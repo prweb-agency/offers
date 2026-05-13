@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO-стратегія для сайту притулку для тварин</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#0a0a0a;
+  --fg-muted:#666;
+  --bg-dark:#0a0a0a;
+  --fg-dark:#fafafa;
+  --accent:#ff2d2d;
+  --border:rgba(0,0,0,0.1);
+  --border-dark:rgba(255,255,255,0.12);
+  --pad-x:clamp(20px,5vw,80px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.5;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--accent);color:#fff;}
+
+/* Top bar */
+.topbar{
+  position:fixed;top:0;left:0;right:0;
+  padding:20px var(--pad-x);
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:11px;font-weight:700;
+  letter-spacing:0.18em;text-transform:uppercase;
+  z-index:100;
+  mix-blend-mode:difference;
+  color:#fff;
+  pointer-events:none;
+}
+.topbar a{pointer-events:auto;}
+.topbar .dot{
+  display:inline-block;width:8px;height:8px;
+  background:var(--accent);border-radius:50%;
+  margin-right:10px;vertical-align:middle;
+}
+
+/* Sections */
+section{
+  padding:clamp(80px,10vw,140px) var(--pad-x);
+  position:relative;
+}
+.dark{background:var(--bg-dark);color:var(--fg-dark);}
+
+.section-head{
+  display:flex;align-items:baseline;
+  gap:24px;
+  margin-bottom:clamp(40px,6vw,70px);
+  flex-wrap:wrap;
+}
+.section-num{
+  font-size:clamp(70px,10vw,140px);
+  font-weight:300;line-height:0.9;
+  letter-spacing:-0.04em;
+  color:var(--accent);
+}
+.section-label{
+  font-size:11px;font-weight:700;
+  letter-spacing:0.22em;text-transform:uppercase;
+  border-top:1px solid currentColor;
+  padding-top:8px;min-width:140px;
+  opacity:0.85;
+}
+
+h1,h2,h3,h4{font-weight:800;letter-spacing:-0.03em;line-height:1.05;}
+
+.h-display{
+  font-size:clamp(44px,8.5vw,120px);
+  font-weight:900;letter-spacing:-0.045em;
+  line-height:0.95;
+}
+.h-section{
+  font-size:clamp(34px,5.5vw,76px);
+  font-weight:800;letter-spacing:-0.035em;
+  line-height:1.02;
+  margin-bottom:clamp(30px,4vw,50px);
+}
+.h-sub{
+  font-size:clamp(22px,2.4vw,32px);
+  font-weight:800;letter-spacing:-0.025em;
+  line-height:1.1;
+  margin-bottom:clamp(20px,2.5vw,30px);
+}
+.accent{color:var(--accent);}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:22px 34px;
+  background:var(--fg);color:var(--bg);
+  font-size:15px;font-weight:600;letter-spacing:0.02em;
+  border:1px solid var(--fg);border-radius:0;
+  cursor:pointer;
+  transition:transform .3s ease,background .3s ease,color .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.btn:hover{
+  background:var(--accent);border-color:var(--accent);color:#fff;
+  transform:translate(-4px,-4px);
+  box-shadow:6px 6px 0 var(--fg);
+}
+.dark .btn{background:var(--fg-dark);color:var(--bg-dark);border-color:var(--fg-dark);}
+.dark .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:6px 6px 0 var(--fg-dark);}
+.btn .arrow{transition:transform .3s ease;display:inline-block;}
+.btn:hover .arrow{transform:translateX(4px);}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding-top:140px;padding-bottom:100px;
+}
+.hero h1{max-width:1400px;margin-bottom:clamp(30px,4vw,50px);}
+.hero .sub{
+  font-size:clamp(17px,1.8vw,24px);
+  font-weight:400;line-height:1.45;
+  max-width:900px;
+  color:var(--fg-muted);
+  margin-bottom:clamp(20px,2.5vw,30px);
+}
+.hero .badges{
+  font-size:clamp(13px,1.2vw,15px);
+  font-weight:600;letter-spacing:0.02em;
+  margin-bottom:clamp(40px,5vw,60px);
+  display:flex;gap:24px;flex-wrap:wrap;
+}
+.hero .badges span{
+  display:inline-flex;align-items:center;gap:10px;
+}
+.hero .badges span::before{
+  content:'';width:8px;height:8px;background:var(--accent);
+  display:inline-block;
+}
+.hero-meta{
+  position:absolute;
+  bottom:40px;left:var(--pad-x);right:var(--pad-x);
+  display:flex;justify-content:space-between;
+  font-size:11px;font-weight:600;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--fg-muted);
+}
+@media(max-width:600px){.hero-meta{display:none;}}
+
+/* Generic prose */
+.prose{
+  font-size:clamp(16px,1.5vw,19px);
+  line-height:1.6;
+  max-width:1100px;
+  margin-bottom:clamp(24px,3vw,40px);
+}
+.prose p{margin-bottom:18px;}
+.prose strong{font-weight:700;}
+
+/* Callout */
+.callout{
+  padding:clamp(28px,3vw,44px);
+  border:1px solid var(--border);
+  background:#fafafa;
+  margin-bottom:clamp(30px,4vw,50px);
+}
+.dark .callout{
+  background:rgba(255,255,255,0.04);
+  border-color:var(--border-dark);
+}
+.callout-label{
+  font-size:11px;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+.callout-text{
+  font-size:clamp(18px,2vw,26px);
+  font-weight:600;letter-spacing:-0.02em;
+  line-height:1.35;
+}
+
+.highlight{
+  background:var(--accent);color:#fff;
+  padding:2px 12px;
+  display:inline-block;
+}
+
+/* Tables */
+.table-wrap{
+  overflow-x:auto;
+  margin-bottom:clamp(30px,4vw,50px);
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:clamp(14px,1.2vw,16px);
+  min-width:600px;
+}
+th{
+  text-align:left;
+  padding:18px 16px;
+  border-bottom:2px solid currentColor;
+  font-size:11px;font-weight:700;
+  letter-spacing:0.18em;text-transform:uppercase;
+  vertical-align:bottom;
+}
+td{
+  padding:18px 16px;
+  border-bottom:1px solid var(--border);
+  vertical-align:top;
+  line-height:1.5;
+}
+.dark td{border-bottom-color:var(--border-dark);}
+tr:hover td{background:rgba(255,45,45,0.06);}
+td strong{font-weight:700;}
+
+/* Card grids */
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.dark .grid-2{border-color:var(--border-dark);}
+@media(max-width:900px){.grid-2{grid-template-columns:1fr;}}
+.grid-2 > .cell{
+  padding:clamp(30px,3.5vw,50px) clamp(24px,3vw,40px);
+  border-right:1px solid var(--border);
+}
+.dark .grid-2 > .cell{border-right-color:var(--border-dark);}
+.grid-2 > .cell:last-child{border-right:none;}
+@media(max-width:900px){
+  .grid-2 > .cell{border-right:none;border-bottom:1px solid var(--border);}
+  .dark .grid-2 > .cell{border-bottom-color:var(--border-dark);}
+  .grid-2 > .cell:last-child{border-bottom:none;}
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.dark .grid-3{border-color:var(--border-dark);}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr;}}
+.grid-3 > .cell{
+  padding:clamp(28px,3vw,44px) clamp(22px,2.5vw,36px);
+  border-right:1px solid var(--border);
+}
+.dark .grid-3 > .cell{border-right-color:var(--border-dark);}
+.grid-3 > .cell:last-child{border-right:none;}
+@media(max-width:900px){
+  .grid-3 > .cell{border-right:none;border-bottom:1px solid var(--border);}
+  .dark .grid-3 > .cell{border-bottom-color:var(--border-dark);}
+  .grid-3 > .cell:last-child{border-bottom:none;}
+}
+
+.cell-num{
+  font-size:13px;font-weight:700;
+  letter-spacing:0.2em;
+  color:var(--accent);
+  margin-bottom:20px;
+}
+.cell h3{
+  font-size:clamp(22px,2.2vw,30px);
+  font-weight:800;letter-spacing:-0.025em;
+  margin-bottom:14px;line-height:1.1;
+}
+.cell p{
+  font-size:15px;line-height:1.6;
+  color:var(--fg-muted);
+}
+.dark .cell p{color:rgba(250,250,250,0.65);}
+.cell ul{list-style:none;margin-top:14px;}
+.cell li{
+  padding:10px 0;
+  font-size:15px;line-height:1.45;
+  border-bottom:1px solid var(--border);
+  display:flex;gap:12px;
+}
+.dark .cell li{border-bottom-color:var(--border-dark);}
+.cell li:last-child{border-bottom:none;}
+.cell li::before{
+  content:'→';color:var(--accent);font-weight:700;flex-shrink:0;
+}
+
+/* Lists generic */
+ul.check-list{list-style:none;margin-bottom:clamp(24px,3vw,40px);}
+ul.check-list li{
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+  font-size:clamp(15px,1.3vw,17px);
+  line-height:1.5;
+  display:flex;gap:14px;
+}
+.dark ul.check-list li{border-bottom-color:var(--border-dark);}
+ul.check-list li::before{
+  content:'✓';color:var(--accent);font-weight:700;flex-shrink:0;
+}
+
+ul.dash-list{list-style:none;margin-bottom:clamp(24px,3vw,40px);}
+ul.dash-list li{
+  padding:10px 0 10px 24px;
+  font-size:clamp(15px,1.3vw,17px);
+  line-height:1.55;
+  position:relative;
+}
+ul.dash-list li::before{
+  content:'—';color:var(--accent);
+  position:absolute;left:0;font-weight:700;
+}
+
+/* URL code block */
+.code-block{
+  font-family:'SF Mono','Monaco','Menlo',monospace;
+  font-size:clamp(13px,1.2vw,15px);
+  line-height:1.8;
+  padding:clamp(24px,3vw,36px);
+  background:#0a0a0a;
+  color:#fafafa;
+  border-left:3px solid var(--accent);
+  margin-bottom:clamp(30px,4vw,50px);
+  overflow-x:auto;
+  white-space:pre;
+}
+
+/* Sub block (numbered subsection inside section) */
+.sub-block{
+  margin-bottom:clamp(50px,7vw,90px);
+}
+.sub-block:last-child{margin-bottom:0;}
+.sub-block-label{
+  font-size:11px;font-weight:700;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:14px;
+  display:flex;align-items:center;gap:14px;
+}
+.sub-block-label::after{
+  content:'';flex-grow:1;
+  height:1px;background:currentColor;
+  opacity:0.3;
+}
+
+/* Final CTA */
+.final-cta{
+  padding-top:clamp(100px,12vw,170px);
+  padding-bottom:clamp(100px,12vw,170px);
+}
+.final-cta h2{
+  font-size:clamp(44px,7.5vw,110px);
+  font-weight:900;letter-spacing:-0.04em;
+  line-height:0.95;
+  margin-bottom:clamp(30px,4vw,50px);
+  max-width:1300px;
+}
+.final-cta .tagline{
+  font-size:clamp(20px,2.2vw,30px);
+  line-height:1.4;max-width:920px;
+  font-weight:600;
+  margin-bottom:clamp(40px,5vw,60px);
+  letter-spacing:-0.02em;
+}
+.cta-points{
+  display:flex;flex-wrap:wrap;gap:30px;
+  margin-bottom:clamp(40px,5vw,60px);
+}
+.cta-point{
+  display:flex;align-items:center;gap:14px;
+  font-size:clamp(15px,1.4vw,18px);
+  font-weight:600;
+}
+.cta-point::before{
+  content:'';width:10px;height:10px;background:var(--accent);
+  border-radius:50%;flex-shrink:0;
+}
+
+/* Footer */
+footer{
+  padding:40px var(--pad-x);
+  background:var(--bg-dark);color:var(--fg-dark);
+  border-top:1px solid var(--border-dark);
+  display:flex;justify-content:space-between;
+  font-size:11px;
+  letter-spacing:0.2em;text-transform:uppercase;
+  opacity:0.5;
+  flex-wrap:wrap;gap:20px;
+}
+
+/* Reveal animations */
+.reveal{
+  opacity:0;transform:translateY(30px);
+  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-1{transition-delay:.08s;}
+.reveal-2{transition-delay:.16s;}
+.reveal-3{transition-delay:.24s;}
+.reveal-4{transition-delay:.32s;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><span class="dot"></span>SHELTER · SEO STRATEGY</div>
+  <div>FULL PROPOSAL</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="h-display reveal">
+    SEO-вимоги та <span class="accent">план впровадження</span> для нового сайту притулку для тварин
+  </h1>
+  <p class="sub reveal reveal-1">
+    Новий сайт притулку потрібно запускати як SEO- та data-ready платформу: із чистою архітектурою URL, вимірюванням ключових дій від першого дня, мобільною першістю, керованим CMS і міграцією через повну redirect map.
+  </p>
+  <div class="badges reveal reveal-2">
+    <span>Adoption</span>
+    <span>Donation</span>
+    <span>Volunteer</span>
+    <span>Events</span>
+    <span>Local SEO</span>
+  </div>
+  <div class="reveal reveal-3">
+    <a href="https://t.me/verdiev" target="_blank" rel="noopener" class="btn">
+      Обговорити проєкт
+      <span class="arrow">→</span>
+    </a>
+  </div>
+  <div class="hero-meta">
+    <span>— прогортайте нижче</span>
+    <span>01 / 06</span>
+  </div>
+</section>
+
+<!-- 02 — EXECUTIVE SUMMARY -->
+<section class="dark">
+  <div class="section-head reveal">
+    <div class="section-num">02</div>
+    <div class="section-label">Executive summary</div>
+  </div>
+  <h2 class="h-section reveal">Ключовий висновок</h2>
+
+  <div class="prose reveal reveal-1">
+    <p>Новий сайт притулку потрібно запускати як SEO- та data-ready платформу: із чистою архітектурою URL, вимірюванням ключових дій від першого дня, мобільною першістю, керованим CMS і міграцією через повну redirect map. Google прямо рекомендує логічну структуру сайту, зрозумілі URL, crawlable internal links, коректні канонікали, sitemap, а при зміні URL — підготовлений URL mapping і 301 redirects.</p>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">Відповідь на три питання клієнта</div>
+    <h3 class="h-sub reveal reveal-1">Measure · Manage · Mobile</h3>
+    <div class="prose reveal reveal-2">
+      <p><strong>По-перше</strong>, ефективність і usability потрібно міряти через стек GA4 + Search Console + GTM + Hotjar або FullStory + Core Web Vitals + Lighthouse + Looker Studio + A/B testing tool; Google окремо рекомендує дивитися GA4 і Search Console разом, а Core Web Vitals — через Search Console та web.dev-інструменти.</p>
+      <p><strong>По-друге</strong>, якщо головна задача — швидко редагувати контент, сторінки тварин, події, FAQ, локації та SEO-поля без зайвого dev-овергеду, найкращий баланс дає WordPress + Gutenberg + ACF; Webflow підходить для швидкого маркетингового сайту, Strapi — коли потрібен headless і сильна dev-команда, Shopify — лише якщо e-commerce стає ядром проєкту.</p>
+      <p><strong>По-третє</strong>, адаптивність має бути не "додатком після дизайну", а базовою вимогою: mobile-first, однаковий основний контент і metadata на mobile/desktop, responsive images через srcset, коректний viewport, перевірка Core Web Vitals та QA на реальних пристроях.</p>
+    </div>
+  </div>
+
+  <div class="callout reveal">
+    <div class="callout-label">Що рекомендувати на старті</div>
+    <div class="callout-text">
+      <span class="highlight">WordPress (Gutenberg + ACF)</span> + GA4 + GTM + GSC + Hotjar + Looker Studio + Lighthouse QA + JSON-LD schema + CDN/HTTPS/cache + повна redirect map. Це дає найкраще співвідношення керованості контентом, SEO-контролю, вартості підтримки та швидкості запуску для неприбуткового або service-oriented сайту притулку.
+    </div>
+  </div>
+</section>
+
+<!-- 03 — ВИМІРЮВАННЯ -->
+<section>
+  <div class="section-head reveal">
+    <div class="section-num">03</div>
+    <div class="section-label">Вимірювання</div>
+  </div>
+  <h2 class="h-section reveal">Вимірювання ефективності та usability</h2>
+
+  <!-- KPI -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">3.1 — Які KPI реально потрібні</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Блок</th>
+            <th>KPI</th>
+            <th>Джерело</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SEO visibility</strong></td>
+            <td>impressions, clicks, CTR, avg. position, branded vs non-branded queries</td>
+            <td>Search Console</td>
+          </tr>
+          <tr>
+            <td><strong>Indexation</strong></td>
+            <td>indexed important pages, non-indexed reasons, canonical correctness</td>
+            <td>Search Console</td>
+          </tr>
+          <tr>
+            <td><strong>UX / performance</strong></td>
+            <td>good CWV rate, LCP / INP / CLS, Lighthouse score by template</td>
+            <td>Search Console, web.dev, Lighthouse</td>
+          </tr>
+          <tr>
+            <td><strong>Conversion</strong></td>
+            <td>adoption inquiry submit rate, donation completion rate, volunteer application rate, contact CTA rate, event registration rate</td>
+            <td>GA4</td>
+          </tr>
+          <tr>
+            <td><strong>Engagement</strong></td>
+            <td>pet profile views, filter usage, internal search usage, scroll depth, form interaction</td>
+            <td>GA4 + Hotjar / FullStory</td>
+          </tr>
+          <tr>
+            <td><strong>Local</strong></td>
+            <td>Google Business Profile clicks to site / directions / calls, branded local landing traffic</td>
+            <td>GBP + GA4 + GSC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>Search Console дає основні метрики пошукової видимості — clicks, impressions, CTR, average position; Page Indexing report показує, які URL Google знає, індексує або не індексує; URL Inspection дозволяє перевірити конкретну сторінку, canonical, rendering та можливість індексації. Google також рекомендує поєднувати Search Console і GA4 в одному Looker Studio dashboard для повнішої картини "до кліку" і "після кліку".</p>
+    </div>
+  </div>
+
+  <!-- Measurement stack -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">3.2 — Обов'язковий measurement stack</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Інструмент</th>
+            <th>Обов'язково</th>
+            <th>Для чого саме</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>GA4</strong></td><td>Так</td><td>події, key events, funnels, landing pages, content groups</td></tr>
+          <tr><td><strong>Google Tag Manager</strong></td><td>Так</td><td>централізоване керування тегами, версії, безпечне розгортання</td></tr>
+          <tr><td><strong>Google Search Console</strong></td><td>Так</td><td>performance, indexing, HTTPS, structured data, URL Inspection</td></tr>
+          <tr><td><strong>Looker Studio</strong></td><td>Так</td><td>executive dashboard і SEO/UX dashboard</td></tr>
+          <tr><td><strong>Hotjar або FullStory</strong></td><td>Так</td><td>heatmaps, session replay, form friction, funnel drop-offs</td></tr>
+          <tr><td><strong>Core Web Vitals stack</strong></td><td>Так</td><td>Search Console CWV + web.dev / PageSpeed / CrUX</td></tr>
+          <tr><td><strong>Lighthouse</strong></td><td>Так</td><td>pre-launch та post-launch template audits</td></tr>
+          <tr><td><strong>A/B testing tool</strong></td><td>За потреби</td><td>Optimizely Web Experimentation або VWO для тестів CTA/form layouts</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>GTM дає версійність, організацію тегів і централізоване оновлення без ручного втручання в код на кожній зміні. Search Console окремо має Performance, Page Indexing, URL Inspection і HTTPS report. Lighthouse покриває performance, accessibility, SEO та інші аудити, а Optimizely/VWO підтримують web experimentation для A/B tests.</p>
+    </div>
+  </div>
+
+  <!-- GA4 events -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">3.3 — GA4 event plan для притулку</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Тип</th>
+            <th>Тригер</th>
+            <th>Параметри</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>generate_lead</strong></td><td>recommended</td><td>submit adoption / volunteer / foster / contact form</td><td>form_name, pet_id, pet_type, cta_location</td></tr>
+          <tr><td><strong>search</strong></td><td>recommended</td><td>внутрішній пошук по сайту або по тваринах</td><td>search_term, search_type</td></tr>
+          <tr><td><strong>select_content</strong></td><td>recommended</td><td>клік по картці тварини / CTA / банеру акції</td><td>content_type, content_id, cta_location</td></tr>
+          <tr><td><strong>view_item</strong></td><td>recommended/adapted</td><td>перегляд профілю тварини</td><td>item_id, item_name, item_category</td></tr>
+          <tr><td><strong>view_item_list</strong></td><td>recommended/adapted</td><td>перегляд списку adoptable pets</td><td>list_name, species, availability</td></tr>
+          <tr><td><strong>share</strong></td><td>recommended</td><td>share pet profile / event / donation page</td><td>method, content_type, item_id</td></tr>
+          <tr><td><strong>donation_start</strong></td><td>custom</td><td>клік "Donate" / старт donation flow</td><td>campaign_name, cta_location</td></tr>
+          <tr><td><strong>donation_complete</strong></td><td>custom / key event</td><td>успішний донат</td><td>value, currency, campaign_name</td></tr>
+          <tr><td><strong>pet_filter_use</strong></td><td>custom</td><td>використання breed/age/size filters</td><td>species, filter_name, filter_value</td></tr>
+          <tr><td><strong>appointment_request</strong></td><td>custom / key event</td><td>заявка на зустріч / meet-and-greet</td><td>pet_id, location, preferred_date</td></tr>
+          <tr><td><strong>call_click / email_click / directions_click</strong></td><td>custom / key event</td><td>клік по контактних CTA</td><td>location_name, cta_location</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>GA4 рекомендує generate_lead, search, select_content, share, а також lead-funnel events; для кастомних деталей подій треба реєструвати custom dimensions / metrics, інакше параметри не будуть доступні у звітах. Якщо дія бізнес-критична, її потрібно позначати як key event / conversion.</p>
+    </div>
+  </div>
+
+  <!-- Hotjar -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">3.4 — Hotjar / FullStory: де дивитися heatmaps і replay</div>
+
+    <h3 class="h-sub reveal reveal-1">Heatmap targets</h3>
+    <ul class="check-list reveal reveal-2">
+      <li>Homepage hero: основний CTA Adopt / Donate / Volunteer.</li>
+      <li>/adopt/ list page: search, filters, sorting, pagination / load more.</li>
+      <li>Pet profile template: gallery, attributes, adoption CTA, "share" CTA, sticky actions.</li>
+      <li>/donate/: first screen, suggested amounts, recurring toggle, trust blocks, submit button.</li>
+      <li>/volunteer/ and /foster/: form field order, submit visibility, rage clicks / dead clicks.</li>
+      <li>/events/ list and event detail pages: register CTA, location block, date/time block.</li>
+    </ul>
+
+    <div class="prose reveal reveal-3">
+      <p>Hotjar heatmaps збирають clicks/taps, scrolls і movement; окремо для форм варто дивитися engagement zones і scroll visibility до submit button. FullStory корисний там, де потрібні session replay, frustration/success signals, dashboards і funnel analysis.</p>
+    </div>
+  </div>
+
+  <!-- Looker Studio layout -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">3.5 — Layout dashboard у Looker Studio</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Віджет</th>
+            <th>Метрика</th>
+            <th>Сегмент</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Organic overview</strong></td><td>users, sessions, engagement rate, key events from organic</td><td>all organic</td></tr>
+          <tr><td><strong>Search visibility</strong></td><td>clicks, impressions, CTR, avg position</td><td>brand / non-brand</td></tr>
+          <tr><td><strong>Key landing pages</strong></td><td>sessions, key events, conversion rate</td><td>/adopt/, /donate/, /volunteer/, /events/, /locations/</td></tr>
+          <tr><td><strong>Indexation panel</strong></td><td>indexed pages, excluded pages, top exclusion reasons</td><td>key templates</td></tr>
+          <tr><td><strong>CWV panel</strong></td><td>% good URLs, template-level LCP/INP/CLS</td><td>mobile / desktop</td></tr>
+          <tr><td><strong>UX friction panel</strong></td><td>rage click pages, dead click pages, form drop-off pages</td><td>key templates</td></tr>
+          <tr><td><strong>Local panel</strong></td><td>local landing page traffic + branded location queries</td><td>by location</td></tr>
+          <tr><td><strong>Content panel</strong></td><td>top pet profiles, top event pages, top FAQ pages</td><td>last 30 / 90 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>Google прямо показує, як з'єднувати GA4 і Search Console у Looker Studio; для shelter-сайту цього достатньо, щоб мати окремий executive dashboard і SEO/UX operations dashboard.</p>
+    </div>
+  </div>
+
+  <!-- Reporting cadence -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">3.6 — Reporting cadence</div>
+
+    <div class="grid-3 reveal reveal-1">
+      <div class="cell">
+        <div class="cell-num">— ЩОТИЖНЯ</div>
+        <p>Технічні помилки, critical CWV regressions, broken tags/events, form failures.</p>
+      </div>
+      <div class="cell">
+        <div class="cell-num">— ЩОМІСЯЦЯ</div>
+        <p>Organic KPI, key events, top landing pages, indexation, UX friction findings, backlog.</p>
+      </div>
+      <div class="cell">
+        <div class="cell-num">— ЩОКВАРТАЛУ</div>
+        <p>IA/content review, schema audit, experiment plan, redirect hygiene, local SEO review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — CMS -->
+<section class="dark">
+  <div class="section-head reveal">
+    <div class="section-num">04</div>
+    <div class="section-label">CMS</div>
+  </div>
+  <h2 class="h-section reveal">CMS та адмін-панель</h2>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">4.1 — Що CMS має вміти обов'язково</div>
+    <div class="prose reveal reveal-1">
+      <p>Для притулку CMS має підтримувати не лише "сторінки", а структурований контент: pet profiles, event pages, donation pages, location pages, FAQs, volunteer roles, documents. Мінімальні вимоги: ролі й права доступу, чернетки, revision history, SEO title/meta, open graph, canonical, redirects, sitemap, schema fields, медіабібліотека, content relationships, page scheduling, form integration і можливість масштабувати шаблони без ручного дублювання. Також потрібен чіткий workflow: draft → SEO/content review → publish.</p>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">4.2 — Рекомендація</div>
+
+    <div class="callout reveal reveal-1">
+      <div class="callout-label">Рекомендую</div>
+      <div class="callout-text">
+        <span class="highlight">WordPress + Gutenberg + ACF</span>
+      </div>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>Чому: для притулку критичні не лише красиві сторінки, а й редакторська незалежність, можливість швидко додавати/редагувати structured pages, хороші ролі доступу, контрольовані SEO-поля, масштабування шаблонів і помірна вартість підтримки. WordPress уже має ролі, block editor і базовий sitemap у core; ACF додає чисту модель custom fields. Це робить WordPress найпрактичнішим вибором, якщо CMS ще не визначено.</p>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">4.3 — Рекомендована content model</div>
+
+    <div class="grid-3 reveal reveal-1">
+      <div class="cell">
+        <div class="cell-num">— CORE</div>
+        <h3>Базові типи</h3>
+        <ul>
+          <li>Page</li>
+          <li>Location</li>
+          <li>Pet profile</li>
+          <li>Event</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <div class="cell-num">— CONTENT</div>
+        <h3>Контентні типи</h3>
+        <ul>
+          <li>FAQ</li>
+          <li>Success story</li>
+          <li>Volunteer role</li>
+          <li>Service page</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <div class="cell-num">— EXTRA</div>
+        <h3>Додаткові</h3>
+        <ul>
+          <li>Donation campaign</li>
+          <li>Document / policy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prose reveal reveal-2" style="margin-top:clamp(24px,3vw,40px);">
+      <p>Це рекомендація архітектури, а не вимога конкретної платформи. Для shelter-сайту саме така модель зменшує дублювання, спрощує schema, внутрішню перелінковку і редакторську роботу. Підтримка structured content напряму впливає на масштабованість SEO.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — АДАПТИВНІСТЬ -->
+<section>
+  <div class="section-head reveal">
+    <div class="section-num">05</div>
+    <div class="section-label">Адаптивність</div>
+  </div>
+  <h2 class="h-section reveal">Адаптивність та responsiveness</h2>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">5.1 — Що означає "site is truly responsive"</div>
+    <div class="prose reveal reveal-1">
+      <p>Responsive design — це не просто "сайт відкривається на телефоні". Для Google важливо, що індексація й ранжування йдуть за mobile version, а значить головний контент, metadata і structured data на mobile мають бути еквівалентні desktop. Можна змінювати layout, ховати блоки в акордеони й таби, але не зменшувати змістовну цінність мобільної версії. Якщо mobile має менше первинного контенту, Google прямо попереджає про можливу втрату трафіку.</p>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">5.2 — Responsive checklist</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Чекпойнт</th>
+            <th>Вимога</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Mobile-first layout</strong></td><td>Дизайн і верстка від малого viewport до великого</td></tr>
+          <tr><td><strong>Equivalent content</strong></td><td>Однаковий primary content на mobile/desktop</td></tr>
+          <tr><td><strong>Equivalent metadata</strong></td><td>Той самий title і meta description у mobile/desktop versions</td></tr>
+          <tr><td><strong>Viewport</strong></td><td>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</td></tr>
+          <tr><td><strong>Responsive images</strong></td><td>srcset / sizes, правильні розміри, без завантаження завеликих зображень</td></tr>
+          <tr><td><strong>Touch targets</strong></td><td>не менше 24×24 CSS px за WCAG 2.2</td></tr>
+          <tr><td><strong>Accessibility</strong></td><td>контраст, alt, labels, keyboard flow, landmarks, form errors</td></tr>
+          <tr><td><strong>Performance</strong></td><td>не ламати LCP / INP / CLS через hero media, sticky UI, late JS</td></tr>
+          <tr><td><strong>Testing</strong></td><td>DevTools device mode + реальні пристрої + Lighthouse</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>viewport потрібен, щоб responsive CSS і media queries працювали коректно на вузьких екранах. srcset дозволяє віддавати різні версії зображень залежно від екрана і мережі. WCAG 2.2 вимагає мінімальний target size 24×24 CSS px. Device Mode у DevTools корисний для швидкої симуляції, але Chrome прямо попереджає: це лише наближення, фінальний QA треба робити на реальних мобільних пристроях.</p>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">5.3 — Core Web Vitals targets для launch gate</div>
+
+    <div class="grid-3 reveal reveal-1">
+      <div class="cell">
+        <div class="cell-num">— LCP</div>
+        <h3>≤ 2.5s</h3>
+        <p>Largest Contentful Paint</p>
+      </div>
+      <div class="cell">
+        <div class="cell-num">— INP</div>
+        <h3>≤ 200ms</h3>
+        <p>Interaction to Next Paint</p>
+      </div>
+      <div class="cell">
+        <div class="cell-num">— CLS</div>
+        <h3>≤ 0.1</h3>
+        <p>Cumulative Layout Shift</p>
+      </div>
+    </div>
+
+    <div class="prose reveal reveal-2" style="margin-top:clamp(24px,3vw,40px);">
+      <p>Оцінювати по 75-му перцентилю окремо для mobile і desktop.</p>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">5.4 — Що найчастіше ламає adaptive + SEO</div>
+
+    <ul class="dash-list reveal reveal-1">
+      <li>mobile-версія без частини основного контенту;</li>
+      <li>інший title / meta description на mobile;</li>
+      <li>lazy-load primary content only on interaction;</li>
+      <li>важкі hero images/video без responsive delivery;</li>
+      <li>sticky bars/popups, які зміщують layout і б'ють по CLS;</li>
+      <li>фільтри / меню / accordions, до яких не можуть дістатися користувачі або Google.</li>
+    </ul>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">5.5 — QA protocol</div>
+
+    <ul class="check-list reveal reveal-1">
+      <li>Пройти кожний шаблон у Chrome DevTools Device Mode.</li>
+      <li>Перевірити Lighthouse по mobile для homepage, adopt list, pet profile, donate, volunteer, event template.</li>
+      <li>Перевірити реальні пристрої: small phone, large phone, tablet.</li>
+      <li>Перевірити form UX: поле за полем, помилки, scroll to error, submit visibility.</li>
+      <li>Перевірити CWV у field data після запуску, а не лише в lab.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 — ТЕХНІЧНЕ SEO -->
+<section class="dark">
+  <div class="section-head reveal">
+    <div class="section-num">06</div>
+    <div class="section-label">Технічне SEO</div>
+  </div>
+  <h2 class="h-section reveal">Технічне SEO та обов'язкові імплементації</h2>
+
+  <!-- URL architecture -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.1 — URL architecture</div>
+
+    <div class="prose reveal reveal-1">
+      <p>Google рекомендує просту і зрозумілу URL-структуру. Для shelter-сайту базова схема може бути такою:</p>
+    </div>
+
+    <div class="code-block reveal reveal-2">/
+/adopt/
+/adopt/dogs/
+/adopt/cats/
+/pets/dog/{pet-name-id}/
+/pets/cat/{pet-name-id}/
+/donate/
+/volunteer/
+/foster/
+/events/
+/events/{event-slug}/
+/services/spay-neuter/
+/lost-found/
+/locations/{city}/
+/faq/
+/about/
+/contact/</div>
+
+    <div class="prose reveal reveal-3">
+      <p>Логіка: один template = один intent. Це спрощує indexation, canonicalization, titles, internal links і аналітику по шаблонах. Google рекомендує логічну організацію сайту, прості URL і crawlable links через &lt;a href&gt;.</p>
+    </div>
+  </div>
+
+  <!-- Mandatory technical SEO -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.2 — Technical SEO mandatory list</div>
+
+    <ul class="check-list reveal reveal-1">
+      <li><strong>Canonical</strong> на всіх indexable сторінках; внутрішні посилання вести на canonical URL.</li>
+      <li><strong>Titles / meta descriptions</strong>: унікальні, page-specific; Google може переписувати title/snippet, якщо сторінка подає слабкі або суперечливі сигнали.</li>
+      <li><strong>H1 / headings</strong>: один чіткий головний заголовок, послідовна ієрархія секцій. Google радить виносити слова, які люди реально шукають, у title, main heading, alt text та link text.</li>
+      <li><strong>Internal linking</strong>: важливі сторінки мають бути reachable навігаційно, без JS-only links.</li>
+      <li><strong>Robots / noindex</strong>: robots.txt — для керування crawl traffic, а не для приховування сторінок із Search; для виключення з індексу потрібен noindex або захист доступу.</li>
+      <li><strong>Sitemap</strong>: включати лише canonical URLs; подавати через Search Console; тримати актуальним.</li>
+      <li><strong>Hreflang</strong>: лише якщо реально є multilingual / multi-regional site; для кожної мовної версії — окремий URL. Google не використовує hreflang або HTML lang для визначення мови сторінки, але hreflang допомагає пов'язати локалізовані версії.</li>
+      <li><strong>Structured data</strong>: JSON-LD, валідовано через Rich Results Test / Schema Markup Validator.</li>
+      <li><strong>HTTPS</strong> everywhere + без mixed content.</li>
+      <li><strong>CDN</strong> + HTTP caching для статики й media.</li>
+    </ul>
+  </div>
+
+  <!-- Structured data -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.3 — Structured data plan</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Тип сторінки</th>
+            <th>Schema</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Homepage / About</strong></td><td>Organization або специфічніший subtype</td></tr>
+          <tr><td><strong>Contact / Location</strong></td><td>LocalBusiness або специфічніший subtype</td></tr>
+          <tr><td><strong>Animal shelter entity</strong></td><td>AnimalShelter як subtype LocalBusiness</td></tr>
+          <tr><td><strong>Event pages</strong></td><td>Event</td></tr>
+          <tr><td><strong>FAQ pages</strong></td><td>FAQPage — semantic use, але не розраховувати на rich result</td></tr>
+          <tr><td><strong>Donation page</strong></td><td>Organization + semantic donation markup</td></tr>
+          <tr><td><strong>Breadcrumb trail</strong></td><td>BreadcrumbList</td></tr>
+          <tr><td><strong>Searchable site box</strong></td><td>WebSite / SearchAction за потреби</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>AnimalShelter існує в Schema.org як subtype LocalBusiness. Google офіційно підтримує Organization, LocalBusiness, Event та інші типи в Search Gallery. Для FAQ є важливе обмеження: rich results доступні лише для well-known government/health sites, тому для чотириногого притулку FAQ markup варто використовувати радше як semantic markup, а не як гарантований SERP gain. Окремого Google-rich-result типу для DonateAction Google не документує в supported Search Gallery, тому donation schema слід розглядати як semantic layer, а не як джерело окремого rich result — це аналітичний висновок на основі Google Search Gallery та Schema.org vocabulary.</p>
+    </div>
+  </div>
+
+  <!-- On-page SEO -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.4 — On-page SEO checklist</div>
+
+    <ul class="check-list reveal reveal-1">
+      <li>Унікальний title для кожної сторінки.</li>
+      <li>Унікальна meta description для комерційних та key content pages.</li>
+      <li>Один чіткий H1.</li>
+      <li>Логічні H2/H3 під контентні секції.</li>
+      <li>Ключові слова в title, H1, alt text, anchor text — природно, без спаму.</li>
+      <li>Above-the-fold ясний CTA: Adopt / Donate / Volunteer / Foster / Contact.</li>
+      <li>Related content blocks: similar pets, upcoming events, donation CTA, volunteer CTA.</li>
+      <li>Breadcrumbs на глибоких сторінках.</li>
+      <li>Indexable pages мають бути linked з навігації або релевантних hub pages.</li>
+    </ul>
+  </div>
+
+  <!-- Redirect strategy -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.5 — Redirect strategy</div>
+    <div class="prose reveal reveal-1">
+      <p>Google для site moves рекомендує готувати URL mapping до релізу, а не після нього. Правильна міграція включає: old-to-new mapping, 301 redirects, оновлення sitemap, canonical, internal links і post-launch validation.</p>
+    </div>
+  </div>
+
+  <!-- Crawl budget -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.6 — Crawl budget — чи потрібно хвилюватися</div>
+    <div class="prose reveal reveal-1">
+      <p>Для більшості shelter-сайтів crawl budget не є першочерговою проблемою. Google прямо пише: якщо сайт не дуже великий і сторінки зазвичай скануються в день публікації, вистачає актуального sitemap та регулярної перевірки indexing coverage. Crawl-budget optimization стає важливою лише тоді, коли з'являються тисячі pet URLs, faceted filters, параметричні дублі або дуже часті оновлення каталогу.</p>
+    </div>
+  </div>
+
+  <!-- Local SEO -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.7 — Local SEO</div>
+    <div class="prose reveal reveal-1">
+      <p>Притулок має керувати присутністю через Google Business Profile: адреса, години, телефон, сайт, фото, категорія, reviews, verification. Google вказує, що verified Business Profile допомагає показувати правильну інформацію в Search і Maps, а Knowledge Panel / business details також підтримуються через site ownership у Search Console та structured data.</p>
+    </div>
+  </div>
+
+  <!-- Security / hosting -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.8 — Security / hosting</div>
+    <ul class="check-list reveal reveal-1">
+      <li>HTTPS за замовчуванням і повна відмова від mixed content.</li>
+      <li>CDN перед origin для статики й media — зменшує latency, серверне навантаження і покращує TTFB/LCP.</li>
+      <li>Нормальний Cache-Control / HTTP cache headers.</li>
+      <li>Автооновлення ядра/плагінів/тем, якщо CMS це дозволяє; у WordPress це підтримується з core-рівня.</li>
+    </ul>
+  </div>
+
+  <!-- KPI dashboard template -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.9 — KPI dashboard template</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Блок</th>
+            <th>Metric</th>
+            <th>Primary cut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Search visibility</strong></td><td>clicks / impressions / CTR / avg position</td><td>brand vs non-brand</td></tr>
+          <tr><td><strong>Organic conversions</strong></td><td>adoption lead, volunteer lead, donation complete</td><td>landing page</td></tr>
+          <tr><td><strong>Indexation</strong></td><td>indexed vs excluded key URLs</td><td>template</td></tr>
+          <tr><td><strong>UX friction</strong></td><td>rage clicks, dead clicks, form drop-offs</td><td>page template</td></tr>
+          <tr><td><strong>Performance</strong></td><td>LCP / INP / CLS / % good URLs</td><td>mobile vs desktop</td></tr>
+          <tr><td><strong>Local</strong></td><td>GBP interactions + local landing traffic</td><td>location</td></tr>
+          <tr><td><strong>Content</strong></td><td>top pet profiles / events / FAQs</td><td>content type</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Open questions -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">6.10 — Open questions / limitations</div>
+    <ul class="dash-list reveal reveal-1">
+      <li>CMS не specified, тому рекомендація зроблена як best-fit, а не як технічний аудит існуючої платформи.</li>
+      <li>Не враховано конкретні інтеграції shelter software / CRM / donation processor; якщо вони є, це може змістити вибір у бік headless або спеціальних модулів.</li>
+      <li>FAQ rich results для shelter-сайту не варто закладати в KPI, бо Google офіційно обмежує цей формат переважно government/health domains.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 07 — SEO-БЛОК (RU) -->
+<section>
+  <div class="section-head reveal">
+    <div class="section-num">07</div>
+    <div class="section-label">SEO-блок</div>
+  </div>
+  <h2 class="h-section reveal">SEO-блок · Executive summary</h2>
+
+  <div class="callout reveal reveal-1">
+    <div class="callout-label">Summary</div>
+    <div class="callout-text">
+      SEO-секция для shelter-сайта должна решать 4 задачи: привести локальный спрос, отдать трафик на страницы усыновления, упростить donation/volunteer/foster и не потерять мобайл-видимость. На запуске обязательны: индексируемые посадочные, карточки животных, Google Search Console, GA4, XML sitemap, простые URL, &lt;a href&gt;-ссылки, mobile-first parity контента и метаданных.
+    </div>
+  </div>
+
+  <!-- Channels -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">7.1 — Channels</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Канал</th>
+            <th>Приоритет</th>
+            <th>Быстрый запуск</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Google Search + Maps</strong></td><td>P1</td><td>GBP, локальные страницы, NAP</td></tr>
+          <tr><td><strong>Direct/Email</strong></td><td>P2</td><td>подписка на adoption alerts</td></tr>
+          <tr><td><strong>Social</strong></td><td>P3</td><td>посты ведут на canonical pet page</td></tr>
+          <tr><td><strong>Referral</strong></td><td>P3</td><td>ссылки с ветклиник/партнёров</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose reveal reveal-2">
+      <p>Business Profile управляет показом в Search/Maps; полные и точные данные усиливают локальную видимость.</p>
+    </div>
+  </div>
+
+  <!-- Intent -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">7.2 — Intent → page</div>
+
+    <div class="table-wrap reveal reveal-1">
+      <table>
+        <thead>
+          <tr>
+            <th>Intent</th>
+            <th>Примеры ключей</th>
+            <th>Целевая страница</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Adoption</strong></td><td>adopt dog [city], cat adoption near me</td><td>/adopt/dogs/, /adopt/cats/</td></tr>
+          <tr><td><strong>Pet detail</strong></td><td>labrador rescue [city]</td><td>/pets/{slug}/</td></tr>
+          <tr><td><strong>Donate</strong></td><td>donate animal shelter</td><td>/donate/</td></tr>
+          <tr><td><strong>Volunteer/Foster</strong></td><td>foster dog [city]</td><td>/volunteer/, /foster/</td></tr>
+          <tr><td><strong>Support</strong></td><td>adoption process, surrender pet</td><td>/how-to-adopt/, /surrender/, /faq/</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Pages -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">7.3 — Required pages</div>
+    <div class="prose reveal reveal-1">
+      <p>Обязательно: Home, /adopt/dogs/, /adopt/cats/, карточки animals, /how-to-adopt/, /fees/, /donate/, /volunteer/, /foster/, /contact/, /faq/, /lost-found/, /about/. Блог не обязателен на старте; нужен только если команда готова вести evergreen-гайды 2+ раза в месяц.</p>
+    </div>
+  </div>
+
+  <!-- CMS/admin -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">7.4 — CMS / admin</div>
+    <div class="prose reveal reveal-1">
+      <p>Нужна CMS с коллекциями Animals/Pages/FAQ/Posts, ролями, превью, черновиками, шаблонами карточек, SEO-полями (title/meta/canonical/robots), redirect manager, XML sitemap, schema JSON-LD, alt text, медиа-ресайзом, локализацией. Это закрывает требования Google по URL, тайтлам, каноникализации, robots, sitemap и structured data.</p>
+    </div>
+  </div>
+
+  <!-- Measurement -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">7.5 — Measurement stack</div>
+    <div class="prose reveal reveal-1">
+      <p>Подключить: Search Console, GA4, PageSpeed Insights/CWV, Hotjar или FullStory, Looker Studio dashboard. События: adoption_form_submit, donation_click/complete, volunteer_submit, phone_click, email_click, pet_card_view, filter_use, site_search, scroll_75. KPI: indexed pages &gt;90%, organic CTR brand 15–30%, organic CVR ключевых лендингов 2–5%, CWV на p75: LCP ≤2.5s, INP ≤200ms, CLS ≤0.1. GSC меряет клики/показы/индексацию; GA4 — key events; Hotjar/FullStory — replay/heatmaps для UX.</p>
+    </div>
+  </div>
+
+  <!-- Responsive -->
+  <div class="sub-block">
+    <div class="sub-block-label reveal">7.6 — Responsive checklist</div>
+    <div class="prose reveal reveal-1">
+      <p>Mobile-first обязателен: тот же контент и метаданные на mobile/desktop, breakpoints 360/768/1024/1280, видимый CTA, короткие формы, srcset/sizes, width/height, lazy-load below the fold, AVIF/WebP, alt text для фото животных.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — FINAL CTA -->
+<section class="dark final-cta">
+  <div class="section-head reveal">
+    <div class="section-num">08</div>
+    <div class="section-label">Зв'язок</div>
+  </div>
+  <h2 class="reveal">
+    Готові запустити <span class="accent">SEO-ready</span> сайт притулку?
+  </h2>
+  <p class="tagline reveal reveal-1">
+    🔥 <span class="highlight">Verdiev SEO</span> — повна стратегія, технічна імплементація та вимірювання для shelter-сайту.
+  </p>
+  <div class="cta-points reveal reveal-2">
+    <div class="cta-point">SEO + Analytics</div>
+    <div class="cta-point">CMS + Content model</div>
+    <div class="cta-point">Mobile-first + CWV</div>
+  </div>
+  <div class="reveal reveal-3">
+    <a href="https://t.me/verdiev" target="_blank" rel="noopener" class="btn">
+      Зв'язатися з нами
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>Verdiev SEO · Shelter SEO Proposal · 2026</div>
+  <div>t.me/verdiev</div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kardash Development — Local SEO Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#0a0a0a;
+  --fg-muted:#666;
+  --bg-dark:#0a0a0a;
+  --fg-dark:#fafafa;
+  --accent:#ff2d2d;
+  --border:rgba(0,0,0,0.1);
+  --border-dark:rgba(255,255,255,0.12);
+  --pad-x:clamp(20px,5vw,80px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);color:var(--fg);
+  line-height:1.5;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--accent);color:#fff;}
+
+.topbar{
+  position:fixed;top:0;left:0;right:0;
+  padding:20px var(--pad-x);
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:11px;font-weight:700;
+  letter-spacing:0.18em;text-transform:uppercase;
+  z-index:100;mix-blend-mode:difference;color:#fff;
+  pointer-events:none;
+}
+.topbar a{pointer-events:auto;}
+.topbar .dot{
+  display:inline-block;width:8px;height:8px;
+  background:var(--accent);border-radius:50%;
+  margin-right:10px;vertical-align:middle;
+}
+
+section{padding:clamp(80px,10vw,140px) var(--pad-x);position:relative;}
+.dark{background:var(--bg-dark);color:var(--fg-dark);}
+
+.section-head{
+  display:flex;align-items:baseline;gap:24px;
+  margin-bottom:clamp(40px,6vw,70px);flex-wrap:wrap;
+}
+.section-num{
+  font-size:clamp(70px,10vw,140px);
+  font-weight:300;line-height:0.9;
+  letter-spacing:-0.04em;color:var(--accent);
+}
+.section-label{
+  font-size:11px;font-weight:700;
+  letter-spacing:0.22em;text-transform:uppercase;
+  border-top:1px solid currentColor;
+  padding-top:8px;min-width:140px;opacity:0.85;
+}
+
+h1,h2,h3,h4{font-weight:800;letter-spacing:-0.03em;line-height:1.05;}
+.h-display{font-size:clamp(44px,8.5vw,120px);font-weight:900;letter-spacing:-0.045em;line-height:0.95;}
+.h-section{font-size:clamp(34px,5.5vw,76px);font-weight:800;letter-spacing:-0.035em;line-height:1.02;margin-bottom:clamp(30px,4vw,50px);}
+.h-sub{font-size:clamp(22px,2.4vw,32px);font-weight:800;letter-spacing:-0.025em;line-height:1.1;margin-bottom:clamp(20px,2.5vw,30px);}
+.accent{color:var(--accent);}
+
+.btn{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:22px 34px;background:var(--fg);color:var(--bg);
+  font-size:15px;font-weight:600;letter-spacing:0.02em;
+  border:1px solid var(--fg);border-radius:0;cursor:pointer;
+  transition:transform .3s ease,background .3s ease,color .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translate(-4px,-4px);box-shadow:6px 6px 0 var(--fg);}
+.dark .btn{background:var(--fg-dark);color:var(--bg-dark);border-color:var(--fg-dark);}
+.dark .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:6px 6px 0 var(--fg-dark);}
+.btn .arrow{transition:transform .3s ease;display:inline-block;}
+.btn:hover .arrow{transform:translateX(4px);}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:140px;padding-bottom:100px;}
+.hero h1{max-width:1400px;margin-bottom:clamp(30px,4vw,50px);}
+.hero .sub{font-size:clamp(17px,1.8vw,24px);font-weight:400;line-height:1.45;max-width:900px;color:var(--fg-muted);margin-bottom:clamp(20px,2.5vw,30px);}
+.hero .badges{font-size:clamp(13px,1.2vw,15px);font-weight:600;letter-spacing:0.02em;margin-bottom:clamp(40px,5vw,60px);display:flex;gap:24px;flex-wrap:wrap;}
+.hero .badges span{display:inline-flex;align-items:center;gap:10px;}
+.hero .badges span::before{content:'';width:8px;height:8px;background:var(--accent);display:inline-block;}
+.hero-meta{position:absolute;bottom:40px;left:var(--pad-x);right:var(--pad-x);display:flex;justify-content:space-between;font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--fg-muted);}
+@media(max-width:600px){.hero-meta{display:none;}}
+
+.prose{font-size:clamp(16px,1.5vw,19px);line-height:1.6;max-width:1100px;margin-bottom:clamp(24px,3vw,40px);}
+.prose p{margin-bottom:18px;}
+
+.callout{padding:clamp(28px,3vw,44px);border:1px solid var(--border);background:#fafafa;margin-bottom:clamp(30px,4vw,50px);}
+.dark .callout{background:rgba(255,255,255,0.04);border-color:var(--border-dark);}
+.callout-label{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+.callout-text{font-size:clamp(18px,2vw,26px);font-weight:600;letter-spacing:-0.02em;line-height:1.35;}
+.highlight{background:var(--accent);color:#fff;padding:2px 12px;display:inline-block;}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.dark .grid-2{border-color:var(--border-dark);}
+@media(max-width:900px){.grid-2{grid-template-columns:1fr;}}
+.grid-2>.cell{padding:clamp(30px,3.5vw,50px) clamp(24px,3vw,40px);border-right:1px solid var(--border);}
+.dark .grid-2>.cell{border-right-color:var(--border-dark);}
+.grid-2>.cell:last-child{border-right:none;}
+@media(max-width:900px){
+  .grid-2>.cell{border-right:none;border-bottom:1px solid var(--border);}
+  .dark .grid-2>.cell{border-bottom-color:var(--border-dark);}
+  .grid-2>.cell:last-child{border-bottom:none;}
+}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.dark .grid-3{border-color:var(--border-dark);}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr;}}
+.grid-3>.cell{padding:clamp(28px,3vw,44px) clamp(22px,2.5vw,36px);border-right:1px solid var(--border);}
+.dark .grid-3>.cell{border-right-color:var(--border-dark);}
+.grid-3>.cell:last-child{border-right:none;}
+@media(max-width:900px){
+  .grid-3>.cell{border-right:none;border-bottom:1px solid var(--border);}
+  .dark .grid-3>.cell{border-bottom-color:var(--border-dark);}
+  .grid-3>.cell:last-child{border-bottom:none;}
+}
+
+.cell-num{font-size:13px;font-weight:700;letter-spacing:0.2em;color:var(--accent);margin-bottom:20px;}
+.cell h3{font-size:clamp(22px,2.2vw,30px);font-weight:800;letter-spacing:-0.025em;margin-bottom:14px;line-height:1.1;}
+.cell p{font-size:15px;line-height:1.6;color:var(--fg-muted);}
+.dark .cell p{color:rgba(250,250,250,0.65);}
+.cell ul{list-style:none;margin-top:14px;}
+.cell li{padding:10px 0;font-size:15px;line-height:1.45;border-bottom:1px solid var(--border);display:flex;gap:12px;}
+.dark .cell li{border-bottom-color:var(--border-dark);}
+.cell li:last-child{border-bottom:none;}
+.cell li::before{content:'→';color:var(--accent);font-weight:700;flex-shrink:0;}
+
+ul.check-list{list-style:none;margin-bottom:clamp(24px,3vw,40px);}
+ul.check-list li{padding:14px 0;border-bottom:1px solid var(--border);font-size:clamp(15px,1.3vw,17px);line-height:1.5;display:flex;gap:14px;}
+.dark ul.check-list li{border-bottom-color:var(--border-dark);}
+ul.check-list li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0;}
+
+.sub-block{margin-bottom:clamp(50px,7vw,90px);}
+.sub-block:last-child{margin-bottom:0;}
+.sub-block-label{font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:14px;}
+.sub-block-label::after{content:'';flex-grow:1;height:1px;background:currentColor;opacity:0.3;}
+
+/* Pricing */
+.price-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border-dark);}
+@media(max-width:900px){.price-grid-3{grid-template-columns:1fr;}}
+.price-card{padding:clamp(34px,4vw,54px) clamp(28px,3vw,44px);border-right:1px solid var(--border-dark);position:relative;}
+.price-card:last-child{border-right:none;}
+@media(max-width:900px){
+  .price-card{border-right:none;border-bottom:1px solid var(--border-dark);}
+  .price-card:last-child{border-bottom:none;}
+}
+.price-card.featured{background:rgba(255,45,45,0.08);}
+.price-tag{font-size:clamp(40px,5vw,68px);font-weight:900;letter-spacing:-0.04em;color:var(--accent);line-height:1;margin-bottom:4px;}
+.price-period{font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;opacity:0.5;margin-bottom:24px;}
+.price-title{font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-0.025em;margin-bottom:10px;}
+.price-desc{font-size:14px;line-height:1.55;color:rgba(250,250,250,0.6);margin-bottom:28px;}
+.price-includes{list-style:none;}
+.price-includes li{padding:9px 0;font-size:14px;line-height:1.45;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;gap:10px;color:rgba(250,250,250,0.8);}
+.price-includes li:last-child{border-bottom:none;}
+.price-includes li::before{content:'→';color:var(--accent);font-weight:700;flex-shrink:0;}
+.price-link-note{margin-top:20px;font-size:13px;color:rgba(250,250,250,0.45);line-height:1.5;}
+
+/* Roadmap */
+.roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+@media(max-width:900px){.roadmap-grid{grid-template-columns:1fr;}}
+.roadmap-phase{padding:clamp(30px,3.5vw,50px) clamp(24px,3vw,40px);border-right:1px solid var(--border);}
+.roadmap-phase:last-child{border-right:none;}
+@media(max-width:900px){
+  .roadmap-phase{border-right:none;border-bottom:1px solid var(--border);}
+  .roadmap-phase:last-child{border-bottom:none;}
+}
+.phase-period{font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+.phase-title{font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-0.025em;margin-bottom:18px;line-height:1.1;}
+.phase-list{list-style:none;}
+.phase-list li{padding:8px 0;font-size:14px;line-height:1.5;border-bottom:1px solid var(--border);display:flex;gap:10px;color:var(--fg-muted);}
+.phase-list li:last-child{border-bottom:none;}
+.phase-list li::before{content:'→';color:var(--accent);font-weight:700;flex-shrink:0;}
+
+/* Timeline */
+.timeline{border-top:1px solid var(--border-dark);}
+.timeline-item{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:clamp(28px,3vw,44px) 0;border-bottom:1px solid var(--border-dark);align-items:start;}
+@media(max-width:700px){.timeline-item{grid-template-columns:1fr;gap:12px;}}
+.timeline-period{font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);padding-top:4px;}
+.timeline-body h4{font-size:clamp(18px,1.8vw,24px);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
+.timeline-body p{font-size:15px;line-height:1.6;color:rgba(250,250,250,0.6);}
+
+/* CTA */
+.final-cta{padding-top:clamp(100px,12vw,170px);padding-bottom:clamp(100px,12vw,170px);}
+.final-cta h2{font-size:clamp(44px,7.5vw,110px);font-weight:900;letter-spacing:-0.04em;line-height:0.95;margin-bottom:clamp(30px,4vw,50px);max-width:1300px;}
+.final-cta .tagline{font-size:clamp(20px,2.2vw,30px);line-height:1.4;max-width:920px;font-weight:600;margin-bottom:clamp(40px,5vw,60px);letter-spacing:-0.02em;}
+.cta-points{display:flex;flex-wrap:wrap;gap:30px;margin-bottom:clamp(40px,5vw,60px);}
+.cta-point{display:flex;align-items:center;gap:14px;font-size:clamp(15px,1.4vw,18px);font-weight:600;}
+.cta-point::before{content:'';width:10px;height:10px;background:var(--accent);border-radius:50%;flex-shrink:0;}
+
+.steps{margin-bottom:clamp(40px,5vw,60px);}
+.steps-item{display:flex;gap:24px;padding:18px 0;border-bottom:1px solid var(--border-dark);align-items:flex-start;}
+.steps-item:last-child{border-bottom:none;}
+.step-n{font-size:11px;font-weight:700;letter-spacing:0.2em;color:var(--accent);min-width:32px;padding-top:2px;}
+.step-text{font-size:clamp(15px,1.4vw,18px);font-weight:500;line-height:1.5;}
+
+footer{padding:40px var(--pad-x);background:var(--bg-dark);color:var(--fg-dark);border-top:1px solid var(--border-dark);display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.5;flex-wrap:wrap;gap:20px;}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-1{transition-delay:.08s;}
+.reveal-2{transition-delay:.16s;}
+.reveal-3{transition-delay:.24s;}
+.reveal-4{transition-delay:.32s;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><span class="dot"></span>KARDASH DEVELOPMENT · SEO PROPOSAL</div>
+  <div>FULL PROPOSAL</div>
+</div>
+
+<!-- 01 HERO -->
+<section class="hero">
+  <h1 class="h-display reveal">
+    Local SEO для <span class="accent">custom home building</span> у California
+  </h1>
+  <p class="sub reveal reveal-1">
+    Kardash Development — нова будівельна компанія, яка працює з custom homes та приватними інвестиціями. Один якісний лід у цій ніші може мати дуже високу цінність — SEO тут не потребує великої кількості заявок, щоб бути економічно вигідним.
+  </p>
+  <div class="badges reveal reveal-2">
+    <span>Sacramento Area</span>
+    <span>Custom Homes</span>
+    <span>Truckee / Lake Tahoe</span>
+    <span>Bay Area</span>
+    <span>California</span>
+  </div>
+  <div class="reveal reveal-3">
+    <a href="https://t.me/verdiev" target="_blank" rel="noopener" class="btn">
+      Обговорити проєкт
+      <span class="arrow">→</span>
+    </a>
+  </div>
+  <div class="hero-meta">
+    <span>— прогортайте нижче</span>
+    <span>01 / 08</span>
+  </div>
+</section>
+
+<!-- 02 ЧОМУ SEO ВИГІДНЕ -->
+<section class="dark">
+  <div class="section-head reveal">
+    <div class="section-num">02</div>
+    <div class="section-label">Головна ідея</div>
+  </div>
+  <h2 class="h-section reveal">Чому SEO вигідне для цього бізнесу</h2>
+
+  <div class="prose reveal reveal-1">
+    <p>Custom home building — це high-ticket ніша. Один якісний лід може мати дуже високу цінність, тому SEO тут не потребує великої кількості заявок, щоб бути економічно вигідним.</p>
+    <p>SEO допомагає зробити так, щоб компанію знаходили саме в момент, коли клієнт уже шукає забудовника або партнера для проєкту.</p>
+  </div>
+
+  <div class="grid-2 reveal reveal-2">
+    <div class="cell">
+      <div class="cell-num">ПОШУКОВІ ЗАПИТИ</div>
+      <h3>Що шукають клієнти</h3>
+      <ul>
+        <li>custom home builder Sacramento</li>
+        <li>custom home construction Sacramento</li>
+        <li>luxury home builder California</li>
+        <li>custom homes Lake Tahoe</li>
+        <li>home builder Bay Area</li>
+        <li>residential construction company California</li>
+        <li>investment property development California</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">СТРАТЕГІЯ РОСТУ</div>
+      <h3>Від Sacramento до всієї California</h3>
+      <ul>
+        <li>Старт: Sacramento Area</li>
+        <li>Truckee / Lake Tahoe</li>
+        <li>Bay Area / San Francisco</li>
+        <li>South California</li>
+        <li>Los Angeles</li>
+        <li>San Diego</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout reveal reveal-3">
+    <div class="callout-label">Підхід</div>
+    <div class="callout-text">
+      Для старту найкраще не розпорошувати бюджет на всю California, а <span class="highlight">зібрати сильну SEO-базу навколо Sacramento</span> та кількох найбільш перспективних напрямків.
+    </div>
+  </div>
+</section>
+
+<!-- 03 ЩО ПОТРІБНО САЙТУ -->
+<section>
+  <div class="section-head reveal">
+    <div class="section-num">03</div>
+    <div class="section-label">SEO Foundation</div>
+  </div>
+  <h2 class="h-section reveal">Що зараз потрібно сайту для SEO-старту</h2>
+
+  <div class="grid-2 reveal reveal-1">
+    <div class="cell">
+      <div class="cell-num">01 · ТЕХНІЧНА БАЗА</div>
+      <h3>Зробити сайт зрозумілим для Google</h3>
+      <ul>
+        <li>Правильна структура сторінок</li>
+        <li>Sitemap, robots.txt, canonical</li>
+        <li>Унікальні Title / Description / H1</li>
+        <li>Правильна індексація і зрозумілі URL</li>
+        <li>Підключена аналітика (GSC, GA4)</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">02 · КОМЕРЦІЙНІ СТОРІНКИ</div>
+      <h3>Додати точки входу з пошуку</h3>
+      <ul>
+        <li>Custom home construction</li>
+        <li>Custom home builder Sacramento</li>
+        <li>Home building process</li>
+        <li>Projects / portfolio</li>
+        <li>Private investment projects</li>
+        <li>Service areas</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">03 · ДОВІРА</div>
+      <h3>Підсилити довіру</h3>
+      <ul>
+        <li>Фото робіт та опис процесу</li>
+        <li>Інформація про команду</li>
+        <li>Географія роботи та FAQ</li>
+        <li>Приклади проєктів</li>
+        <li>Контакти та форма заявки</li>
+        <li>Зрозумілий CTA</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">04 · AI-ВИДИМІСТЬ</div>
+      <h3>Підготувати сайт під AI</h3>
+      <ul>
+        <li>Чітка структура та зрозумілі заголовки</li>
+        <li>FAQ, описи послуг, кейси</li>
+        <li>Фото з правильними підписами</li>
+        <li>Структуровані бізнес-дані</li>
+        <li>Сторінки по регіонах і послугах</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 СТРУКТУРА САЙТУ -->
+<section class="dark">
+  <div class="section-head reveal">
+    <div class="section-num">04</div>
+    <div class="section-label">Структура сайту</div>
+  </div>
+  <h2 class="h-section reveal">Рекомендована SEO-структура</h2>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">Сторінки послуг</div>
+    <div class="grid-2 reveal reveal-1">
+      <div class="cell">
+        <div class="cell-num">ПОСЛУГИ</div>
+        <h3>Service Pages</h3>
+        <ul>
+          <li>Custom Home Construction</li>
+          <li>Residential Development Projects</li>
+          <li>Private Investment Construction Projects</li>
+          <li>Design &amp; Build Process</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <div class="cell-num">ДОВІРА</div>
+        <h3>Trust Pages</h3>
+        <ul>
+          <li>About Kardash Development</li>
+          <li>How We Work</li>
+          <li>Projects / Portfolio</li>
+          <li>FAQ</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">Локальні сторінки</div>
+    <div class="grid-3 reveal reveal-1">
+      <div class="cell">
+        <div class="cell-num">РЕГІОН 1</div>
+        <h3>Sacramento</h3>
+        <p>Основний регіон старту.</p>
+        <ul>
+          <li>Custom Home Builder in Sacramento</li>
+          <li>Заголовок, послуги, FAQ, форма</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <div class="cell-num">РЕГІОН 2</div>
+        <h3>Truckee / Lake Tahoe</h3>
+        <p>Перспективний напрямок для custom / vacation / luxury homes.</p>
+        <ul>
+          <li>Custom Home Builder in Truckee</li>
+          <li>Vacation &amp; Luxury Homes</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <div class="cell-num">РЕГІОН 3</div>
+        <h3>Bay Area / SF</h3>
+        <p>Наступна хвиля після Sacramento.</p>
+        <ul>
+          <li>Custom Home Builder in Bay Area</li>
+          <li>Custom Home Builder San Francisco</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-block">
+    <div class="sub-block-label reveal">Кейси та портфоліо</div>
+    <div class="grid-2 reveal reveal-1">
+      <div class="cell">
+        <div class="cell-num">КЕЙСИ</div>
+        <h3>Приклади проєктів</h3>
+        <ul>
+          <li>Modern Custom Home in Sacramento Area</li>
+          <li>Lake Tahoe Vacation Home Concept</li>
+          <li>Investment Residential Project in California</li>
+          <li>Custom Family Home Development</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <div class="cell-num">СТРУКТУРА КЕЙСУ</div>
+        <h3>Що має бути в кейсі</h3>
+        <ul>
+          <li>Назва проєкту та регіон</li>
+          <li>Тип будинку та задача клієнта</li>
+          <li>Що було зроблено та фото</li>
+          <li>Результат та CTA</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout reveal reveal-2" style="margin-top:clamp(24px,3vw,40px);">
+      <div class="callout-label">Примітка</div>
+      <div class="callout-text">
+        Якщо готових кейсів ще мало, можна почати з <span class="highlight">2 реальних кейсів і 2 concept / showcase сторінок</span>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 ПАКЕТИ -->
+<section>
+  <div class="section-head reveal">
+    <div class="section-num">05</div>
+    <div class="section-label">Пакети SEO</div>
+  </div>
+  <h2 class="h-section reveal">Три варіанти співпраці</h2>
+
+  <div class="price-grid-3 reveal reveal-1" style="border:1px solid var(--border-dark);background:var(--bg-dark);">
+    <div class="price-card">
+      <div class="price-tag">$500</div>
+      <div class="price-period">/ місяць</div>
+      <div class="price-title">Start SEO</div>
+      <div class="price-desc">Легкий старт та перевірка перших результатів</div>
+      <ul class="price-includes">
+        <li>SEO Foundation + Rank Math</li>
+        <li>GSC / GA4</li>
+        <li>30–40 ключових запитів</li>
+        <li>6–8 SEO-кластерів</li>
+        <li>Оптимізація 5–7 сторінок</li>
+        <li>4–6 нових сторінок або ТЗ</li>
+        <li>10–15 мета-тегів</li>
+        <li>8–10 FAQ</li>
+        <li>Базова внутрішня перелінковка</li>
+        <li>20–30 alt-текстів</li>
+        <li>Базовий Local SEO</li>
+        <li>Щомісячний звіт</li>
+      </ul>
+      <div class="price-link-note">Link Building: $150–250 / місяць — 3–5 згадок або посилань</div>
+    </div>
+    <div class="price-card featured">
+      <div class="price-tag">$750</div>
+      <div class="price-period">/ місяць</div>
+      <div class="price-title">Local Growth</div>
+      <div class="price-desc">Швидша видимість по Sacramento та першій хвилі регіонів</div>
+      <ul class="price-includes">
+        <li>Все з пакету Start SEO</li>
+        <li>50–70 ключових запитів</li>
+        <li>10–14 SEO-кластерів</li>
+        <li>Оптимізація 8–10 сторінок</li>
+        <li>6–8 нових сторінок або ТЗ</li>
+        <li>20–30 мета-тегів</li>
+        <li>12–15 FAQ</li>
+        <li>30–50 alt-текстів</li>
+        <li>Portfolio / case SEO</li>
+        <li>Google Business Profile</li>
+        <li>Звіт + roadmap</li>
+      </ul>
+      <div class="price-link-note">Link Building: $250–400 / місяць — 5–8 згадок або посилань</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tag">$1K</div>
+      <div class="price-period">/ місяць</div>
+      <div class="price-title">California Expansion</div>
+      <div class="price-desc">Активний ріст та вихід за межі Sacramento</div>
+      <ul class="price-includes">
+        <li>Все з пакету Local Growth</li>
+        <li>80–120 ключових запитів</li>
+        <li>15–20 SEO-кластерів</li>
+        <li>Оптимізація 10–15 сторінок</li>
+        <li>8–12 нових сторінок або ТЗ</li>
+        <li>30–40 мета-тегів</li>
+        <li>Truckee / Bay Area / SoCal</li>
+        <li>ТЗ під Los Angeles та San Diego</li>
+        <li>Глибша аналітика</li>
+        <li>Стратегія на 6 місяців</li>
+      </ul>
+      <div class="price-link-note">Link Building: $400–600 / місяць — 8–12 згадок або посилань</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ПРОГНОЗ -->
+<section class="dark">
+  <div class="section-head reveal">
+    <div class="section-num">06</div>
+    <div class="section-label">Прогноз результату</div>
+  </div>
+  <h2 class="h-section reveal">Що відбудеться і коли</h2>
+
+  <div class="timeline reveal reveal-1">
+    <div class="timeline-item">
+      <div class="timeline-period">Через 2–3 місяці</div>
+      <div class="timeline-body">
+        <h4>Перші сигнали</h4>
+        <p>Сторінки почнуть індексуватися. З'являться перші покази в Google. Частина long-tail запитів почне рухатися. Сайт отримає перші переходи з органіки. Буде зрозуміло, які сторінки мають потенціал.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-period">Через 6 місяців</div>
+      <div class="timeline-body">
+        <h4>Стабільні результати</h4>
+        <p>8–12 комерційних сторінок у індексі. 20–40 запитів у трекінгу з позитивною динамікою. Зростання органічних показів. Перші стабільні переходи з локального пошуку. Перші заявки з SEO. Сильніша довіра до бренду. Готовність до масштабування на Truckee, Bay Area або SoCal.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout reveal reveal-2" style="margin-top:clamp(30px,4vw,50px);">
+    <div class="callout-label">Основні KPI</div>
+    <div class="callout-text">
+      Кількість індексованих сторінок · покази та кліки в Google · позиції по ключових запитах · переходи на local pages · заповнення форм · кліки по телефону / email · <span class="highlight">заявки та їх якість</span>
+    </div>
+  </div>
+</section>
+
+<!-- 07 ЩО ОТРИМАЄ КЛІЄНТ -->
+<section>
+  <div class="section-head reveal">
+    <div class="section-num">07</div>
+    <div class="section-label">Результат за 3 місяці</div>
+  </div>
+  <h2 class="h-section reveal">Що клієнт отримає</h2>
+
+  <div class="grid-2 reveal reveal-1">
+    <div class="cell">
+      <div class="cell-num">ТЕХНІЧНА БАЗА</div>
+      <h3>Foundation</h3>
+      <ul>
+        <li>Базова SEO-структура сайту</li>
+        <li>Налаштований Rank Math</li>
+        <li>Sitemap / robots / canonical</li>
+        <li>Google Search Console + GA4</li>
+        <li>Базова AI-ready структура</li>
+        <li>Щомісячний звіт</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">КОНТЕНТ І СТОРІНКИ</div>
+      <h3>Content</h3>
+      <ul>
+        <li>Карта ключових запитів</li>
+        <li>6–8 SEO-кластерів</li>
+        <li>5–7 оптимізованих існуючих сторінок</li>
+        <li>4–6 нових сторінок або ТЗ</li>
+        <li>10–15 FAQ</li>
+        <li>10–15 комплектів мета-тегів</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">ЛОКАЛЬ ТА МЕДІА</div>
+      <h3>Local & Media</h3>
+      <ul>
+        <li>Перші сторінки під Sacramento</li>
+        <li>20–30 оптимізованих фото</li>
+        <li>3–5 локальних згадок щомісяця</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <div class="cell-num">СТРАТЕГІЯ</div>
+      <h3>Strategy</h3>
+      <ul>
+        <li>Рішення, куди масштабуватися далі</li>
+        <li>Truckee / Lake Tahoe або Bay Area</li>
+        <li>Окремий напрямок під SoCal</li>
+        <li>Стратегія Los Angeles та San Diego</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CTA -->
+<section class="dark final-cta">
+  <div class="section-head reveal">
+    <div class="section-num">08</div>
+    <div class="section-label">Рекомендований старт</div>
+  </div>
+  <h2 class="reveal">
+    Готові зібрати <span class="accent">SEO-фундамент</span> для Kardash Development?
+  </h2>
+  <p class="tagline reveal reveal-1">
+    Пропонується стартувати з <span class="highlight">3-місячного SEO-спринту</span> — не вкладати великий бюджет одразу, але зробити достатній обсяг робіт, який може дати перший SEO-фідбек.
+  </p>
+
+  <div class="cta-points reveal reveal-2">
+    <div class="cta-point">Start SEO Package · $500 / місяць</div>
+    <div class="cta-point">Link Building · $150–250 / місяць</div>
+    <div class="cta-point">Перший тестовий період · 3 місяці</div>
+  </div>
+
+  <div class="steps reveal reveal-2">
+    <div class="steps-item">
+      <div class="step-n">01</div>
+      <div class="step-text">Погодити пакет</div>
+    </div>
+    <div class="steps-item">
+      <div class="step-n">02</div>
+      <div class="step-text">Надати доступи до сайту, GA4, GSC, CMS</div>
+    </div>
+    <div class="steps-item">
+      <div class="step-n">03</div>
+      <div class="step-text">Затвердити список пріоритетних сторінок</div>
+    </div>
+    <div class="steps-item">
+      <div class="step-n">04</div>
+      <div class="step-text">Запустити SEO-структуру</div>
+    </div>
+    <div class="steps-item">
+      <div class="step-n">05</div>
+      <div class="step-text">Через 3 місяці оцінити результат і вирішити, куди масштабуватися далі</div>
+    </div>
+  </div>
+
+  <div class="reveal reveal-3">
+    <a href="https://t.me/verdiev" target="_blank" rel="noopener" class="btn">
+      Написати в Telegram
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>Verdiev SEO · Kardash Development SEO Proposal · 2026</div>
+  <div>t.me/verdiev</div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  });
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

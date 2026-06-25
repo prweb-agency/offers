@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO для Hudson Awning · Комерційні навіси NJ / NYC</title>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111111;
+    --bg3: #161616;
+    --border: #222222;
+    --border2: #2a2a2a;
+    --accent: #e8d5a3;
+    --accent2: #c9a84c;
+    --text: #e8e8e8;
+    --text2: #999999;
+    --text3: #666666;
+    --tag-bg: #1a1a1a;
+    --tag-border: #333333;
+    --green: #4a9e6b;
+    --red: #c0392b;
+    --font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 56px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    color: var(--text3);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 40px 80px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(200,168,76,0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 70%, rgba(200,168,76,0.03) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 5.5vw, 72px);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    max-width: 900px;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 strong {
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--text2);
+    max-width: 560px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 56px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--tag-border);
+    border-radius: 3px;
+    background: var(--tag-bg);
+    color: var(--text2);
+  }
+
+  .tag.accent {
+    border-color: rgba(200,168,76,0.4);
+    color: var(--accent2);
+    background: rgba(200,168,76,0.06);
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--accent2);
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 3px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+
+  .hero-scroll {
+    font-size: 12px;
+    color: var(--text3);
+    letter-spacing: 0.06em;
+  }
+
+  .hero-counter {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── SECTION ── */
+  section {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 48px;
+  }
+
+  h2 strong { font-weight: 700; color: var(--accent); }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    margin-top: 36px;
+  }
+
+  h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 12px;
+    margin-top: 32px;
+  }
+
+  p {
+    color: var(--text2);
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+
+  /* ── PROBLEM CARDS ── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  .problem-card {
+    background: var(--bg);
+    padding: 32px;
+    position: relative;
+  }
+
+  .problem-card:hover { background: var(--bg3); }
+
+  .problem-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .problem-card h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  .problem-card p {
+    font-size: 13px;
+    color: var(--text2);
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+
+  .problem-fix {
+    font-size: 12px;
+    color: var(--green);
+    padding: 10px 14px;
+    background: rgba(74,158,107,0.06);
+    border-left: 2px solid var(--green);
+    margin-top: 12px;
+  }
+
+  /* ── TABLE ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 32px 0;
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead tr {
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border2);
+  }
+
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text3);
+    white-space: nowrap;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--bg3); }
+
+  tbody td {
+    padding: 12px 16px;
+    color: var(--text2);
+    vertical-align: top;
+  }
+
+  tbody td:first-child {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  td strong { color: var(--text); }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  .badge-high { background: rgba(74,158,107,0.15); color: #4a9e6b; }
+  .badge-mid  { background: rgba(200,168,76,0.12); color: var(--accent2); }
+  .badge-local{ background: rgba(100,100,255,0.12); color: #7b7bff; }
+
+  /* ── WORK BLOCKS ── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 32px;
+  }
+
+  .work-card {
+    background: var(--bg);
+    padding: 28px 32px;
+  }
+
+  .work-card h3 {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+
+  .work-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .work-card ul li {
+    font-size: 13px;
+    color: var(--text2);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .work-card ul li::before {
+    content: '—';
+    color: var(--text3);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .work-result {
+    margin-top: 16px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--accent2);
+    background: rgba(200,168,76,0.06);
+    border-left: 2px solid var(--accent2);
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--border2);
+  }
+
+  .tl-item {
+    padding: 0 0 48px 40px;
+    position: relative;
+  }
+
+  .tl-item:last-child { padding-bottom: 0; }
+
+  .tl-dot {
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent2);
+    border: 2px solid var(--bg);
+  }
+
+  .tl-period {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent2);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .tl-item h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .tl-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+  }
+
+  .tl-item ul li {
+    font-size: 13px;
+    color: var(--text2);
+    padding: 3px 0;
+    display: flex;
+    gap: 8px;
+  }
+
+  .tl-item ul li::before {
+    content: '·';
+    color: var(--text3);
+  }
+
+  .tl-result {
+    font-size: 12px;
+    color: var(--green);
+    padding: 8px 14px;
+    background: rgba(74,158,107,0.06);
+    border-left: 2px solid rgba(74,158,107,0.4);
+    display: inline-block;
+  }
+
+  /* ── KPI TABLE ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 32px;
+  }
+
+  .kpi-cell {
+    background: var(--bg);
+    padding: 28px 24px;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .kpi-val {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--mono);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .kpi-desc {
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  /* ── PACKAGES ── */
+  .pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  .pkg-card {
+    background: var(--bg);
+    padding: 36px 32px;
+    position: relative;
+  }
+
+  .pkg-card.featured {
+    background: var(--bg3);
+    border: 1px solid rgba(200,168,76,0.25);
+    margin: -1px;
+    z-index: 1;
+  }
+
+  .pkg-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #000;
+    background: var(--accent2);
+    padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .pkg-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .pkg-price {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--accent);
+    font-family: var(--mono);
+    margin-bottom: 4px;
+  }
+
+  .pkg-period {
+    font-size: 12px;
+    color: var(--text3);
+    margin-bottom: 24px;
+  }
+
+  .pkg-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+  }
+
+  .pkg-features li {
+    font-size: 13px;
+    color: var(--text2);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .pkg-features li:last-child { border-bottom: none; }
+
+  .pkg-features li::before {
+    content: '✓';
+    color: var(--green);
+    flex-shrink: 0;
+    font-size: 12px;
+    margin-top: 1px;
+  }
+
+  .pkg-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent2);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(200,168,76,0.3);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .pkg-link:hover { color: var(--accent); border-color: var(--accent); }
+
+  .pkg-linkbuild {
+    margin-top: 20px;
+    padding: 12px 14px;
+    background: rgba(200,168,76,0.05);
+    border: 1px solid var(--border2);
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  .pkg-linkbuild strong { color: var(--text2); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* ── DELIVERABLES LIST ── */
+  .deliverables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0;
+    border: 1px solid var(--border);
+    margin-top: 32px;
+  }
+
+  .deliv-item {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text2);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .deliv-item:nth-child(even) { border-right: none; }
+
+  .deliv-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text3);
+    flex-shrink: 0;
+    min-width: 28px;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: var(--bg2);
+    border-bottom: none;
+  }
+
+  .cta-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .cta-inner h2 {
+    margin-bottom: 0;
+    max-width: 700px;
+  }
+
+  .cta-inner p {
+    font-size: 16px;
+    max-width: 560px;
+    margin-bottom: 0;
+  }
+
+  .cta-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .cta-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-left {
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  .footer-right a {
+    font-size: 12px;
+    color: var(--text3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-right a:hover { color: var(--accent2); }
+
+  /* ── INLINE TAGS ROW ── */
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+  }
+
+  /* ── CODE-STYLE LIST ── */
+  .code-list {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text2);
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin: 16px 0;
+    line-height: 2;
+  }
+
+  .code-list span {
+    color: var(--accent2);
+    margin-right: 8px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 20px 60px; }
+    .hero-counter { right: 20px; }
+    .section-inner { padding: 60px 20px; }
+    .cta-inner { padding: 72px 20px; }
+    footer { padding: 20px; }
+    .deliv-item { border-right: none; }
+    .deliv-item:nth-child(even) { border-right: none; }
+    .pkg-card.featured { margin: 0; }
+  }
+
+  /* ── SCROLL-REVEAL ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal { animation: fadeUp 0.55s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Hudson Awning · SEO</div>
+  <ul class="nav-links">
+    <li><a href="#problems">Проблеми</a></li>
+    <li><a href="#demand">Попит</a></li>
+    <li><a href="#works">Роботи</a></li>
+    <li><a href="#timeline">Строки</a></li>
+    <li><a href="#packages">Пакети</a></li>
+    <li><a href="#cta">Контакт</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">FULL PROPOSAL</div>
+  <h1><strong>SEO для збільшення заявок</strong><br>по основних послугах</h1>
+  <p class="hero-sub">Hudson Awning має сильну базу: компанія давно працює на ринку, має комерційні послуги, продукти, сервісне обслуговування, форму для архітекторів і підрядників, адресу в Linden, NJ та контактний телефон.</p>
+  <div class="hero-tags">
+    <span class="tag accent">Commercial Awnings NJ / NYC</span>
+    <span class="tag">Metal Canopies</span>
+    <span class="tag">Fabric Awnings</span>
+    <span class="tag">Retractable</span>
+    <span class="tag">Awning Repair</span>
+    <span class="tag">Awning Cleaning</span>
+    <span class="tag">Storefront Awnings</span>
+    <span class="tag">Restaurant Awnings</span>
+    <span class="tag">Architectural Canopies</span>
+    <span class="tag">Awning Company Near Me</span>
+  </div>
+  <div class="hero-cta">
+    <a class="btn-primary" href="https://t.me/verdiev" target="_blank">Обговорити проєкт →</a>
+    <span class="hero-scroll">— прогортайте нижче</span>
+  </div>
+  <div class="hero-counter">01 / 09</div>
+</section>
+
+<!-- 01 ГОЛОВНА ІДЕЯ -->
+<section>
+  <div class="section-inner">
+    <span class="section-num">02</span>
+    <span class="section-label">Головна ідея</span>
+    <h2>Що зараз заважає отримувати<br><strong>більше заявок</strong></h2>
+    <p>На сайті вже представлені ключові напрямки: Metal Canopies, Standing Seam, Fabric, Retractable, Services, Architects &amp; Contractors. Основна задача SEO — зробити так, щоб сайт частіше з'являвся в Google по запитах, які вже шукають потенційні клієнти.</p>
+
+    <div id="problems" class="problem-grid">
+
+      <div class="problem-card">
+        <span class="problem-num">ПРОБЛЕМА 01</span>
+        <h3>Головна сторінка недостатньо сильна під пошук</h3>
+        <p>На головній є повторення однакового заголовку "Providing exceptional products and service since 1881!" кілька разів, а основний заголовок "Quality Awnings and Signs" занадто загальний для SEO.</p>
+        <p>Google бачить сторінку як загальну презентацію компанії, але не як сильну сторінку під конкретні комерційні запити: "commercial awning company", "awning installation", "metal canopy contractor".</p>
+        <div class="problem-fix">Переписуємо H1, прибираємо повтори, додаємо блоки під послуги, локальні акценти NJ / NYC та посилюємо CTA на заявку.</div>
+      </div>
+
+      <div class="problem-card">
+        <span class="problem-num">ПРОБЛЕМА 02</span>
+        <h3>Послуги не розкладені на окремі посадкові сторінки</h3>
+        <p>На сайті є розділ Services, де описані take-downs, rehanging, cleaning, sealant, repair та emergency repairs. Але ці послуги зібрані на одній сторінці.</p>
+        <p>Сайт втрачає можливість ранжуватись по: awning repair NJ; awning cleaning NJ; seasonal awning removal; commercial awning maintenance; emergency awning repair.</p>
+        <div class="problem-fix">Створюємо окремі сторінки під послуги, оптимізуємо кожну під свій запит, додаємо FAQ, фото робіт та форму заявки.</div>
+      </div>
+
+      <div class="problem-card">
+        <span class="problem-num">ПРОБЛЕМА 03</span>
+        <h3>Продукти є в меню, але потрібна сильніша SEO-структура</h3>
+        <p>У меню вже є ключові продуктові напрямки: Metal Canopies, Standing Seam, Fabric, Retractable. Це хороша основа, але кожен напрямок потрібно підсилити як окрему комерційну сторінку.</p>
+        <div class="problem-fix">Оптимізуємо сторінки продуктів, додаємо блоки "для кого підходить", запити по бізнес-сегментах і внутрішні посилання між продуктами та послугами.</div>
+      </div>
+
+      <div class="problem-card">
+        <span class="problem-num">ПРОБЛЕМА 04</span>
+        <h3>Слабке локальне SEO</h3>
+        <p>На сайті є адреса 641 E Elizabeth Ave, Linden, NJ, телефон і email. Але для SEO цього недостатньо. Сайт може слабше показуватись у локальному пошуку по NJ / NYC / nearby areas.</p>
+        <div class="problem-fix">Створюємо сторінки під основні міста / зони, оптимізуємо Google Business Profile, уніфікуємо контактні дані, додаємо локальні блоки та згадки в каталогах.</div>
+      </div>
+
+      <div class="problem-card">
+        <span class="problem-num">ПРОБЛЕМА 05</span>
+        <h3>Сторінка для архітекторів і підрядників недовикористана</h3>
+        <p>На сайті є окрема сторінка для Architects &amp; Contractors із формою запиту на drawings, fastening details, bids та project details. Це сильний B2B-напрям, який можна краще просувати через SEO.</p>
+        <div class="problem-fix">Підсилюємо сторінку під запити "awning contractor", "architectural canopies", "awning bids", додаємо блоки для architects / contractors / property managers та приклади проєктів.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 02 ПОПИТ -->
+<section id="demand">
+  <div class="section-inner">
+    <span class="section-num">03</span>
+    <span class="section-label">Орієнтовний попит у пошуку</span>
+    <h2>Оцінка ринкового попиту<br><strong>по кластерах запитів</strong></h2>
+    <p>Оцінка для презентації, точні цифри потрібно підтвердити через Google Keyword Planner / Ahrefs / Semrush.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Кластер запитів</th>
+            <th>Орієнтовний попит</th>
+            <th>Коментар</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Awnings / awning company</td><td><span class="badge badge-high">Високий</span></td><td>Базовий попит по ринку</td></tr>
+          <tr><td>Commercial awnings</td><td><span class="badge badge-high">Середній / Високий</span></td><td>Найцінніший B2B-напрям</td></tr>
+          <tr><td>Retractable awnings</td><td><span class="badge badge-high">Високий</span></td><td>Частина попиту B2C + B2B</td></tr>
+          <tr><td>Metal canopies</td><td><span class="badge badge-mid">Середній</span></td><td>Хороший комерційний intent</td></tr>
+          <tr><td>Awning repair / cleaning</td><td><span class="badge badge-mid">Середній</span></td><td>Швидші заявки на сервіс</td></tr>
+          <tr><td>Storefront / restaurant awnings</td><td><span class="badge badge-mid">Середній</span></td><td>Локальний бізнес-попит</td></tr>
+          <tr><td>Awning company NJ / NYC</td><td><span class="badge badge-local">Локальний</span></td><td>Важливо для карт і локальної видачі</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Конкурентна логіка</h3>
+    <p>У цій ніші конкуренти зазвичай ростуть за рахунок:</p>
+    <div class="tags-row">
+      <span class="tag">Окремі сторінки під кожну послугу</span>
+      <span class="tag">Локальні сторінки під міста</span>
+      <span class="tag">Commercial awnings</span>
+      <span class="tag">Restaurant awnings</span>
+      <span class="tag">Storefront awnings</span>
+      <span class="tag">Портфоліо робіт</span>
+      <span class="tag">Google Business Profile</span>
+      <span class="tag">Відгуки</span>
+      <span class="tag">Локальні посилання</span>
+      <span class="tag">Architects & Contractors</span>
+      <span class="tag">Property Managers</span>
+    </div>
+    <p>Hudson Awning має сильну історію та портфоліо брендів, але сайту потрібно краще розкласти ці переваги для Google.</p>
+  </div>
+</section>
+
+<!-- 03 РОБОТИ -->
+<section id="works">
+  <div class="section-inner">
+    <span class="section-num">04</span>
+    <span class="section-label">Повний список робіт</span>
+    <h2>Що входить<br><strong>у роботу</strong></h2>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <h3>SEO Foundation</h3>
+        <ul>
+          <li>перевірка індексації</li>
+          <li>налаштування Google Search Console</li>
+          <li>налаштування GA4</li>
+          <li>перевірка sitemap</li>
+          <li>перевірка robots.txt</li>
+          <li>перевірка canonical</li>
+          <li>базова перевірка швидкості</li>
+          <li>перевірка мобільної версії</li>
+          <li>перевірка форм заявки</li>
+          <li>контроль помилок 404</li>
+        </ul>
+        <div class="work-result">Сайт стає готовим до нормальної індексації та вимірювання заявок.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Оптимізація головної сторінки</h3>
+        <ul>
+          <li>новий H1</li>
+          <li>нові Title / Description</li>
+          <li>переробка структури H2</li>
+          <li>додавання блоків послуг</li>
+          <li>додавання локального блоку NJ / NYC</li>
+          <li>посилення CTA</li>
+          <li>внутрішні посилання на основні сторінки</li>
+        </ul>
+        <div class="work-result">Головна сторінка краще відповідає запитам по основній послузі та бренду.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Оптимізація продуктових сторінок</h3>
+        <ul>
+          <li>Metal Canopies</li>
+          <li>Standing Seam</li>
+          <li>Fabric Awnings</li>
+          <li>Retractable Awnings</li>
+          <li>Title / Description / H1 для кожної</li>
+          <li>SEO-текст та FAQ</li>
+          <li>блок "для кого підходить"</li>
+          <li>CTA та внутрішні посилання</li>
+        </ul>
+        <div class="work-result">Кожен продуктовий напрям отримує свою точку входу з Google.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Створення сторінок послуг</h3>
+        <ul>
+          <li>Awning Repair</li>
+          <li>Awning Cleaning</li>
+          <li>Awning Maintenance</li>
+          <li>Seasonal Awning Take-Down & Rehang</li>
+          <li>Emergency Awning Repair</li>
+          <li>Commercial Awning Service</li>
+          <li>Protective Sealant Service</li>
+        </ul>
+        <div class="work-result">Сайт починає закривати сервісні запити, які можуть давати швидші заявки.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Створення B2B-сторінок</h3>
+        <ul>
+          <li>Awnings for Restaurants</li>
+          <li>Storefront Awnings</li>
+          <li>Awnings for Schools</li>
+          <li>Awnings for Offices</li>
+          <li>Architects & Contractors</li>
+        </ul>
+        <div class="work-result">Сайт краще працює з комерційними клієнтами, підрядниками та архітекторами.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Локальні сторінки</h3>
+        <ul>
+          <li>Awning Company in Linden, NJ</li>
+          <li>Commercial Awnings in New Jersey</li>
+          <li>Awning Company in NYC</li>
+          <li>Awnings in Newark, NJ</li>
+          <li>Awnings in Jersey City</li>
+          <li>Awnings in Hoboken</li>
+        </ul>
+        <div class="work-result">Більше шансів потрапити в локальний пошук і Google Maps.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Портфоліо / кейси</h3>
+        <ul>
+          <li>1 сторінка портфоліо</li>
+          <li>6–10 прикладів робіт з фото</li>
+          <li>тип об'єкта та місто / район</li>
+          <li>тип виробу та короткий опис задачі</li>
+          <li>CTA</li>
+        </ul>
+        <div class="work-result">Кейси підсилюють довіру та допомагають конвертувати SEO-трафік у заявки.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Внутрішня перелінковка</h3>
+        <ul>
+          <li>40–70 внутрішніх посилань</li>
+          <li>зв'язка головної з продуктами</li>
+          <li>зв'язка продуктів із послугами</li>
+          <li>зв'язка локальних сторінок із портфоліо</li>
+          <li>зв'язка B2B-сторінок із формою заявки</li>
+        </ul>
+        <div class="work-result">Google краще розуміє структуру сайту, а користувач швидше доходить до заявки.</div>
+      </div>
+
+      <div class="work-card">
+        <h3>Мінімальний лінкбілдинг</h3>
+        <ul>
+          <li>3–5 зовнішніх згадок або посилань на місяць</li>
+          <li>локальні бізнес-каталоги</li>
+          <li>будівельні та архітектурні каталоги</li>
+          <li>local citations</li>
+          <li>партнерські згадки</li>
+          <li>профільні майданчики</li>
+        </ul>
+        <div class="work-result">Поступово росте довіра домену та локальна видимість.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 04 TIMELINE -->
+<section id="timeline">
+  <div class="section-inner">
+    <span class="section-num">05</span>
+    <span class="section-label">План робіт і строки</span>
+    <h2>Що і коли<br><strong>впроваджуємо</strong></h2>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">ПЕРШІ 30 ДНІВ</span>
+        <h3>Foundation</h3>
+        <ul>
+          <li>SEO Foundation</li>
+          <li>оптимізація головної</li>
+          <li>оптимізація 4 продуктових сторінок</li>
+          <li>налаштування аналітики</li>
+          <li>підготовка структури нових сторінок</li>
+          <li>старт мета-тегів</li>
+          <li>перевірка форм заявки</li>
+        </ul>
+        <div class="tl-result">Сайт готовий до нормальної індексації та отримує перші покращення по базових сторінках.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">30–60 ДНІВ</span>
+        <h3>Landing Pages</h3>
+        <ul>
+          <li>створення сторінок послуг</li>
+          <li>створення перших локальних сторінок</li>
+          <li>оптимізація сторінки Architects & Contractors</li>
+          <li>внутрішня перелінковка</li>
+          <li>FAQ</li>
+          <li>перші локальні згадки</li>
+        </ul>
+        <div class="tl-result">Сайт отримує більше посадкових сторінок під конкретні запити.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">60–90 ДНІВ</span>
+        <h3>B2B + Portfolio</h3>
+        <ul>
+          <li>запуск B2B-сторінок</li>
+          <li>оформлення портфоліо</li>
+          <li>додаткові локальні сторінки</li>
+          <li>оптимізація сторінок, які вже почали давати покази</li>
+          <li>посилення CTA</li>
+          <li>аналіз результатів у GSC / GA4</li>
+        </ul>
+        <div class="tl-result">Починаємо бачити, які напрямки дають перші покази, кліки й заявки.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">3–6 МІСЯЦІВ</span>
+        <h3>Scale</h3>
+        <ul>
+          <li>розширення локальних сторінок</li>
+          <li>додавання нових кейсів</li>
+          <li>оновлення слабких сторінок</li>
+          <li>посилення лінкбілдингу</li>
+          <li>робота з Google Business Profile</li>
+          <li>оптимізація під запити, які вже ростуть</li>
+        </ul>
+        <div class="tl-result">Формується стабільна SEO-база для локальних заявок.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 05 KPI -->
+<section>
+  <div class="section-inner">
+    <span class="section-num">06</span>
+    <span class="section-label">Прогноз результатів</span>
+    <h2>Орієнтовний прогноз<br><strong>за умови регулярного впровадження</strong></h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Período</th>
+            <th>Що очікуємо</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1 місяць</td><td>індексація, базове покращення сторінок, перші нові покази</td></tr>
+          <tr><td>2–3 місяці</td><td>ріст показів по послугах і локальних запитах</td></tr>
+          <tr><td>3–6 місяців</td><td>перші стабільні переходи та заявки з органіки</td></tr>
+          <tr><td>6+ місяців</td><td>масштабування по містах, послугах і B2B-напрямах</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Орієнтовний KPI</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>KPI</th>
+            <th>3 місяці</th>
+            <th>6 місяців</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Оптимізовані сторінки</td><td>10–15</td><td>20–30</td></tr>
+          <tr><td>Нові посадкові сторінки</td><td>8–12</td><td>15–25</td></tr>
+          <tr><td>Кластери запитів</td><td>20–35</td><td>40–70</td></tr>
+          <tr><td>Покази в Google</td><td>+20–50%</td><td>+50–120%</td></tr>
+          <tr><td>Органічні переходи</td><td>+10–30%</td><td>+30–80%</td></tr>
+          <tr><td>SEO-заявки</td><td>перші заявки</td><td>стабільніші заявки</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Прогноз залежить від швидкості впровадження, конкуренції, бюджету на посилання та доступів до аналітики.</p>
+
+    <div class="kpi-grid" style="margin-top:40px;">
+      <div class="kpi-cell">
+        <div class="kpi-label">Оптимізованих сторінок за 6 міс</div>
+        <div class="kpi-val">30</div>
+        <div class="kpi-desc">продукти + послуги + локальні + B2B</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-label">Кластерів запитів</div>
+        <div class="kpi-val">70</div>
+        <div class="kpi-desc">за 6 місяців роботи</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-label">Зростання показів</div>
+        <div class="kpi-val">+120%</div>
+        <div class="kpi-desc">орієнтир за 6 місяців</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="kpi-label">Зростання трафіку</div>
+        <div class="kpi-val">+80%</div>
+        <div class="kpi-desc">органічні переходи за 6 міс</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PACKAGES -->
+<section id="packages">
+  <div class="section-inner">
+    <span class="section-num">07</span>
+    <span class="section-label">Пакети SEO</span>
+    <h2>Виберіть<br><strong>оптимальний пакет</strong></h2>
+
+    <div class="pkg-grid">
+
+      <div class="pkg-card">
+        <div class="pkg-name">Start SEO</div>
+        <div class="pkg-price">$500</div>
+        <div class="pkg-period">/ місяць · підходить для старту та перевірки перших результатів</div>
+        <ul class="pkg-features">
+          <li>SEO Foundation</li>
+          <li>Оптимізація головної сторінки</li>
+          <li>4–6 сторінок у роботі щомісяця</li>
+          <li>10–15 мета-тегів</li>
+          <li>4–6 FAQ-блоків</li>
+          <li>Внутрішня перелінковка</li>
+          <li>GSC / GA4</li>
+          <li>Базове локальне SEO</li>
+          <li>Щомісячний звіт</li>
+        </ul>
+        <div class="pkg-linkbuild">
+          <strong>Лінкбілдинг окремо:</strong> $150–250 / місяць<br>
+          Орієнтовно: 3–5 згадок або посилань
+        </div>
+        <br>
+        <a class="pkg-link" href="https://t.me/verdiev" target="_blank">Обрати Start →</a>
+      </div>
+
+      <div class="pkg-card featured">
+        <div class="pkg-badge">Рекомендовано</div>
+        <div class="pkg-name">Growth SEO</div>
+        <div class="pkg-price">$800</div>
+        <div class="pkg-period">/ місяць · оптимальний пакет для швидшого росту</div>
+        <ul class="pkg-features">
+          <li>Усе з Start SEO</li>
+          <li>8–12 сторінок у роботі щомісяця</li>
+          <li>20–30 мета-тегів</li>
+          <li>6–10 FAQ-блоків</li>
+          <li>Створення сторінок послуг</li>
+          <li>Локальні сторінки</li>
+          <li>Портфоліо / кейси</li>
+          <li>Оптимізація Google Business Profile</li>
+          <li>Щомісячний звіт + план росту</li>
+        </ul>
+        <div class="pkg-linkbuild">
+          <strong>Лінкбілдинг окремо:</strong> $300–500 / місяць<br>
+          Орієнтовно: 6–10 згадок або посилань
+        </div>
+        <br>
+        <a class="pkg-link" href="https://t.me/verdiev" target="_blank">Обрати Growth →</a>
+      </div>
+
+      <div class="pkg-card">
+        <div class="pkg-name">Scale SEO</div>
+        <div class="pkg-price">$1,200</div>
+        <div class="pkg-period">/ місяць · для активного росту та конкуренції по NJ / NYC</div>
+        <ul class="pkg-features">
+          <li>Усе з Growth SEO</li>
+          <li>12–18 сторінок у роботі щомісяця</li>
+          <li>Масштабування локальних сторінок</li>
+          <li>B2B-сторінки</li>
+          <li>Розширення портфоліо</li>
+          <li>Контентні матеріали</li>
+          <li>Активніша робота з конверсією</li>
+          <li>Глибша аналітика</li>
+        </ul>
+        <div class="pkg-linkbuild">
+          <strong>Лінкбілдинг окремо:</strong> $500–800 / місяць<br>
+          Орієнтовно: 10–15 згадок або посилань
+        </div>
+        <br>
+        <a class="pkg-link" href="https://t.me/verdiev" target="_blank">Обрати Scale →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 07 РЕКОМЕНДОВАНИЙ СТАРТ -->
+<section>
+  <div class="section-inner">
+    <span class="section-num">08</span>
+    <span class="section-label">Рекомендований старт</span>
+    <h2>Оптимальний варіант<br><strong>для першого спринту</strong></h2>
+
+    <div style="display:flex;gap:40px;flex-wrap:wrap;margin-top:8px;">
+      <div>
+        <div class="kpi-label" style="margin-bottom:8px;">Growth SEO</div>
+        <div class="kpi-val" style="font-size:40px;">$800</div>
+        <div class="kpi-desc">/ місяць</div>
+      </div>
+      <div>
+        <div class="kpi-label" style="margin-bottom:8px;">Link Building</div>
+        <div class="kpi-val" style="font-size:40px;">$300–500</div>
+        <div class="kpi-desc">/ місяць</div>
+      </div>
+      <div>
+        <div class="kpi-label" style="margin-bottom:8px;">Тестовий період</div>
+        <div class="kpi-val" style="font-size:40px;">3</div>
+        <div class="kpi-desc">місяці</div>
+      </div>
+    </div>
+
+    <p style="margin-top:32px;">Цей варіант дозволяє не просто "підкрутити сайт", а створити достатню кількість сторінок під послуги, міста й B2B-напрями.</p>
+
+    <h3 style="margin-top:48px;">Що клієнт отримає за перші 3 місяці</h3>
+
+    <div class="deliverables" style="margin-top:24px;">
+      <div class="deliv-item"><span class="deliv-num">01</span>SEO Foundation</div>
+      <div class="deliv-item"><span class="deliv-num">02</span>Оновлена головна сторінка</div>
+      <div class="deliv-item"><span class="deliv-num">03</span>4 оптимізовані продуктові сторінки</div>
+      <div class="deliv-item"><span class="deliv-num">04</span>5–7 сторінок послуг</div>
+      <div class="deliv-item"><span class="deliv-num">05</span>4–6 локальних сторінок</div>
+      <div class="deliv-item"><span class="deliv-num">06</span>3–5 B2B-сторінок</div>
+      <div class="deliv-item"><span class="deliv-num">07</span>1 сторінка портфоліо</div>
+      <div class="deliv-item"><span class="deliv-num">08</span>6–10 кейсів або прикладів робіт</div>
+      <div class="deliv-item"><span class="deliv-num">09</span>40–70 внутрішніх посилань</div>
+      <div class="deliv-item"><span class="deliv-num">10</span>30–60 мета-тегів</div>
+      <div class="deliv-item"><span class="deliv-num">11</span>10–20 FAQ-блоків</div>
+      <div class="deliv-item"><span class="deliv-num">12</span>9–20 зовнішніх згадок або посилань</div>
+      <div class="deliv-item"><span class="deliv-num">13</span>Щомісячна звітність</div>
+      <div class="deliv-item"><span class="deliv-num">14</span>Розуміння, які послуги та міста дають найкращий результат</div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 SUMMARY -->
+<section>
+  <div class="section-inner">
+    <span class="section-num">09</span>
+    <span class="section-label">Короткий висновок</span>
+    <h2>Hudson Awning має сильну<br><strong>основу для росту</strong></h2>
+    <p>Hudson Awning має сильну історію, комерційний продукт і хорошу базу довіри. Основне завдання SEO — краще розкласти послуги, продукти та географію для Google.</p>
+
+    <h3>Перший фокус</h3>
+    <div class="tags-row">
+      <span class="tag accent">Commercial awnings</span>
+      <span class="tag accent">Metal canopies</span>
+      <span class="tag accent">Fabric awnings</span>
+      <span class="tag accent">Retractable awnings</span>
+      <span class="tag accent">Repair / Maintenance</span>
+      <span class="tag accent">Architects & Contractors</span>
+      <span class="tag accent">NJ / NYC локальні сторінки</span>
+    </div>
+
+    <p style="margin-top:24px;">Найшвидший ефект варто шукати не в блозі, а в комерційних сторінках: продукти, послуги, локальні сторінки, сторінки для B2B-клієнтів, кейси / приклади робіт.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-inner">
+    <span class="section-label">Стартуємо</span>
+    <h2>Готові запустити<br><strong>SEO-спринт для Hudson Awning?</strong></h2>
+    <p>🔥 Стартуємо з 3-місячного SEO-спринту. Після 3 місяців дивимося, які сторінки дали покази, кліки та заявки, і масштабуємо найсильніші напрямки.</p>
+    <div class="cta-tags">
+      <span class="tag">Growth SEO — $800 / міс</span>
+      <span class="tag">Link Building — $300–500 / міс</span>
+      <span class="tag">3 місяці тестовий період</span>
+    </div>
+    <div class="cta-btns">
+      <a class="btn-primary" href="https://t.me/verdiev" target="_blank">Зв'язатися з нами →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Verdiev SEO · Hudson Awning SEO Proposal · 2026</div>
+  <div class="footer-right"><a href="https://t.me/verdiev" target="_blank">t.me/verdiev</a></div>
+</footer>
+
+</body>
+</html>

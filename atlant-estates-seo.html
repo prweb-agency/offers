@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO-продвижение Atlant Estates — Вроцлав</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0B0E14;
+    --bg2: #111520;
+    --bg3: #171C2C;
+    --accent: #4F7CFF;
+    --accent2: #7B5FFF;
+    --gold: #F5A623;
+    --text: #E8EAF0;
+    --text2: #8C93A8;
+    --border: rgba(255,255,255,0.08);
+    --card: rgba(255,255,255,0.04);
+    --green: #22D97B;
+    --red: #FF5A5A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(11,14,20,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800; font-size: 1.1rem;
+    color: var(--text);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { color: var(--text2); font-size: 0.875rem; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+  .nav-cta {
+    background: var(--accent);
+    color: #fff; font-size: 0.875rem; font-weight: 600;
+    padding: 8px 20px; border-radius: 8px;
+    transition: opacity .2s;
+  }
+  .nav-cta:hover { opacity: 0.85; text-decoration: none; }
+
+  /* SECTIONS */
+  section { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800; line-height: 1.15;
+    color: #fff; margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700; color: #fff; margin-bottom: 1rem;
+  }
+  h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;
+  }
+  p { color: var(--text2); line-height: 1.75; }
+
+  /* HERO */
+  .hero-section {
+    max-width: 100%;
+    padding: 0;
+    background: linear-gradient(135deg, #0B0E14 0%, #0f1528 50%, #0B0E14 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(79,124,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 100px 2rem 80px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(79,124,255,0.12);
+    border: 1px solid rgba(79,124,255,0.3);
+    border-radius: 100px;
+    padding: 6px 16px; font-size: 0.8rem; font-weight: 500;
+    color: #a0b4ff; margin-bottom: 2rem;
+  }
+  .hero-badge::before { content: '●'; color: var(--green); font-size: 10px; }
+  .hero-subtitle { font-size: 1.125rem; color: var(--text2); max-width: 600px; margin-bottom: 2.5rem; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff; font-weight: 600; font-size: 1rem;
+    padding: 14px 32px; border-radius: 10px;
+    transition: transform .2s, opacity .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
+  .btn-secondary {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border); font-weight: 500;
+    font-size: 1rem; padding: 14px 32px; border-radius: 10px;
+    transition: border-color .2s, background .2s;
+  }
+  .btn-secondary:hover { border-color: var(--accent); background: rgba(79,124,255,0.06); text-decoration: none; }
+
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 4rem;
+    padding-top: 3rem; border-top: 1px solid var(--border);
+  }
+  .stat-item { }
+  .stat-num {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2rem; font-weight: 800; color: #fff;
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-desc { font-size: 0.875rem; color: var(--text2); margin-top: 4px; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px; background: var(--border);
+    max-width: 1100px; margin: 0 auto;
+  }
+
+  /* CARDS GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.75rem;
+    transition: border-color .2s, transform .2s;
+  }
+  .card:hover { border-color: rgba(79,124,255,0.3); transform: translateY(-2px); }
+  .card-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(79,124,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem; margin-bottom: 1.25rem;
+  }
+  .card-icon.gold { background: rgba(245,166,35,0.12); }
+  .card-icon.green { background: rgba(34,217,123,0.12); }
+  .card-icon.purple { background: rgba(123,95,255,0.12); }
+  .tag {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    background: rgba(79,124,255,0.15); color: #7ba0ff;
+    border-radius: 6px; padding: 3px 10px; margin-bottom: 1rem;
+  }
+  .tag.gold { background: rgba(245,166,35,0.15); color: #f5c35a; }
+  .tag.green { background: rgba(34,217,123,0.15); color: #22d97b; }
+
+  /* AUDIT SECTION */
+  .audit-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem; margin-top: 2.5rem;
+  }
+  @media (max-width: 700px) { .audit-grid { grid-template-columns: 1fr; } }
+  .audit-card {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.75rem;
+  }
+  .audit-card h3 { margin-bottom: 1rem; }
+  .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .check-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.9rem; color: var(--text2);
+  }
+  .check-list li::before {
+    content: '✓'; color: var(--green);
+    font-weight: 700; font-size: 0.85rem;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .check-list li.warn::before { content: '⚠'; color: var(--gold); }
+  .audit-cta-box {
+    margin-top: 2.5rem;
+    background: linear-gradient(135deg, rgba(79,124,255,0.1), rgba(123,95,255,0.1));
+    border: 1px solid rgba(79,124,255,0.25);
+    border-radius: 14px; padding: 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .audit-cta-text h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .audit-price {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.5rem; font-weight: 800; color: var(--accent);
+  }
+  .audit-price-note { font-size: 0.8rem; color: var(--text2); }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .pricing-card {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem;
+    display: flex; flex-direction: column;
+    transition: border-color .2s;
+  }
+  .pricing-card.featured {
+    border: 1.5px solid var(--accent);
+    background: linear-gradient(160deg, rgba(79,124,255,0.08), var(--bg3));
+    position: relative;
+  }
+  .featured-badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--accent); color: #fff;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em;
+    padding: 4px 16px; border-radius: 100px;
+    text-transform: uppercase;
+  }
+  .pricing-name { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text2); margin-bottom: 0.75rem; }
+  .pricing-price {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.25rem; font-weight: 800; color: #fff;
+    margin-bottom: 0.25rem;
+  }
+  .pricing-price sup { font-size: 1rem; vertical-align: top; margin-top: 0.5rem; }
+  .pricing-price sub { font-size: 0.9rem; font-weight: 400; color: var(--text2); }
+  .pricing-desc { font-size: 0.875rem; color: var(--text2); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .pricing-features { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+  .pricing-features li { font-size: 0.875rem; color: var(--text2); display: flex; align-items: flex-start; gap: 10px; }
+  .pricing-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .pricing-features li.gray::before { content: '—'; color: var(--text2); }
+  .btn-plan {
+    display: block; text-align: center;
+    background: var(--card); border: 1px solid var(--border);
+    color: var(--text); font-weight: 600; font-size: 0.9rem;
+    padding: 12px; border-radius: 10px;
+    transition: all .2s;
+  }
+  .btn-plan:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+  .pricing-card.featured .btn-plan {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .pricing-card.featured .btn-plan:hover { opacity: 0.88; }
+
+  /* LINKBUILDING */
+  .lb-intro { max-width: 700px; margin-bottom: 2.5rem; }
+  .lb-table-wrap {
+    overflow-x: auto; border-radius: 14px;
+    border: 1px solid var(--border);
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: rgba(79,124,255,0.08); }
+  th { padding: 1rem 1.25rem; text-align: left; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text2); }
+  td { padding: 1rem 1.25rem; font-size: 0.9rem; color: var(--text2); border-top: 1px solid var(--border); }
+  td:first-child { color: var(--text); font-weight: 500; }
+  td .badge {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 10px; border-radius: 100px;
+  }
+  .badge-low { background: rgba(34,217,123,0.15); color: #22d97b; }
+  .badge-mid { background: rgba(245,166,35,0.15); color: #f5c35a; }
+  .badge-high { background: rgba(255,90,90,0.15); color: #ff7a7a; }
+  .total-row { background: rgba(79,124,255,0.06); }
+  .total-row td { font-weight: 700; color: var(--text); border-top: 1px solid rgba(79,124,255,0.3); }
+
+  .lb-budget-summary {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; margin-top: 2rem;
+  }
+  .budget-card {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem 1.5rem;
+  }
+  .budget-card .label { font-size: 0.8rem; color: var(--text2); margin-bottom: 0.5rem; }
+  .budget-card .value {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem; font-weight: 800; color: #fff;
+  }
+  .budget-card .value.accent { color: var(--accent); }
+  .budget-card .value.gold { color: var(--gold); }
+
+  /* CONTENT STRATEGY */
+  .strategy-list { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+  .strategy-item {
+    display: flex; gap: 1.25rem;
+    padding: 1.5rem; background: var(--card);
+    border: 1px solid var(--border); border-radius: 12px;
+  }
+  .strategy-num {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem; font-weight: 800; color: var(--accent);
+    flex-shrink: 0; min-width: 36px;
+  }
+  .strategy-body h3 { margin-bottom: 0.4rem; font-size: 1rem; }
+  .strategy-body p { font-size: 0.875rem; }
+
+  /* CTA BANNER */
+  .cta-banner {
+    max-width: 100%; padding: 80px 2rem;
+    background: linear-gradient(135deg, #0D1432 0%, #0B0E14 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .cta-banner-inner { max-width: 700px; margin: 0 auto; }
+  .cta-banner h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1rem; }
+  .cta-banner p { color: var(--text2); margin-bottom: 2rem; }
+  .cta-contact {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 2.5rem 2rem;
+    color: var(--text2); font-size: 0.875rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--text2); }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .audit-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .nav-cta { font-size: 0.8rem; padding: 7px 14px; }
+    .audit-cta-box { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    ⬡ Atlant<span>SEO</span>
+  </div>
+  <div class="nav-links">
+    <a href="#audit">Аудит</a>
+    <a href="#services">Услуги</a>
+    <a href="#pricing">Тарифы</a>
+    <a href="#linkbuilding">Линкбилдинг</a>
+    <a href="#contact">Контакт</a>
+  </div>
+  <a href="#contact" class="nav-cta">Получить КП</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-badge">Специализация: недвижимость Вроцлава</div>
+    <h1>SEO-продвижение<br><span style="color: var(--accent);">atlantestates.com</span><br>в Google Польши</h1>
+    <p class="hero-subtitle">Комплексная стратегия выхода в ТОП-3 по низкочастотным и коммерческим запросам рынка недвижимости Вроцлава — в обход порталов Otodom, Morizon и OLX.</p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn-primary">Смотреть тарифы →</a>
+      <a href="#audit" class="btn-secondary">Технический аудит</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num"><span>8</span> блоков</div>
+        <div class="stat-desc">системной SEO-оптимизации</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span>4</span> языка</div>
+        <div class="stat-desc">контент для экспатов</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span>+300%</span></div>
+        <div class="stat-desc">рост органического трафика за 6 мес.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW CARDS -->
+<section id="services">
+  <div class="section-label">Что входит в работы</div>
+  <h2>8 направлений продвижения<br>по плану для atlantestates.com</h2>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">🗺️</div>
+      <div class="tag">Структура</div>
+      <h3>Масштабирование семантики</h3>
+      <p>Посадочные страницы третьего уровня: /krzyki/kawalerka, /gaj/2-pokojowe и т.д. Охват микрорайонов (Osiedla) и ключевых улиц (Ulice). Защита от вылета из индекса через блоки «Архивные объекты».</p>
+    </div>
+    <div class="card">
+      <div class="card-icon gold">🏢</div>
+      <div class="tag gold">ЖК / Inwestycje</div>
+      <h3>База жилых комплексов</h3>
+      <p>Паспорта ТОП-50 ЖК Вроцлава: Olimpia Port, Promenady Wrocławskie и др. Страницы покупки и аренды. Триггерные формы захвата от собственников.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">🔗</div>
+      <div class="tag green">UX + SEO</div>
+      <h3>Перелинковка и интерфейс</h3>
+      <p>Интерактивное облако тегов «По районам / По ЖК / По улицам» в первом экране. Анкорная перелинковка в карточках объектов для равномерного распределения веса.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌍</div>
+      <div class="tag">Контент</div>
+      <h3>Мультиязычный маркетинг</h3>
+      <p>Гайды для экспатов на PL/EN/UA/RU. Инфо-хаб с аналитикой рынка и новостями застройщиков. Коммерческие виджеты с актуальными объектами внутри статей.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">⭐</div>
+      <div class="tag" style="background:rgba(123,95,255,0.15);color:#a88fff;">E-E-A-T</div>
+      <h3>Доверие и авторитетность</h3>
+      <p>FAQ-блоки с инфраструктурой и ценами за м². Профили риелторов за локациями. Schema.org: RealEstateAgent, ItemList, FAQPage. Синхронизация с Google Business Profile.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚙️</div>
+      <div class="tag">Техника</div>
+      <h3>Техническое SEO и скорость</h3>
+      <p>Полный аудит логов, 404, дублей, robots.txt, sitemap.xml. Оптимизация Core Web Vitals. Конвертация изображений в WebP/AVIF. Mobile-First Indexing.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon gold">📝</div>
+      <div class="tag gold">On-Page</div>
+      <h3>Семантическое ядро и тексты</h3>
+      <p>Сбор и кластеризация семантики на PL/EN/UA. Шаблоны автогенерации мета-тегов с актуальным количеством объектов. Рерайт под LSI (нотариус, ипотека, чинш, наём).</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">🔌</div>
+      <div class="tag green">Off-Page</div>
+      <h3>Линкбилдинг и ссылочная масса</h3>
+      <p>Анализ профилей конкурентов. Гостевые статьи на польских региональных порталах. Крауд-маркетинг: Panorama Firm, PKT, форумы экспатов. Постепенный рост ссылочной массы.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TECHNICAL AUDIT -->
+<section id="audit">
+  <div class="section-label">Первичный анализ</div>
+  <h2>Технический аудит atlantestates.com</h2>
+  <p style="max-width:600px; margin-bottom: 2rem;">Первичный технический анализ — отправная точка всех работ. Без него невозможно понять, что мешает краулерам Google правильно сканировать сайт и почему текущие страницы не ранжируются.</p>
+
+  <div class="audit-grid">
+    <div class="audit-card">
+      <h3>🔍 Краулинг и индексация</h3>
+      <ul class="check-list">
+        <li>Полный обход сайта с анализом лог-файлов сервера</li>
+        <li>Поиск страниц с кодом 404, 301-цепочек и мягких ошибок Soft-404</li>
+        <li class="warn">Выявление дублей страниц (с www / без, http/https, trailing slash)</li>
+        <li class="warn">Проверка директив robots.txt — заблокированный контент</li>
+        <li>Аудит sitemap.xml: наличие, актуальность, ошибки в URL</li>
+        <li>Проверка canonical-тегов на коммерческих страницах</li>
+      </ul>
+    </div>
+    <div class="audit-card">
+      <h3>⚡ Core Web Vitals</h3>
+      <ul class="check-list">
+        <li>Замер LCP, FID/INP, CLS через PageSpeed Insights и Chrome UX Report</li>
+        <li class="warn">Анализ критических изображений — отсутствие WebP/AVIF</li>
+        <li class="warn">Оценка блокирующих JS/CSS ресурсов выше fold</li>
+        <li>Проверка кэширования статических ресурсов</li>
+        <li>Аудит мобильной версии — Mobile-First Indexing</li>
+      </ul>
+    </div>
+    <div class="audit-card">
+      <h3>📋 On-Page и семантика</h3>
+      <ul class="check-list">
+        <li>Аудит мета-тегов Title и Description на всех типах страниц</li>
+        <li class="warn">Проверка H1 на дублирование с Title и отсутствие заголовков</li>
+        <li>Оценка текущей структуры URL (ЧПУ, глубина, транслитерация)</li>
+        <li class="warn">Анализ «тонкого контента» (Thin Content) на страницах районов</li>
+        <li>Инвентаризация текущих посадочных страниц</li>
+      </ul>
+    </div>
+    <div class="audit-card">
+      <h3>🏗️ Структура и микроразметка</h3>
+      <ul class="check-list">
+        <li>Проверка наличия Schema.org разметки на карточках объектов</li>
+        <li class="warn">Анализ LocalBusiness разметки и привязки к Google Maps</li>
+        <li>Тест Rich Results в Google Search Console</li>
+        <li>Оценка внутренней перелинковки и глубины вложенности</li>
+        <li>Проверка hreflang для мультиязычных страниц</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="audit-cta-box">
+    <div class="audit-cta-text">
+      <h3>Технический аудит + отчёт с приоритетами</h3>
+      <p style="font-size:0.875rem; max-width:400px;">Детальный отчёт с разбивкой по критичности ошибок, скриншотами и готовым ТЗ для разработчика. Срок: 5 рабочих дней.</p>
+    </div>
+    <div style="text-align:right;">
+      <div class="audit-price-note">Стоимость аудита</div>
+      <div class="audit-price">990 PLN</div>
+      <div class="audit-price-note">включается в стоимость пакета при старте работ</div>
+      <a href="#contact" class="btn-primary" style="margin-top:1rem; display:inline-flex;">Заказать аудит</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Тарифные планы</div>
+  <h2>Выберите объём работ</h2>
+  <p style="max-width:600px; margin-bottom: 0.5rem;">Все тарифы включают ежемесячный отчёт, доступ в аналитику и еженедельную коммуникацию по прогрессу. Контракт от 3 месяцев.</p>
+
+  <div class="pricing-grid">
+
+    <!-- STARTER -->
+    <div class="pricing-card">
+      <div class="pricing-name">Старт</div>
+      <div class="pricing-price"><sup>от </sup>1 800<sub> PLN/мес</sub></div>
+      <p class="pricing-desc">Техническая база и первичная оптимизация. Подходит для запуска с нуля.</p>
+      <ul class="pricing-features">
+        <li>Технический аудит сайта (однократно)</li>
+        <li>Устранение критических ошибок (до 30 задач)</li>
+        <li>Сбор семантического ядра (PL)</li>
+        <li>Оптимизация мета-тегов (автошаблоны)</li>
+        <li>Настройка Google Business Profile</li>
+        <li>3–5 посадочных страниц районов</li>
+        <li class="gray">Линкбилдинг</li>
+        <li class="gray">Мультиязычный контент</li>
+        <li class="gray">Страницы ЖК</li>
+      </ul>
+      <a href="#contact" class="btn-plan">Выбрать тариф →</a>
+    </div>
+
+    <!-- GROWTH -->
+    <div class="pricing-card featured">
+      <div class="featured-badge">Рекомендуем</div>
+      <div class="pricing-name">Рост</div>
+      <div class="pricing-price"><sup>от </sup>3 500<sub> PLN/мес</sub></div>
+      <p class="pricing-desc">Полный цикл SEO: структура, контент и внешняя оптимизация. Быстрый рост трафика за 3–4 месяца.</p>
+      <ul class="pricing-features">
+        <li>Всё из тарифа «Старт»</li>
+        <li>До 30 посадочных страниц (районы + микрорайоны)</li>
+        <li>Паспорта ТОП-20 ЖК Вроцлава</li>
+        <li>Семантика PL + EN + UA</li>
+        <li>4 экспертных статьи в месяц</li>
+        <li>Базовый линкбилдинг (6–8 ссылок/мес)</li>
+        <li>Schema.org разметка (карточки + каталог)</li>
+        <li>Облако тегов / перелинковка</li>
+        <li class="gray">Guest posting на порталах</li>
+      </ul>
+      <a href="#contact" class="btn-plan">Выбрать тариф →</a>
+    </div>
+
+    <!-- DOMINANCE -->
+    <div class="pricing-card">
+      <div class="pricing-name">Доминирование</div>
+      <div class="pricing-price"><sup>от </sup>6 500<sub> PLN/мес</sub></div>
+      <p class="pricing-desc">Агрессивная стратегия лидерства в нише. Полный охват рынка Вроцлава и регионов.</p>
+      <ul class="pricing-features">
+        <li>Всё из тарифа «Рост»</li>
+        <li>Неограниченные посадочные страницы (улицы, Osiedla)</li>
+        <li>Паспорта ТОП-50 ЖК</li>
+        <li>8+ статей в месяц (PL/EN/UA/RU)</li>
+        <li>Агрессивный линкбилдинг (15–20 ссылок/мес)</li>
+        <li>Guest posting: 2–3 публикации на тематических порталах</li>
+        <li>Крауд-маркетинг (форумы, каталоги)</li>
+        <li>Персональный SEO-стратег</li>
+        <li>Еженедельные отчёты + приоритет задач</li>
+      </ul>
+      <a href="#contact" class="btn-plan">Выбрать тариф →</a>
+    </div>
+
+  </div>
+
+  <div style="margin-top:2rem; padding:1.5rem; background:var(--card); border:1px solid var(--border); border-radius:12px;">
+    <p style="font-size:0.875rem; color:var(--text2);">
+      <strong style="color:var(--text);">💡 Важно:</strong> Бюджет на внешний линкбилдинг (покупку ссылок, размещение гостевых статей) оплачивается <em>отдельно</em> и не входит в стоимость тарифа. Детальный расчёт — в разделе ниже.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LINKBUILDING -->
+<section id="linkbuilding">
+  <div class="section-label">Внешняя оптимизация</div>
+  <h2>Бюджет на линкбилдинг<br>для рынка Вроцлава</h2>
+  <div class="lb-intro">
+    <p>Рынок польской недвижимости характеризуется высокой конкуренцией со стороны агрегаторов (Otodom, Morizon, Gratka) с DR 70+. Для атлантестейтс.ком критически важно планомерно наращивать авторитет ссылочного профиля. Расчёт составлен на основе актуальных цен польского рынка размещений (2025–2026).</p>
+  </div>
+
+  <div class="lb-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Тип размещения</th>
+          <th>Примеры площадок</th>
+          <th>DR донора</th>
+          <th>Цена / ед.</th>
+          <th>Кол-во в мес.</th>
+          <th>Бюджет / мес.</th>
+          <th>Риск</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Каталоги предприятий</td>
+          <td>Panorama Firm, PKT.pl, Biznes.pl</td>
+          <td>40–60</td>
+          <td>30–80 PLN</td>
+          <td>5–8</td>
+          <td>150–640 PLN</td>
+          <td><span class="badge badge-low">Низкий</span></td>
+        </tr>
+        <tr>
+          <td>Крауд-маркетинг</td>
+          <td>Форумы, Facebook-группы экспатов, Reddit PL</td>
+          <td>30–65</td>
+          <td>50–150 PLN</td>
+          <td>8–12</td>
+          <td>400–1 800 PLN</td>
+          <td><span class="badge badge-low">Низкий</span></td>
+        </tr>
+        <tr>
+          <td>Региональные СМИ</td>
+          <td>Wrocław.pl, Gazeta Wrocławska, RegioVentures</td>
+          <td>45–65</td>
+          <td>300–700 PLN</td>
+          <td>2–3</td>
+          <td>600–2 100 PLN</td>
+          <td><span class="badge badge-mid">Средний</span></td>
+        </tr>
+        <tr>
+          <td>Тематические порталы (недвижимость)</td>
+          <td>Nieruchomości-online, Szukaj24, Property News PL</td>
+          <td>40–60</td>
+          <td>250–500 PLN</td>
+          <td>2–3</td>
+          <td>500–1 500 PLN</td>
+          <td><span class="badge badge-mid">Средний</span></td>
+        </tr>
+        <tr>
+          <td>Экспатские площадки</td>
+          <td>Expats.pl, Polin.pl, AngloPol</td>
+          <td>35–55</td>
+          <td>200–500 PLN</td>
+          <td>1–2</td>
+          <td>200–1 000 PLN</td>
+          <td><span class="badge badge-low">Низкий</span></td>
+        </tr>
+        <tr>
+          <td>Guest Post (общие бизнес)</td>
+          <td>Wrocław Business, Forbes PL (рег.), Wyborcza</td>
+          <td>55–75</td>
+          <td>800–2 500 PLN</td>
+          <td>1–2</td>
+          <td>800–5 000 PLN</td>
+          <td><span class="badge badge-high">Высокий DR</span></td>
+        </tr>
+        <tr>
+          <td>PBN / Niche Edits (осторожно)</td>
+          <td>Тематические блоги о недвижимости, DIY, ипотеке</td>
+          <td>25–45</td>
+          <td>150–400 PLN</td>
+          <td>3–5</td>
+          <td>450–2 000 PLN</td>
+          <td><span class="badge badge-high">Риск</span></td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="5">💰 Итоговый бюджет на линкбилдинг (в месяц)</td>
+          <td><strong>3 100–14 040 PLN</strong></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="lb-budget-summary">
+    <div class="budget-card">
+      <div class="label">Минимальный старт (Тариф «Рост»)</div>
+      <div class="value accent">3 100–4 500 PLN</div>
+    </div>
+    <div class="budget-card">
+      <div class="label">Оптимальный бюджет (рекомендуем)</div>
+      <div class="value gold">5 500–8 000 PLN</div>
+    </div>
+    <div class="budget-card">
+      <div class="label">Агрессивный рост (Тариф «Доминирование»)</div>
+      <div class="value" style="color:var(--red);">10 000–14 000 PLN</div>
+    </div>
+    <div class="budget-card">
+      <div class="label">Срок до заметного эффекта</div>
+      <div class="value">3–5 мес.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem; padding:1.25rem 1.5rem; background:rgba(245,166,35,0.07); border:1px solid rgba(245,166,35,0.2); border-radius:12px;">
+    <p style="font-size:0.875rem;">
+      <strong style="color:var(--gold);">⚠ Примечание:</strong> PBN и Niche Edits несут риск санкций Google. Для сайта недвижимости (YMYL-тематика) рекомендуем делать ставку на каталоги, крауд и гостевые статьи на авторитетных польских медиа. Бюджет указан без учёта стоимости написания контента для guest posting (от 200–600 PLN за статью).
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTENT PLAN -->
+<section>
+  <div class="section-label">Контентная воронка</div>
+  <h2>Как экспатский контент конвертирует в лиды</h2>
+  <ul class="strategy-list">
+    <li class="strategy-item">
+      <div class="strategy-num">01</div>
+      <div class="strategy-body">
+        <h3>Информационный трафик (PL/EN/UA/RU)</h3>
+        <p>Пользователь ищет «jak wynająć mieszkanie we Wrocławiu» или «купить квартиру во Вроцлаве иностранцу». Попадает на экспертную статью Atlant Estates — агентство выступает главным источником знаний.</p>
+      </div>
+    </li>
+    <li class="strategy-item">
+      <div class="strategy-num">02</div>
+      <div class="strategy-body">
+        <h3>Коммерческие виджеты в статьях</h3>
+        <p>Внутри статьи — блок с актуальными объектами по теме. Читатель статьи о «znajdowanie mieszkania Krzyki» видит реальные квартиры в Кшиках прямо в тексте и кликает на карточку.</p>
+      </div>
+    </li>
+    <li class="strategy-item">
+      <div class="strategy-num">03</div>
+      <div class="strategy-body">
+        <h3>Триггерные формы на страницах ЖК</h3>
+        <p>«Владеете квартирой в ЖК Olimpia Port? Помогаем выгодно сдать или продать — есть база покупателей». Захват собственников на страницах конкретных жилых комплексов.</p>
+      </div>
+    </li>
+    <li class="strategy-item">
+      <div class="strategy-num">04</div>
+      <div class="strategy-body">
+        <h3>Local Pack и Google Maps</h3>
+        <p>Синхронизация Google Business Profile + микроразметка LocalBusiness = присутствие в карточке агентства в Google Maps. Пользователи, ищущие «agencja nieruchomości Wrocław», видят Atlant Estates в топе карты.</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner" id="contact">
+  <div class="cta-banner-inner">
+    <div class="section-label" style="text-align:center;">Следующий шаг</div>
+    <h2>Готовы вывести atlantestates.com<br>в ТОП-3 Google по Вроцлаву?</h2>
+    <p>Отправьте запрос — в течение 24 часов вышлем персональное коммерческое предложение с детальным роадмапом и расчётом ROI на 12 месяцев.</p>
+    <div class="cta-contact">
+      <a href="mailto:seo@atlantestates.com" class="btn-primary">✉ Написать на email</a>
+      <a href="https://atlantestates.com/" target="_blank" class="btn-secondary">atlantestates.com →</a>
+    </div>
+    <p style="margin-top:1.5rem; font-size:0.8rem; color:var(--text2);">Или свяжитесь напрямую: <a href="tel:+48000000000" style="color:var(--accent);">+48 XXX XXX XXX</a> · Вроцлав, Польша</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 SEO-план для <a href="https://atlantestates.com/" target="_blank">atlantestates.com</a> · Вроцлав, Польша · Конфиденциальный документ</p>
+</footer>
+
+</body>
+</html>

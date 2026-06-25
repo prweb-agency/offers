@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --bg: #0B0E14;
     --bg2: #111520;
@@ -24,9 +24,9 @@
     --green: #22D97B;
     --red: #FF5A5A;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: 'Inter', sans-serif;
     background: var(--bg);
@@ -34,10 +34,10 @@
     line-height: 1.6;
     font-size: 16px;
   }
-
+ 
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
+ 
   /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100;
@@ -65,7 +65,7 @@
     transition: opacity .2s;
   }
   .nav-cta:hover { opacity: 0.85; text-decoration: none; }
-
+ 
   /* SECTIONS */
   section { padding: 80px 2rem; max-width: 1100px; margin: 0 auto; }
   .section-label {
@@ -89,7 +89,7 @@
     font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;
   }
   p { color: var(--text2); line-height: 1.75; }
-
+ 
   /* HERO */
   .hero-section {
     max-width: 100%;
@@ -135,7 +135,7 @@
     transition: border-color .2s, background .2s;
   }
   .btn-secondary:hover { border-color: var(--accent); background: rgba(79,124,255,0.06); text-decoration: none; }
-
+ 
   .hero-stats {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem; margin-top: 4rem;
@@ -148,13 +148,13 @@
   }
   .stat-num span { color: var(--accent); }
   .stat-desc { font-size: 0.875rem; color: var(--text2); margin-top: 4px; }
-
+ 
   /* DIVIDER */
   .divider {
     height: 1px; background: var(--border);
     max-width: 1100px; margin: 0 auto;
   }
-
+ 
   /* CARDS GRID */
   .cards-grid {
     display: grid;
@@ -185,7 +185,7 @@
   }
   .tag.gold { background: rgba(245,166,35,0.15); color: #f5c35a; }
   .tag.green { background: rgba(34,217,123,0.15); color: #22d97b; }
-
+ 
   /* AUDIT SECTION */
   .audit-grid {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -222,7 +222,7 @@
     font-size: 2.5rem; font-weight: 800; color: var(--accent);
   }
   .audit-price-note { font-size: 0.8rem; color: var(--text2); }
-
+ 
   /* PRICING */
   .pricing-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -271,7 +271,7 @@
     background: var(--accent); border-color: var(--accent); color: #fff;
   }
   .pricing-card.featured .btn-plan:hover { opacity: 0.88; }
-
+ 
   /* LINKBUILDING */
   .lb-intro { max-width: 700px; margin-bottom: 2.5rem; }
   .lb-table-wrap {
@@ -292,7 +292,7 @@
   .badge-high { background: rgba(255,90,90,0.15); color: #ff7a7a; }
   .total-row { background: rgba(79,124,255,0.06); }
   .total-row td { font-weight: 700; color: var(--text); border-top: 1px solid rgba(79,124,255,0.3); }
-
+ 
   .lb-budget-summary {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem; margin-top: 2rem;
@@ -308,7 +308,7 @@
   }
   .budget-card .value.accent { color: var(--accent); }
   .budget-card .value.gold { color: var(--gold); }
-
+ 
   /* CONTENT STRATEGY */
   .strategy-list { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
   .strategy-item {
@@ -323,7 +323,7 @@
   }
   .strategy-body h3 { margin-bottom: 0.4rem; font-size: 1rem; }
   .strategy-body p { font-size: 0.875rem; }
-
+ 
   /* CTA BANNER */
   .cta-banner {
     max-width: 100%; padding: 80px 2rem;
@@ -338,7 +338,7 @@
   .cta-contact {
     display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
   }
-
+ 
   /* FOOTER */
   footer {
     text-align: center; padding: 2.5rem 2rem;
@@ -347,7 +347,7 @@
   }
   footer a { color: var(--text2); }
   footer a:hover { color: var(--accent); }
-
+ 
   @media (max-width: 768px) {
     .hero-stats { grid-template-columns: 1fr 1fr; }
     .audit-grid { grid-template-columns: 1fr; }
@@ -358,7 +358,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
@@ -373,7 +373,7 @@
   </div>
   <a href="#contact" class="nav-cta">Получить КП</a>
 </nav>
-
+ 
 <!-- HERO -->
 <div class="hero-section">
   <div class="hero-inner">
@@ -400,7 +400,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- OVERVIEW CARDS -->
 <section id="services">
   <div class="section-label">Что входит в работы</div>
@@ -456,15 +456,15 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- TECHNICAL AUDIT -->
 <section id="audit">
   <div class="section-label">Первичный анализ</div>
   <h2>Технический аудит atlantestates.com</h2>
   <p style="max-width:600px; margin-bottom: 2rem;">Первичный технический анализ — отправная точка всех работ. Без него невозможно понять, что мешает краулерам Google правильно сканировать сайт и почему текущие страницы не ранжируются.</p>
-
+ 
   <div class="audit-grid">
     <div class="audit-card">
       <h3>🔍 Краулинг и индексация</h3>
@@ -508,7 +508,7 @@
       </ul>
     </div>
   </div>
-
+ 
   <div class="audit-cta-box">
     <div class="audit-cta-text">
       <h3>Технический аудит + отчёт с приоритетами</h3>
@@ -522,17 +522,17 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- PRICING -->
 <section id="pricing">
   <div class="section-label">Тарифные планы</div>
   <h2>Выберите объём работ</h2>
   <p style="max-width:600px; margin-bottom: 0.5rem;">Все тарифы включают ежемесячный отчёт, доступ в аналитику и еженедельную коммуникацию по прогрессу. Контракт от 3 месяцев.</p>
-
+ 
   <div class="pricing-grid">
-
+ 
     <!-- STARTER -->
     <div class="pricing-card">
       <div class="pricing-name">Старт</div>
@@ -551,7 +551,7 @@
       </ul>
       <a href="#contact" class="btn-plan">Выбрать тариф →</a>
     </div>
-
+ 
     <!-- GROWTH -->
     <div class="pricing-card featured">
       <div class="featured-badge">Рекомендуем</div>
@@ -571,7 +571,7 @@
       </ul>
       <a href="#contact" class="btn-plan">Выбрать тариф →</a>
     </div>
-
+ 
     <!-- DOMINANCE -->
     <div class="pricing-card">
       <div class="pricing-name">Доминирование</div>
@@ -590,140 +590,60 @@
       </ul>
       <a href="#contact" class="btn-plan">Выбрать тариф →</a>
     </div>
-
+ 
   </div>
-
+ 
   <div style="margin-top:2rem; padding:1.5rem; background:var(--card); border:1px solid var(--border); border-radius:12px;">
     <p style="font-size:0.875rem; color:var(--text2);">
       <strong style="color:var(--text);">💡 Важно:</strong> Бюджет на внешний линкбилдинг (покупку ссылок, размещение гостевых статей) оплачивается <em>отдельно</em> и не входит в стоимость тарифа. Детальный расчёт — в разделе ниже.
     </p>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- LINKBUILDING -->
 <section id="linkbuilding">
   <div class="section-label">Внешняя оптимизация</div>
-  <h2>Бюджет на линкбилдинг<br>для рынка Вроцлава</h2>
-  <div class="lb-intro">
-    <p>Рынок польской недвижимости характеризуется высокой конкуренцией со стороны агрегаторов (Otodom, Morizon, Gratka) с DR 70+. Для атлантестейтс.ком критически важно планомерно наращивать авторитет ссылочного профиля. Расчёт составлен на основе актуальных цен польского рынка размещений (2025–2026).</p>
-  </div>
-
-  <div class="lb-table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Тип размещения</th>
-          <th>Примеры площадок</th>
-          <th>DR донора</th>
-          <th>Цена / ед.</th>
-          <th>Кол-во в мес.</th>
-          <th>Бюджет / мес.</th>
-          <th>Риск</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Каталоги предприятий</td>
-          <td>Panorama Firm, PKT.pl, Biznes.pl</td>
-          <td>40–60</td>
-          <td>30–80 PLN</td>
-          <td>5–8</td>
-          <td>150–640 PLN</td>
-          <td><span class="badge badge-low">Низкий</span></td>
-        </tr>
-        <tr>
-          <td>Крауд-маркетинг</td>
-          <td>Форумы, Facebook-группы экспатов, Reddit PL</td>
-          <td>30–65</td>
-          <td>50–150 PLN</td>
-          <td>8–12</td>
-          <td>400–1 800 PLN</td>
-          <td><span class="badge badge-low">Низкий</span></td>
-        </tr>
-        <tr>
-          <td>Региональные СМИ</td>
-          <td>Wrocław.pl, Gazeta Wrocławska, RegioVentures</td>
-          <td>45–65</td>
-          <td>300–700 PLN</td>
-          <td>2–3</td>
-          <td>600–2 100 PLN</td>
-          <td><span class="badge badge-mid">Средний</span></td>
-        </tr>
-        <tr>
-          <td>Тематические порталы (недвижимость)</td>
-          <td>Nieruchomości-online, Szukaj24, Property News PL</td>
-          <td>40–60</td>
-          <td>250–500 PLN</td>
-          <td>2–3</td>
-          <td>500–1 500 PLN</td>
-          <td><span class="badge badge-mid">Средний</span></td>
-        </tr>
-        <tr>
-          <td>Экспатские площадки</td>
-          <td>Expats.pl, Polin.pl, AngloPol</td>
-          <td>35–55</td>
-          <td>200–500 PLN</td>
-          <td>1–2</td>
-          <td>200–1 000 PLN</td>
-          <td><span class="badge badge-low">Низкий</span></td>
-        </tr>
-        <tr>
-          <td>Guest Post (общие бизнес)</td>
-          <td>Wrocław Business, Forbes PL (рег.), Wyborcza</td>
-          <td>55–75</td>
-          <td>800–2 500 PLN</td>
-          <td>1–2</td>
-          <td>800–5 000 PLN</td>
-          <td><span class="badge badge-high">Высокий DR</span></td>
-        </tr>
-        <tr>
-          <td>PBN / Niche Edits (осторожно)</td>
-          <td>Тематические блоги о недвижимости, DIY, ипотеке</td>
-          <td>25–45</td>
-          <td>150–400 PLN</td>
-          <td>3–5</td>
-          <td>450–2 000 PLN</td>
-          <td><span class="badge badge-high">Риск</span></td>
-        </tr>
-        <tr class="total-row">
-          <td colspan="5">💰 Итоговый бюджет на линкбилдинг (в месяц)</td>
-          <td><strong>3 100–14 040 PLN</strong></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="lb-budget-summary">
-    <div class="budget-card">
-      <div class="label">Минимальный старт (Тариф «Рост»)</div>
-      <div class="value accent">3 100–4 500 PLN</div>
+  <h2>Бюджет на линкбилдинг</h2>
+  <p style="max-width:580px; margin-bottom:2.5rem;">Конкуренты в нише (Otodom, Morizon) имеют DR 70+. Для выхода в ТОП по коммерческим запросам Вроцлава необходимо системное наращивание ссылочной массы.</p>
+ 
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-bottom:2rem;">
+    <div class="budget-card" style="border-color: rgba(34,217,123,0.25);">
+      <div class="label">Старт · 5–8 ссылок/мес</div>
+      <div class="value accent">2 000–3 500</div>
+      <div style="font-size:0.8rem; color:var(--text2); margin-top:4px;">PLN / месяц</div>
+      <div style="margin-top:0.75rem; font-size:0.8rem; color:var(--text2);">Каталоги + крауд-маркетинг</div>
+    </div>
+    <div class="budget-card" style="border-color: rgba(79,124,255,0.35);">
+      <div class="label">Рост · 10–15 ссылок/мес</div>
+      <div class="value gold">4 000–7 000</div>
+      <div style="font-size:0.8rem; color:var(--text2); margin-top:4px;">PLN / месяц</div>
+      <div style="margin-top:0.75rem; font-size:0.8rem; color:var(--text2);">+ региональные СМИ и тематические порталы</div>
+    </div>
+    <div class="budget-card" style="border-color: rgba(245,166,35,0.25);">
+      <div class="label">Агрессив · 20–30 ссылок/мес</div>
+      <div class="value" style="color:var(--red);">8 000–14 000</div>
+      <div style="font-size:0.8rem; color:var(--text2); margin-top:4px;">PLN / месяц</div>
+      <div style="margin-top:0.75rem; font-size:0.8rem; color:var(--text2);">+ guest posting на авторитетных польских медиа</div>
     </div>
     <div class="budget-card">
-      <div class="label">Оптимальный бюджет (рекомендуем)</div>
-      <div class="value gold">5 500–8 000 PLN</div>
-    </div>
-    <div class="budget-card">
-      <div class="label">Агрессивный рост (Тариф «Доминирование»)</div>
-      <div class="value" style="color:var(--red);">10 000–14 000 PLN</div>
-    </div>
-    <div class="budget-card">
-      <div class="label">Срок до заметного эффекта</div>
-      <div class="value">3–5 мес.</div>
+      <div class="label">Первый эффект заметен</div>
+      <div class="value">3–5</div>
+      <div style="font-size:0.8rem; color:var(--text2); margin-top:4px;">месяцев с начала работ</div>
+      <div style="margin-top:0.75rem; font-size:0.8rem; color:var(--text2);">При стабильном бюджете от 4 000 PLN/мес</div>
     </div>
   </div>
-
-  <div style="margin-top:1.5rem; padding:1.25rem 1.5rem; background:rgba(245,166,35,0.07); border:1px solid rgba(245,166,35,0.2); border-radius:12px;">
-    <p style="font-size:0.875rem;">
-      <strong style="color:var(--gold);">⚠ Примечание:</strong> PBN и Niche Edits несут риск санкций Google. Для сайта недвижимости (YMYL-тематика) рекомендуем делать ставку на каталоги, крауд и гостевые статьи на авторитетных польских медиа. Бюджет указан без учёта стоимости написания контента для guest posting (от 200–600 PLN за статью).
+ 
+  <div style="padding:1.25rem 1.5rem; background:rgba(79,124,255,0.06); border:1px solid rgba(79,124,255,0.2); border-radius:12px;">
+    <p style="font-size:0.875rem; color:var(--text2);">
+      <strong style="color:var(--text);">💡 Рекомендуем:</strong> тариф «Рост» — 10–15 ссылок в месяц с бюджетом <strong style="color:var(--accent);">4 000–7 000 PLN</strong>. Оплачивается отдельно от стоимости SEO-тарифа.
     </p>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- CONTENT PLAN -->
 <section>
   <div class="section-label">Контентная воронка</div>
@@ -759,7 +679,7 @@
     </li>
   </ul>
 </section>
-
+ 
 <!-- CTA BANNER -->
 <div class="cta-banner" id="contact">
   <div class="cta-banner-inner">
@@ -773,11 +693,12 @@
     <p style="margin-top:1.5rem; font-size:0.8rem; color:var(--text2);">Или свяжитесь напрямую: <a href="tel:+48000000000" style="color:var(--accent);">+48 XXX XXX XXX</a> · Вроцлав, Польша</p>
   </div>
 </div>
-
+ 
 <!-- FOOTER -->
 <footer>
   <p>© 2025 SEO-план для <a href="https://atlantestates.com/" target="_blank">atlantestates.com</a> · Вроцлав, Польша · Конфиденциальный документ</p>
 </footer>
-
+ 
 </body>
 </html>
+ 

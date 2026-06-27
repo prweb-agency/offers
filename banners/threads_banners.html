@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Threads + Рекламні банери — PR.WEB</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--red:#E8374A;--black:#111;--dark:#1A1A1A;--gray:#F4F4F4;--muted:#666}
+  body{font-family:Arial,sans-serif;color:var(--black);background:#fff;line-height:1.5;padding:40px}
+
+  h1{font-size:32px;font-weight:900;margin-bottom:8px}
+  h1 em{color:var(--red);font-style:normal}
+  .page-sub{color:var(--muted);margin-bottom:48px;font-size:16px}
+
+  /* SECTION */
+  .sec-title{font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px}
+  h2{font-size:26px;font-weight:900;margin-bottom:24px;letter-spacing:-0.3px}
+  h2 em{color:var(--red);font-style:normal}
+
+  /* THREADS */
+  .threads-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:60px}
+  .thread-card{border:1px solid #eee;border-radius:16px;padding:28px;position:relative}
+  .thread-num{position:absolute;top:20px;right:20px;background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+  .thread-type{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px}
+  .thread-text{font-size:15px;line-height:1.7;white-space:pre-line;color:var(--black)}
+  .thread-text strong{font-weight:900}
+  .thread-hint{margin-top:16px;background:var(--gray);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--muted)}
+  .thread-hint span{color:var(--red);font-weight:700}
+
+  /* BANNERS */
+  .banner-section{margin-bottom:60px}
+  .banner-intro{font-size:15px;color:var(--muted);max-width:640px;margin-bottom:32px;line-height:1.6}
+
+  /* BANNER PREVIEW */
+  .banners-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px}
+
+  /* 1:1 square banner */
+  .banner-sq{width:100%;aspect-ratio:1;border-radius:12px;overflow:hidden;position:relative;background:var(--dark);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;border:1px solid #222}
+  .banner-sq .b-tag{font-size:9px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px}
+  .banner-sq .b-title{font-size:clamp(14px,2.5vw,20px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:10px}
+  .banner-sq .b-title em{color:var(--red);font-style:normal}
+  .banner-sq .b-metrics{display:flex;gap:12px;margin-bottom:12px}
+  .banner-sq .b-m{display:flex;flex-direction:column;gap:1px}
+  .banner-sq .b-m .v{font-size:clamp(13px,2vw,18px);font-weight:900;color:var(--red);line-height:1}
+  .banner-sq .b-m .l{font-size:9px;color:#888}
+  .banner-sq .b-cta{background:var(--red);color:#fff;border-radius:30px;padding:6px 14px;font-size:10px;font-weight:700;display:inline-block}
+  .banner-sq .b-logo{position:absolute;top:14px;left:16px;font-size:13px;font-weight:900;color:#fff}
+  .banner-sq .b-logo span{color:var(--red)}
+  .banner-sq .accent-bar{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red)}
+
+  /* 9:16 story banner */
+  .banner-story{width:100%;aspect-ratio:9/16;border-radius:12px;overflow:hidden;position:relative;background:var(--dark);display:flex;flex-direction:column;justify-content:space-between;padding:20px;border:1px solid #222}
+  .banner-story .s-top{display:flex;flex-direction:column;gap:4px}
+  .banner-story .s-logo{font-size:14px;font-weight:900;color:#fff}
+  .banner-story .s-logo span{color:var(--red)}
+  .banner-story .s-tag{font-size:9px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.08em}
+  .banner-story .s-mid{text-align:center}
+  .banner-story .s-mid .s-title{font-size:clamp(18px,4vw,28px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:12px}
+  .banner-story .s-mid .s-title em{color:var(--red);font-style:normal}
+  .banner-story .s-mid .s-sub{font-size:11px;color:#aaa;margin-bottom:16px;line-height:1.5}
+  .banner-story .s-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .banner-story .s-metric{background:rgba(255,255,255,0.06);border-radius:8px;padding:8px;text-align:center}
+  .banner-story .s-metric .sv{font-size:clamp(14px,3vw,20px);font-weight:900;color:var(--red)}
+  .banner-story .s-metric .sl{font-size:9px;color:#888}
+  .banner-story .s-bot{text-align:center}
+  .banner-story .s-cta{background:var(--red);color:#fff;border-radius:30px;padding:10px 20px;font-size:11px;font-weight:700;display:inline-block}
+
+  /* 16:9 horizontal */
+  .banner-wide{width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;position:relative;background:var(--dark);display:flex;align-items:center;padding:24px;border:1px solid #222;gap:20px}
+  .banner-wide .w-left{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px}
+  .banner-wide .w-logo{font-size:14px;font-weight:900;color:#fff}
+  .banner-wide .w-logo span{color:var(--red)}
+  .banner-wide .w-tag{font-size:9px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.08em}
+  .banner-wide .w-title{font-size:clamp(14px,2.5vw,22px);font-weight:900;color:#fff;line-height:1.1}
+  .banner-wide .w-title em{color:var(--red);font-style:normal}
+  .banner-wide .w-cta{background:var(--red);color:#fff;border-radius:30px;padding:7px 16px;font-size:10px;font-weight:700;display:inline-block;margin-top:4px}
+  .banner-wide .w-right{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  .banner-wide .w-m{text-align:right}
+  .banner-wide .w-m .wv{font-size:clamp(18px,3vw,28px);font-weight:900;color:var(--red);line-height:1}
+  .banner-wide .w-m .wl{font-size:9px;color:#888}
+  .banner-wide .accent-line{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red)}
+
+  /* SIZE LABEL */
+  .size-label{font-size:12px;color:var(--muted);text-align:center;margin-top:8px;font-weight:700}
+
+  /* TZ BLOCK */
+  .tz-block{background:var(--gray);border-radius:16px;padding:32px;margin-bottom:20px}
+  .tz-block h3{font-size:18px;font-weight:900;margin-bottom:16px}
+  .tz-row{display:grid;grid-template-columns:140px 1fr;gap:8px 16px;align-items:start;margin-bottom:8px;font-size:14px}
+  .tz-key{font-weight:700;color:var(--muted)}
+  .tz-val{color:var(--black);line-height:1.5}
+  .tz-divider{border:none;border-top:1px solid #ddd;margin:16px 0}
+  .copy-block{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px;margin-top:12px;font-size:14px;line-height:1.7;white-space:pre-line}
+
+  @media(max-width:768px){
+    body{padding:20px}
+    .threads-grid,.banners-row{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<h1>Контент-пакет: <em>Roll Club</em></h1>
+<p class="page-sub">Threads-пости · Рекламні банери · ТЗ для дизайнера</p>
+
+<!-- ===== THREADS ===== -->
+<div class="sec-title">Контент</div>
+<h2>Пости для <em>Threads</em></h2>
+<p style="color:var(--muted);max-width:600px;margin-bottom:28px;font-size:15px">4 готових пости — підставте свої цифри в місцях <strong>[X]</strong>. Кожен закриває різну ЦА.</p>
+
+<div class="threads-grid">
+
+  <!-- Post 1 -->
+  <div class="thread-card">
+    <div class="thread-num">Пост 1</div>
+    <div class="thread-type">📈 До/Після · Hook — цифра</div>
+    <div class="thread-text"><strong>+[X]% органічного трафіку без жодної гривні на рекламу.</strong>
+
+Ось що ми зробили для мережі доставки їжі Roll Club за [X] місяців:
+
+→ [X] сайт → топ Google у [X] містах
+→ Google Maps: кожна нова локація в топ-3 за [X] тижнів
+→ Польща: зайшли на новий ринок без окремого бюджету
+
+Секрет? Одна система SEO, яка масштабується на кожне нове місто.
+
+Якщо у вас доставка, ресторан або локальний бізнес — це повторюється.
+
+Детальний кейс у профілі ↑</div>
+    <div class="thread-hint"><span>ЦА:</span> власники ресторанів та доставки в UA/PL</div>
+  </div>
+
+  <!-- Post 2 -->
+  <div class="thread-card">
+    <div class="thread-num">Пост 2</div>
+    <div class="thread-type">🧵 Процес · Освітній</div>
+    <div class="thread-text"><strong>Як ми виводимо локальний бізнес у топ Google. Покроково:</strong>
+
+1/ Аудит + семантика
+Збираємо всі запити по яких вас шукають у кожному місті. Не просто «доставка суші», а «доставка суші Харків недорого».
+
+2/ Локальні сторінки
+Окрема сторінка під кожне місто + район. Це те, що конкуренти ігнорують.
+
+3/ Google Business Profile
+Повне заповнення, відгуки, фото — без цього Google Maps не віддає топ.
+
+4/ Контент + посилання
+Статті для блогу, крауд у локальних форумах, каталоги.
+
+5/ Масштаб
+Готовий шаблон → нове місто → топ за [X] тижнів.
+
+Roll Club так захопив [X]+ локацій 🇺🇦🇵🇱
+
+Яка у вас ніша? Відповім чи підходить цей підхід 👇</div>
+    <div class="thread-hint"><span>ЦА:</span> всі локальні бізнеси, освіта + лідогенерація</div>
+  </div>
+
+  <!-- Post 3 -->
+  <div class="thread-card">
+    <div class="thread-num">Пост 3</div>
+    <div class="thread-type">🇵🇱 Польський ринок · Нова ЦА</div>
+    <div class="thread-text"><strong>Виходите з бізнесом у Польщу? Ось що потрібно знати про SEO.</strong>
+
+Ми допомогли Roll Club зайти на PL-ринок. Ось головні відмінності:
+
+❌ Просто перекласти сайт — не працює
+✅ Потрібна окрема семантика під польські запити
+
+❌ Один домен .ua для Польщі — мінус позиції
+✅ Окремий .pl або папка /pl/ з правильним hreflang
+
+❌ Посилання з України не допоможуть в PL
+✅ Потрібні польські локальні каталоги + крауд
+
+За [X] місяців — топ в Google.pl по [X] запитах.
+
+Якщо є питання по виходу на польський ринок — питайте в коментарях 👇</div>
+    <div class="thread-hint"><span>ЦА:</span> українські бізнеси з виходом у EU/PL</div>
+  </div>
+
+  <!-- Post 4 -->
+  <div class="thread-card">
+    <div class="thread-num">Пост 4</div>
+    <div class="thread-type">💬 Соціальний доказ · Кейс в 1 пості</div>
+    <div class="thread-text"><strong>«[Вставте цитату клієнта — 1-2 речення про результат]»</strong>
+— [Ім'я], засновник Roll Club
+
+Коли ми починали — 1 сайт, 0 трафіку, конкуренти займали весь Google.
+
+Зараз:
+📍 [X]+ міст в Україні та Польщі
+📈 +[X]% органічного трафіку
+🗺 Топ-[X] в Google Maps у кожній локації
+💰 [X]K органічних відвідувачів/місяць
+
+Без реклами. Тільки SEO.
+
+Якщо у вас локальний бізнес і хочете такий самий результат — напишіть або перейдіть за посиланням у профілі.</div>
+    <div class="thread-hint"><span>ЦА:</span> широка — конверсійний пост для прогрітої аудиторії</div>
+  </div>
+
+</div>
+
+<!-- ===== BANNER PREVIEWS ===== -->
+<div class="sec-title">Реклама</div>
+<h2>Банери для <em>Facebook & Instagram</em></h2>
+<p class="banner-intro">Три формати: стрічка (1:1), сторіс (9:16), широкий банер (16:9 / 1200×628). Підставте свої цифри замість [X]. Стиль відповідає сайту PRWEB.</p>
+
+<div class="banner-section">
+  <div class="banners-row">
+
+    <!-- 1:1 -->
+    <div>
+      <div class="banner-sq">
+        <div class="b-logo"><span>PR.</span>WEB</div>
+        <div class="accent-bar"></div>
+        <div class="b-tag">Кейс · Roll Club · SEO</div>
+        <div class="b-title">З 1 сайту до<br>мережі <em>[X]+ міст</em><br>без реклами</div>
+        <div class="b-metrics">
+          <div class="b-m"><span class="v">+[X]%</span><span class="l">трафік</span></div>
+          <div class="b-m"><span class="v">×[X]</span><span class="l">заявки</span></div>
+          <div class="b-m"><span class="v">Топ-[X]</span><span class="l">Google Maps</span></div>
+        </div>
+        <div class="b-cta">Хочу так само →</div>
+      </div>
+      <div class="size-label">1:1 · 1080×1080px · Стрічка</div>
+    </div>
+
+    <!-- 9:16 -->
+    <div>
+      <div class="banner-story">
+        <div class="s-top">
+          <div class="s-logo"><span>PR.</span>WEB</div>
+          <div class="s-tag">Кейс · Roll Club</div>
+        </div>
+        <div class="s-mid">
+          <div class="s-title">Мережа<br><em>[X]+ локацій</em><br>в UA та PL</div>
+          <div class="s-sub">З нуля до топу Google Maps<br>у кожному новому місті</div>
+          <div class="s-metrics">
+            <div class="s-metric"><div class="sv">+[X]%</div><div class="sl">ріст трафіку</div></div>
+            <div class="s-metric"><div class="sv">×[X]</div><div class="sl">заявки</div></div>
+            <div class="s-metric"><div class="sv">[X]+</div><div class="sl">міст</div></div>
+            <div class="s-metric"><div class="sv">Топ-[X]</div><div class="sl">Google Maps</div></div>
+          </div>
+        </div>
+        <div class="s-bot">
+          <div class="s-cta">Безкоштовний аудит →</div>
+        </div>
+      </div>
+      <div class="size-label">9:16 · 1080×1920px · Сторіс / Reels</div>
+    </div>
+
+    <!-- 16:9 -->
+    <div>
+      <div class="banner-wide">
+        <div class="accent-line"></div>
+        <div class="w-left">
+          <div class="w-logo"><span>PR.</span>WEB</div>
+          <div class="w-tag">Кейс · SEO для локального бізнесу</div>
+          <div class="w-title">З 1 сайту до<br>мережі <em>[X]+ міст</em></div>
+          <div class="w-cta">Отримати аудит →</div>
+        </div>
+        <div class="w-right">
+          <div class="w-m"><div class="wv">+[X]%</div><div class="wl">трафік</div></div>
+          <div class="w-m"><div class="wv">×[X]</div><div class="wl">заявки</div></div>
+          <div class="w-m"><div class="wv">Топ-[X]</div><div class="wl">Google Maps</div></div>
+        </div>
+      </div>
+      <div class="size-label">16:9 · 1200×628px · Facebook / LinkedIn</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== ТЗ ДЛЯ ДИЗАЙНЕРА ===== -->
+<div class="sec-title">Технічне завдання</div>
+<h2>ТЗ для <em>дизайнера</em> або Midjourney</h2>
+
+<div class="tz-block">
+  <h3>🎨 Загальний стиль</h3>
+  <div class="tz-row"><span class="tz-key">Стиль</span><span class="tz-val">Мінімалістичний, bold-типографіка, без декору. Як Apple Ads × агентський сайт.</span></div>
+  <div class="tz-row"><span class="tz-key">Фон</span><span class="tz-val">Темний (#1A1A1A) або білий (#FFFFFF). Ніяких градієнтів.</span></div>
+  <div class="tz-row"><span class="tz-key">Акцент</span><span class="tz-val">Червоний #E8374A — тільки для цифр, CTA, підкреслень.</span></div>
+  <div class="tz-row"><span class="tz-key">Шрифт</span><span class="tz-val">Arial Black / Inter Black / Neue Haas Grotesk. Усі заголовки жирні, без курсиву.</span></div>
+  <div class="tz-row"><span class="tz-key">Лого</span><span class="tz-val">«PR.WEB» — PR. червоний, WEB чорний/білий (залежно від фону).</span></div>
+</div>
+
+<div class="tz-block">
+  <h3>📐 Формати та розміри</h3>
+  <div class="tz-row"><span class="tz-key">Стрічка FB/IG</span><span class="tz-val">1080×1080 px (1:1)</span></div>
+  <div class="tz-row"><span class="tz-key">Сторіс / Reels</span><span class="tz-val">1080×1920 px (9:16)</span></div>
+  <div class="tz-row"><span class="tz-key">Facebook банер</span><span class="tz-val">1200×628 px (1.91:1)</span></div>
+  <div class="tz-row"><span class="tz-key">Відступи</span><span class="tz-val">Безпечна зона: 80px від країв для сторіс, 40px для квадрату</span></div>
+  <div class="tz-row"><span class="tz-key">Формат файлу</span><span class="tz-val">PNG + вихідник (Figma / PSD). Для відео — MP4, 5–7 сек.</span></div>
+</div>
+
+<div class="tz-block">
+  <h3>📝 Копірайт для банерів (підставте [X])</h3>
+  <hr class="tz-divider">
+  <strong style="font-size:13px;color:var(--muted)">Варіант A — Квадрат 1:1</strong>
+  <div class="copy-block">Заголовок: З 1 сайту до мережі [X]+ міст
+Підзаголовок: без рекламного бюджету
+Метрики: +[X]% трафік · ×[X] заявки · Топ-[X] Google Maps
+CTA: Хочу так само →
+Лого: PR.WEB</div>
+  <hr class="tz-divider">
+  <strong style="font-size:13px;color:var(--muted)">Варіант B — Сторіс 9:16</strong>
+  <div class="copy-block">Верхня частина: PR.WEB · Кейс Roll Club
+Центр-заголовок: Мережа [X]+ локацій в UA та PL
+Підзаголовок: З нуля до топу Google Maps у кожному місті
+Метрики (4 блоки): +[X]% трафік / ×[X] заявки / [X]+ міст / Топ-[X] Maps
+CTA знизу: Безкоштовний аудит →</div>
+  <hr class="tz-divider">
+  <strong style="font-size:13px;color:var(--muted)">Варіант C — Facebook 1200×628</strong>
+  <div class="copy-block">Ліво: PR.WEB · SEO для локального бізнесу
+Заголовок: З 1 сайту до мережі [X]+ міст
+CTA: Отримати аудит →
+Право (цифри): +[X]% трафік / ×[X] заявки / Топ-[X] Google Maps</div>
+</div>
+
+<div class="tz-block">
+  <h3>🤖 Промпт для Midjourney / Ideogram (фонове зображення)</h3>
+  <div class="copy-block">minimal dark background for SEO agency ad banner, abstract growth chart lines in red accent color #E8374A on very dark #1A1A1A background, clean geometric style, no people, no text, professional digital marketing aesthetic, flat design, --ar 1:1 --style raw --v 6</div>
+  <div style="margin-top:12px;font-size:13px;color:var(--muted)">Для сторіс змініть --ar 9:16, для широкого банера --ar 16:9</div>
+</div>
+
+<div class="tz-block">
+  <h3>🎯 Аудиторії для таргету (FB/IG Ads)</h3>
+  <div class="tz-row"><span class="tz-key">Аудиторія 1</span><span class="tz-val">Власники ресторанів і доставки їжі · UA · 28–50 років · інтереси: бізнес, франшиза, доставка їжі</span></div>
+  <div class="tz-row"><span class="tz-key">Аудиторія 2</span><span class="tz-val">Малий бізнес / підприємці · UA+PL · 25–45 · інтереси: маркетинг, SEO, Google Ads</span></div>
+  <div class="tz-row"><span class="tz-key">Аудиторія 3</span><span class="tz-val">Lookalike від відвідувачів prweb.pro (1–3%) · UA</span></div>
+  <div class="tz-row"><span class="tz-key">Бюджет</span><span class="tz-val">$50–100/міс на старті. A/B тест: квадрат vs сторіс. Оптимізація на кліки → потім на ліди.</span></div>
+  <div class="tz-row"><span class="tz-key">Ціль</span><span class="tz-val">Трафік на сторінку кейсу → форма «безкоштовний аудит»</span></div>
+</div>
+
+</body>
+</html>

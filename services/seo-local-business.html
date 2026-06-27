@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO для локального бізнесу — більше клієнтів з Google у вашому місті | PR.WEB</title>
+<meta name="description" content="Local SEO для малого і середнього бізнесу: виходьте в топ Google у своєму місті, отримуйте заявки з органіки і масштабуйтеся в нові регіони. PR.WEB — кейс Roll Club 4,1M+ переходів.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#202020;
+  --white:#F9F9F9;
+  --pink:#F6364D;
+  --gray:#A2A2A2;
+  --light:#EEECEE;
+  --radius:12px;
+  --pad:124px;
+  --max-w:1192px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}
+.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--black);font-size:16px}
+.nav-links a:hover{color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer;transition:all .15s}
+.btn-dark{background:var(--black);color:var(--white)}
+.btn-pink{background:var(--pink);color:var(--white)}
+.btn-pink:hover{background:#d42b3f}
+.btn-outline{background:transparent;color:var(--black);border:1.5px solid var(--black)}
+.btn-outline:hover{background:var(--black);color:var(--white)}
+.btn-white{background:var(--white);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700}
+
+.service-tabs{background:var(--light);padding:0 var(--pad);overflow-x:auto;white-space:nowrap;border-bottom:1px solid #ddd}
+.service-tabs-inner{max-width:var(--max-w);margin:0 auto;display:flex}
+.stab{display:inline-flex;align-items:center;gap:6px;padding:14px 20px;font-size:15px;color:var(--gray);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.stab:hover{color:var(--black)}
+.stab.active{color:var(--black);border-bottom-color:var(--pink);font-weight:700}
+
+/* HERO */
+.hero{padding:72px var(--pad) 80px}
+.hero-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:64px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:24px;text-transform:uppercase;letter-spacing:0.06em}
+.hero h1{font-family:'Onest',sans-serif;font-weight:700;font-size:52px;line-height:1.05;margin-bottom:24px}
+.hero h1 span{color:var(--pink)}
+.hero-sub{font-size:20px;color:var(--gray);line-height:1.5;margin-bottom:40px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.hero-proof{display:flex;gap:32px;flex-wrap:wrap;padding-top:32px;border-top:1px solid #eee}
+.proof-item{display:flex;flex-direction:column;gap:4px}
+.proof-num{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;color:var(--black);line-height:1}
+.proof-num span{color:var(--pink)}
+.proof-label{font-size:13px;color:var(--gray)}
+
+/* HERO VISUAL */
+.hero-visual{background:var(--black);border-radius:20px;overflow:hidden;position:relative;min-height:400px;padding:32px;display:flex;flex-direction:column;justify-content:flex-end}
+.hv-bg{position:absolute;inset:0;background:linear-gradient(135deg,#111 0%,#1a1208 50%,#201505 100%)}
+.hv-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(246,54,77,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(246,54,77,0.04) 1px,transparent 1px);background-size:48px 48px}
+.hv-emoji{position:absolute;top:24px;right:24px;font-size:80px;opacity:.12}
+.hv-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--pink)}
+.hv-stats{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hvs{background:rgba(255,255,255,0.06);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.07)}
+.hvs-num{font-family:'Onest',sans-serif;font-weight:700;font-size:26px;color:var(--white);line-height:1;margin-bottom:4px}
+.hvs-num span{color:var(--pink)}
+.hvs-label{font-size:12px;color:var(--gray);line-height:1.3}
+
+/* SECTION */
+.sec{padding:80px var(--pad)}
+.sec-inner{max-width:var(--max-w);margin:0 auto}
+.sec-tag{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:16px}
+.sec-h{font-family:'Onest',sans-serif;font-weight:700;font-size:44px;line-height:1.05;margin-bottom:16px}
+.sec-h span{color:var(--pink)}
+.sec-sub{font-size:18px;color:var(--gray);line-height:1.6;max-width:680px;margin-bottom:0}
+
+/* NICHES */
+.niches-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.niche-card{border:1px solid #eee;border-radius:var(--radius);padding:24px;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--black);display:block}
+.niche-card:hover{border-color:var(--pink);transform:translateY(-2px)}
+.niche-icon{font-size:32px;margin-bottom:12px}
+.niche-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;margin-bottom:6px}
+.niche-card p{font-size:13px;color:var(--gray);line-height:1.5}
+.niche-card .niche-link{font-size:13px;color:var(--pink);font-weight:700;margin-top:12px;display:block}
+
+/* WHAT IS LOCAL SEO */
+.local-seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px}
+.local-seo-text p{font-size:17px;color:var(--black);line-height:1.7;margin-bottom:20px}
+.local-seo-text p strong{font-weight:700;color:var(--black)}
+.local-seo-visual{background:var(--black);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.serp-item{background:rgba(255,255,255,0.05);border-radius:10px;padding:16px;border-left:3px solid transparent;transition:all .2s}
+.serp-item.top{border-left-color:var(--pink)}
+.serp-pos{font-family:'Onest',sans-serif;font-weight:700;font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+.serp-title{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:#7c9ff7;margin-bottom:4px}
+.serp-url{font-size:12px;color:#4a9a5a;margin-bottom:4px}
+.serp-desc{font-size:12px;color:var(--gray);line-height:1.4}
+.serp-badge{display:inline-block;background:rgba(246,54,77,0.15);color:var(--pink);font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.step-card{border:1px solid #eee;border-radius:var(--radius);padding:28px;transition:border-color .2s}
+.step-card:hover{border-color:var(--pink)}
+.step-tag{display:inline-block;background:rgba(246,54,77,0.08);color:var(--pink);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em}
+.step-num{font-family:'Onest',sans-serif;font-weight:700;font-size:40px;color:var(--pink);line-height:1;margin-bottom:16px;opacity:.25}
+.step-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:17px;margin-bottom:10px}
+.step-card p{font-size:15px;color:var(--gray);line-height:1.6}
+
+/* CASE */
+.case-block{background:var(--black);border-radius:20px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.case-label{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px}
+.case-block h2{font-family:'Onest',sans-serif;font-weight:700;font-size:34px;color:var(--white);line-height:1.15;margin-bottom:16px}
+.case-block h2 span{color:var(--pink)}
+.case-block p{font-size:16px;color:#bbb;line-height:1.6;margin-bottom:28px}
+.case-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cs{background:rgba(255,255,255,0.06);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.08)}
+.cs-num{font-family:'Onest',sans-serif;font-weight:700;font-size:30px;color:var(--white);line-height:1;margin-bottom:4px}
+.cs-num span{color:var(--pink)}
+.cs-label{font-size:12px;color:var(--gray)}
+
+/* COMPARE */
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.compare-card{border-radius:var(--radius);padding:32px}
+.compare-card.bad{background:#fff5f5;border:1px solid #fdd}
+.compare-card.good{background:var(--black);border:1px solid transparent}
+.compare-card h3{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:20px}
+.compare-card.bad h3{color:#c0392b}
+.compare-card.good h3{color:var(--white)}
+.compare-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.compare-list li{font-size:15px;line-height:1.5;padding-left:24px;position:relative}
+.compare-card.bad .compare-list li{color:#666}
+.compare-card.bad .compare-list li::before{content:"✗";color:#e74c3c;position:absolute;left:0;font-weight:700}
+.compare-card.good .compare-list li{color:#ccc}
+.compare-card.good .compare-list li::before{content:"✓";color:var(--pink);position:absolute;left:0;font-weight:700}
+
+/* CTA STRIP */
+.cta-strip{background:var(--pink);padding:40px var(--pad)}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-strip h3{font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#fff;margin-bottom:6px}
+.cta-strip p{font-size:15px;color:rgba(255,255,255,.8)}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.price-card{border:1px solid #eee;border-radius:var(--radius);padding:32px;position:relative}
+.price-card.featured{border:2px solid var(--pink)}
+.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:12px;padding:4px 16px;border-radius:20px;white-space:nowrap}
+.price-name{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:6px}
+.price-desc{font-size:13px;color:var(--gray);margin-bottom:20px;line-height:1.5}
+.price-val{font-family:'Onest',sans-serif;font-weight:700;font-size:34px;margin-bottom:4px}
+.price-val span{font-size:15px;font-weight:400;color:var(--gray)}
+.price-period{font-size:12px;color:var(--gray);margin-bottom:24px}
+.price-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.price-list li{font-size:14px;display:flex;align-items:flex-start;gap:8px;line-height:1.4;color:var(--black)}
+.price-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0}
+
+/* FAQ */
+.faq-list{margin-top:48px;display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid #eee;padding:24px 0}
+.faq-item:first-child{border-top:1px solid #eee}
+.faq-q{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;user-select:none}
+.faq-q::after{content:"+";font-size:24px;color:var(--pink);flex-shrink:0;font-weight:400;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-size:16px;color:var(--gray);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:400px;padding-top:16px}
+
+/* SEO TEXT */
+.seo-text-section{padding:72px var(--pad);background:var(--light)}
+.seo-text-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.seo-text h2{font-family:'Onest',sans-serif;font-weight:700;font-size:32px;line-height:1.15;margin-bottom:20px}
+.seo-text h2 span{color:var(--pink)}
+.seo-text h3{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin:28px 0 12px}
+.seo-text p{font-size:16px;color:#444;line-height:1.8;margin-bottom:16px}
+.seo-text ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.seo-text ul li{font-size:16px;color:#444;line-height:1.6;padding-left:20px;position:relative}
+.seo-text ul li::before{content:"—";color:var(--pink);position:absolute;left:0;font-weight:700}
+
+/* MAIN CTA */
+.main-cta{padding:80px var(--pad)}
+.main-cta-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start}
+.main-cta h2{font-family:'Onest',sans-serif;font-weight:700;font-size:42px;line-height:1.05;margin-bottom:20px}
+.main-cta h2 span{color:var(--pink)}
+.main-cta-sub{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:32px}
+.audit-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.audit-list li{display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.5}
+.audit-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0;margin-top:1px}
+.form-card{background:var(--light);border-radius:16px;padding:32px}
+.form-card h3{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:6px}
+.form-card p{font-size:14px;color:var(--gray);margin-bottom:24px}
+.field{border:none;border-bottom:1.5px solid #ccc;background:transparent;width:100%;padding:12px 4px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;color:var(--black);margin-bottom:16px;outline:none;transition:border-color .2s}
+.field:focus{border-bottom-color:var(--pink)}
+.field::placeholder{color:var(--gray)}
+.form-note{font-size:12px;color:var(--gray);margin-top:12px;text-align:center}
+
+/* FOOTER */
+footer{background:var(--black);padding:56px var(--pad) 40px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:48px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}
+.footer-logo span{color:var(--pink)}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col .label{font-size:13px;color:var(--gray);margin-bottom:12px}
+.footer-col a,.footer-col p{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);text-decoration:none;display:block;margin-bottom:8px;word-break:break-word}
+.footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
+
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}
+.sticky-cta .btn{width:100%;justify-content:center}
+
+@media(max-width:1024px){
+  :root{--pad:40px}
+  .hero-inner,.local-seo-grid,.case-block,.compare-grid,.main-cta-inner,.seo-text-inner{grid-template-columns:1fr;gap:40px}
+  .niches-grid{grid-template-columns:1fr 1fr}
+  .steps-grid,.price-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  :root{--pad:20px}
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero h1,.sec-h,.main-cta h2{font-size:30px}
+  .niches-grid,.steps-grid,.price-grid,.case-stats,.footer-cols{grid-template-columns:1fr}
+  .sticky-cta{display:block}
+  body{padding-bottom:72px}
+  .case-block{padding:28px 20px}
+  .service-tabs{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+    <ul class="nav-links">
+      <li><a href="https://prweb.pro/services">Послуги</a></li>
+      <li><a href="https://prweb.pro/cases">Кейси</a></li>
+      <li><a href="https://prweb.pro/about">Про нас</a></li>
+      <li><a href="https://prweb.pro/blog">Блог</a></li>
+      <li><a href="https://prweb.pro/contacts">Контакти</a></li>
+    </ul>
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+  </div>
+</nav>
+
+<!-- TABS -->
+<div class="service-tabs">
+  <div class="service-tabs-inner">
+    <a href="https://prweb.pro/seo-sushi" class="stab">🍱 SEO для доставки суші</a>
+    <a href="https://prweb.pro/seo" class="stab">🔍 SEO-просування</a>
+    <a href="https://prweb.pro/seo-shop" class="stab">🛒 SEO для інтернет-магазину</a>
+    <a href="#" class="stab active">📍 SEO для локального бізнесу</a>
+    <a href="https://prweb.pro/admin" class="stab">⚙️ Адміністрування сайту</a>
+    <a href="https://prweb.pro/google-ads" class="stab">📣 Реклама в Google</a>
+    <a href="https://prweb.pro/dev" class="stab">💻 Розробка сайтів</a>
+    <a href="https://prweb.pro/audit" class="stab">🔧 Технічний аудит</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">📍 Local SEO для бізнесу</div>
+      <h1>Ваш бізнес — перший<br>у Google <span>у своєму місті</span></h1>
+      <p class="hero-sub">Будуємо SEO-систему для локального бізнесу: більше клієнтів з пошуку, стабільний потік заявок і масштабування в нові регіони без залежності від реклами.</p>
+      <div class="hero-btns">
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Отримати безкоштовний аудит →</a>
+        <a href="#how" class="btn btn-outline">Як ми працюємо</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <span class="proof-num">4,1<span>M</span></span>
+          <span class="proof-label">переходів з SEO у клієнта</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">+<span>308</span>%</span>
+          <span class="proof-label">зростання трафіку за 4 роки</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">12<span>+</span></span>
+          <span class="proof-label">міст в UA та PL</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-bg"></div>
+      <div class="hv-grid"></div>
+      <div class="hv-emoji">📍</div>
+      <div class="hv-line"></div>
+      <div class="hv-stats">
+        <div class="hvs">
+          <div class="hvs-num">Топ-<span>1</span></div>
+          <div class="hvs-label">«барбершоп Харків»</div>
+        </div>
+        <div class="hvs">
+          <div class="hvs-num">Топ-<span>1</span></div>
+          <div class="hvs-label">«клінінг Київ ціна»</div>
+        </div>
+        <div class="hvs">
+          <div class="hvs-num"><span>3</span> міс</div>
+          <div class="hvs-label">до перших результатів</div>
+        </div>
+        <div class="hvs">
+          <div class="hvs-num"><span>0</span> грн</div>
+          <div class="hvs-label">на рекламу після SEO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NICHES -->
+<div class="sec" style="padding-top:0;padding-bottom:72px">
+  <div class="sec-inner">
+    <span class="sec-tag">Ніші</span>
+    <h2 class="sec-h">Ми просуваємо<br><span>будь-який локальний бізнес</span></h2>
+    <p class="sec-sub">Якщо ваші клієнти шукають «послуга + місто» — Local SEO збільшить потік заявок</p>
+    <div class="niches-grid">
+      <div class="niche-card">
+        <div class="niche-icon">🍜</div>
+        <h4>Ресторани та доставка</h4>
+        <p>Суші, піца, бургери — топ в Google Maps без комісії агрегаторів</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">✂️</div>
+        <h4>Барбершопи та салони</h4>
+        <p>«Барбершоп поруч» — саме ваш заклад у топ-3 Maps і пошуку</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">🦷</div>
+        <h4>Клініки та стоматологія</h4>
+        <p>Медичні запити мають найвищу конверсію — виходьте в топ першими</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">🔧</div>
+        <h4>Ремонт та будівництво</h4>
+        <p>«Ремонт квартир Харків» — стабільний потік заявок з органіки</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">🏋️</div>
+        <h4>Фітнес та студії</h4>
+        <p>Спортзал, йога, танці — клієнти шукають «поруч». Будьте першими</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">🧹</div>
+        <h4>Клінінг</h4>
+        <p>«Прибирання квартири Київ» — SEO дає стабільні заявки щодня</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">🚗</div>
+        <h4>Автосервіси</h4>
+        <p>«Шиномонтаж поруч», «СТО Дніпро» — локальні запити з високою конверсією</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+      <div class="niche-card">
+        <div class="niche-icon">⚖️</div>
+        <h4>Юридичні та фінансові</h4>
+        <p>Адвокат, бухгалтер, нотаріус — довіра починається з топу Google</p>
+        <span class="niche-link">Детальніше →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IS LOCAL SEO -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px">
+  <div class="sec-inner">
+    <span class="sec-tag">Що таке Local SEO</span>
+    <h2 class="sec-h">SEO, яке <span>приводить клієнтів</span><br>саме з вашого міста</h2>
+    <div class="local-seo-grid">
+      <div class="local-seo-text">
+        <p>Local SEO — це просування сайту і Google Maps під локальні запити: «послуга + місто», «послуга поруч», «найкращий X у Харкові». Людина шукає — і знаходить вас.</p>
+        <p>На відміну від звичайного SEO, локальне просування враховує <strong>географію пошуку</strong>: кожен район, кожне місто отримує свою сторінку, свій набір запитів, своє місце в Google Maps.</p>
+        <p>Результат — <strong>стабільний потік заявок без щоденних витрат на рекламу</strong>. Трафік накопичується місяць за місяцем і залишається з вами.</p>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="margin-top:8px">Обговорити мій проект →</a>
+      </div>
+      <div class="local-seo-visual">
+        <p style="font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-weight:700">Google · барбершоп харків</p>
+        <div class="serp-item top">
+          <div class="serp-pos">ТОП-1 <span class="serp-badge">ВАШ САЙТ</span></div>
+          <div class="serp-title">Барбершоп у Харкові — стрижка від 299 грн</div>
+          <div class="serp-url">vash-barbershop.ua/kharkiv</div>
+          <div class="serp-desc">Запис онлайн, досвідчені барбери, 3 локації у Харкові. Відкриті щодня...</div>
+        </div>
+        <div class="serp-item">
+          <div class="serp-pos">ТОП-2</div>
+          <div class="serp-title">Барбершоп Харків — TopBarber</div>
+          <div class="serp-url">topbarber.com.ua</div>
+          <div class="serp-desc">Стрижки та гоління. Запис за телефоном...</div>
+        </div>
+        <div class="serp-item">
+          <div class="serp-pos">ТОП-3</div>
+          <div class="serp-title">Барбершоп ChopChop Харків</div>
+          <div class="serp-url">chopchop.ua/kharkiv</div>
+          <div class="serp-desc">Класичні стрижки та борода...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE: без SEO vs з PR.WEB -->
+<div class="sec">
+  <div class="sec-inner">
+    <span class="sec-tag">До і після</span>
+    <h2 class="sec-h">Що змінюється<br><span>після Local SEO</span></h2>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <h3>😓 Без SEO зараз</h3>
+        <ul class="compare-list">
+          <li>Платите за рекламу щодня — зупинили бюджет, зупинились клієнти</li>
+          <li>В Google по вашим запитам — конкуренти і агрегатори</li>
+          <li>Сайт є, але нікого не приводить</li>
+          <li>Google Maps профіль заповнений на 30% і не видно в топі</li>
+          <li>Відкриваєте нове місто — і знову старт з нуля</li>
+          <li>Не знаєте, де шукають ваших клієнтів</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <h3>✅ З PR.WEB через 4–6 місяців</h3>
+        <ul class="compare-list">
+          <li>Органічний трафік росте щомісяця — без щоденного рекламного бюджету</li>
+          <li>Топ-3 Google по ключових локальних запитах вашого міста</li>
+          <li>Сайт щодня приводить нових клієнтів без вашої участі</li>
+          <li>Google Maps оптимізований — ви перший у «поруч» і в місті</li>
+          <li>Готовий шаблон під кожне нове місто — запуск за 2–3 місяці</li>
+          <li>Прозорий звіт: трафік, позиції, заявки, дохід з органіки</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MINI CTA -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div>
+      <h3>Хочете знати, де ваш сайт зараз у Google?</h3>
+      <p>Безкоштовний SEO-розбір — покажемо точки росту для вашого бізнесу</p>
+    </div>
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в Telegram →</a>
+  </div>
+</div>
+
+<!-- HOW WE WORK -->
+<div class="sec" id="how">
+  <div class="sec-inner">
+    <span class="sec-tag">Процес</span>
+    <h2 class="sec-h">Як ми будуємо<br><span>SEO-систему для бізнесу</span></h2>
+    <p class="sec-sub">Не разова оптимізація, а повна інфраструктура під довгостроковий ріст</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-tag">Крок 1 · Місяць 1</div>
+        <div class="step-num">01</div>
+        <h4>SEO-аудит і технічна база</h4>
+        <p>Аналізуємо сайт, конкурентів і ринок. Виправляємо технічні помилки: швидкість, мобільна адаптація, структура URL, дублі сторінок. Це фундамент — без нього решта не працює.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 2 · Місяць 1</div>
+        <div class="step-num">02</div>
+        <h4>Локальна семантика</h4>
+        <p>Збираємо всі запити «послуга + місто», «послуга поруч», брендові і конкурентні ключі. Кластеризуємо під структуру сайту — кожна сторінка закриває свою групу запитів.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 3 · Місяць 1–2</div>
+        <div class="step-num">03</div>
+        <h4>Структура і локальні сторінки</h4>
+        <p>Створюємо або переробляємо сторінки під кожне місто, район, послугу. Оптимізуємо мета-теги, заголовки, комерційні блоки. Це ключ до видимості в локальному пошуку.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 4 · Місяць 2</div>
+        <div class="step-num">04</div>
+        <h4>Google Business Profile</h4>
+        <p>Повна оптимізація картки: фото, категорії, опис, відгуки, Q&A, регулярні пости. Топ-3 у Google Maps — це окрема робота, яка дає найшвидший результат у локальному пошуку.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 5 · Місяць 2–3</div>
+        <div class="step-num">05</div>
+        <h4>Контент і зовнішні посилання</h4>
+        <p>Оптимізований контент на сторінках, статті для блогу, крауд-маркетинг у локальних ресурсах, посилання з тематичних сайтів. Зміцнюємо авторитет домену в очах Google.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 6 · Постійно</div>
+        <div class="step-num">06</div>
+        <h4>Аналітика і масштабування</h4>
+        <p>Щомісячний звіт: трафік, позиції, заявки, дохід з органіки. Оптимізуємо те, що росте повільно. Готовий шаблон під нові міста — кожен наступний запуск швидший і дешевший.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CASE ROLL CLUB -->
+<div class="sec" style="padding-top:0">
+  <div class="sec-inner">
+    <div class="case-block">
+      <div>
+        <div class="case-label">Головний кейс PR.WEB</div>
+        <h2>Roll Club: з 1 міста<br>до мережі <span>12+ локацій</span><br>в UA та Польщі</h2>
+        <p>Побудували SEO-систему для локальної доставки їжі, яка масштабується містами. Органіка замінила постійну рекламу і стала головним каналом замовлень.</p>
+        <a href="https://prweb-agency.github.io/offers/cases/Seo-Case-Roll-Club.html" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700">Читати повний кейс →</a>
+      </div>
+      <div class="case-stats">
+        <div class="cs"><div class="cs-num"><span>4,1</span>M</div><div class="cs-label">SEO-переходів за 6 років</div></div>
+        <div class="cs"><div class="cs-num">+<span>308</span>%</div><div class="cs-label">зростання трафіку 2020→2024</div></div>
+        <div class="cs"><div class="cs-num"><span>286</span>K</div><div class="cs-label">SEO-транзакцій з органіки</div></div>
+        <div class="cs"><div class="cs-num"><span>12</span>+</div><div class="cs-label">міст в UA та Польщі</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px" id="price">
+  <div class="sec-inner">
+    <span class="sec-tag">Вартість</span>
+    <h2 class="sec-h">Тарифи Local SEO<br><span>без прихованих платежів</span></h2>
+    <p class="sec-sub">Фіксований місячний платіж. Ціна залежить від кількості міст і обсягу робіт.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-name">Basic Local SEO</div>
+        <div class="price-desc">Для малого бізнесу в 1 місті</div>
+        <div class="price-val">від $300 <span>/міс</span></div>
+        <div class="price-period">+ разовий старт від $200</div>
+        <ul class="price-list">
+          <li>SEO-аудит і технічна оптимізація</li>
+          <li>Локальна семантика під 1 місто</li>
+          <li>До 15 оптимізованих сторінок</li>
+          <li>Google Business Profile</li>
+          <li>2 статті на місяць</li>
+          <li>Щомісячний звіт</li>
+        </ul>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Найпопулярніший</div>
+        <div class="price-name">Growth SEO</div>
+        <div class="price-desc">Стабільне зростання + масштабування</div>
+        <div class="price-val">від $700 <span>/міс</span></div>
+        <div class="price-period">+ разовий старт від $400</div>
+        <ul class="price-list">
+          <li>Все з тарифу Basic</li>
+          <li>До 3 міст одночасно</li>
+          <li>До 60 локальних сторінок</li>
+          <li>Google Maps для кожної точки</li>
+          <li>5 статей на місяць</li>
+          <li>Крауд-маркетинг і посилання</li>
+          <li>Пріоритетна підтримка</li>
+        </ul>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700">Обговорити →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Local SEO Scale</div>
+        <div class="price-desc">Для мереж, франшиз і виходу в EU</div>
+        <div class="price-val">від $1 200 <span>/міс</span></div>
+        <div class="price-period">Індивідуальні умови</div>
+        <ul class="price-list">
+          <li>Все з тарифу Growth</li>
+          <li>Необмежена кількість міст</li>
+          <li>Польща та EU — окрема семантика</li>
+          <li>hreflang і мультимовне SEO</li>
+          <li>Виділений SEO-спеціаліст</li>
+          <li>Щотижнева комунікація</li>
+          <li>Стратегія на рік</li>
+        </ul>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MINI CTA 2 -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div>
+      <h3>Не впевнені який тариф підходить?</h3>
+      <p>Напишіть — розберемо ваш кейс і запропонуємо оптимальний план</p>
+    </div>
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в TG →</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sec">
+  <div class="sec-inner">
+    <span class="sec-tag">Питання та відповіді</span>
+    <h2 class="sec-h">Часті запитання<br><span>про Local SEO</span></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Скільки часу займе вийти в топ Google?</div>
+        <div class="faq-a">Перші зрушення в позиціях з'являються через 6–8 тижнів після старту. Стабільний трафік — через 3–4 місяці. Google Maps реагує швидше: топ-3 по деяких запитах можливий вже за 4–6 тижнів після оптимізації профілю. Терміни залежать від конкурентності ніші і вихідного стану сайту.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Чим Local SEO відрізняється від звичайного SEO?</div>
+        <div class="faq-a">Звичайне SEO орієнтоване на загальні запити без прив'язки до місця. Local SEO фокусується на запитах «послуга + місто», просуванні в Google Maps і роботі з Google Business Profile. Для бізнесу, який обслуговує клієнтів у конкретних містах, Local SEO дає набагато вищу конверсію і швидший результат.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Чи можна просувати бізнес одразу в кількох містах?</div>
+        <div class="faq-a">Так, це одна з наших спеціалізацій. Ми будуємо SEO-шаблон, який масштабується: окрема сторінка під кожне місто, своя семантика, свій Google Business Profile. Кейс Roll Club — від 1 міста до 12+ локацій в UA і Польщі. Кожне нове місто запускається швидше попереднього завдяки готовому шаблону.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ви гарантуєте ТОП-1 у Google?</div>
+        <div class="faq-a">Ніхто чесно не може гарантувати конкретну позицію — алгоритм Google змінюється постійно. Ми не обіцяємо ТОП-1, але показуємо реальні кейси з цифрами і даємо прогноз на основі аналізу конкуренції. Наш фокус — не позиція сама по собі, а зростання органічного трафіку і заявок.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Чи потрібен новий сайт для Local SEO?</div>
+        <div class="faq-a">Ні. Ми працюємо з вашим існуючим сайтом. Якщо сайт потребує серйозної переробки — скажемо про це чесно після аудиту. У більшості випадків достатньо технічної оптимізації і додавання нових сторінок під локальні запити.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Що буде, якщо ми зупинимо SEO?</div>
+        <div class="faq-a">На відміну від реклами, SEO-результати не зникають миттєво після зупинки. Позиції і трафік тримаються від кількох місяців до кількох років залежно від конкурентності. Це і є головна перевага органіки перед рекламою — ви платите за довгостроковий актив, а не за щоденний «прокат» трафіку.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEO TEXT BLOCK -->
+<div class="seo-text-section">
+  <div class="seo-text-inner">
+    <div class="seo-text">
+      <h2>Local SEO для бізнесу —<br><span>що це і навіщо це вам</span></h2>
+      <p>Локальне SEO (Local Search Engine Optimization) — це комплекс робіт, спрямованих на підвищення видимості бізнесу в Google за геолокаційними запитами. Якщо ваші клієнти шукають «перукарня Харків», «ремонт ноутбуків Київ» або «доставка їжі поруч» — ви маєте бути першими у видачі.</p>
+      <p>PR.WEB спеціалізується на Local SEO для локального бізнесу в Україні та Польщі. Ми не просто «оптимізуємо сайт» — ми будуємо систему, яка приводить цільових клієнтів з Google щодня без щоденних витрат на рекламу.</p>
+      <h3>Чому локальний бізнес програє в Google</h3>
+      <p>Більшість локальних бізнесів мають сайт, але не мають стратегії. Сторінки не оптимізовані під локальні запити, Google Business Profile заповнений частково, немає посилальної маси — і в результаті топ займають агрегатори та великі мережі з більшими бюджетами.</p>
+      <p>Але у Local SEO є одна перевага: <strong>локальність — це фільтр</strong>. Великий федеральний конкурент не завжди виграє по запиту «ремонт взуття Шевченківський район Київ». Тут виграє той, хто краще відповідає на локальний намір пошуку.</p>
+    </div>
+    <div class="seo-text">
+      <h2>Як Local SEO<br><span>генерує замовлення</span></h2>
+      <h3>Google Maps — найбільший генератор локального трафіку</h3>
+      <p>Більше 40% локальних пошукових запитів клікаються з блоку Google Maps («локальна трійка»). Це люди з наміром купити — вони вже визначились з послугою і шукають, де саме. Оптимізація Google Business Profile — один з найшвидших способів отримати нових клієнтів.</p>
+      <h3>Локальні сторінки — основа органічного трафіку</h3>
+      <p>Окрема сторінка «Доставка суші Харків», «Барбершоп Шевченківський район» або «Ремонт квартир Оболонь Київ» — це точне попадання в намір пошуку. Google показує такі сторінки вище, ніж загальні сторінки послуг.</p>
+      <ul>
+        <li>Локальна семантика під кожне місто і район</li>
+        <li>Оптимізовані мета-теги і заголовки під місцеві запити</li>
+        <li>Структурована розмітка Schema.org для локального бізнесу</li>
+        <li>Комерційні блоки: відгуки, ціни, адреса, карта</li>
+        <li>Внутрішня перелінковка між локальними сторінками</li>
+      </ul>
+      <h3>SEO як актив, а не витрата</h3>
+      <p>Реклама зупиняється — трафік зупиняється. SEO накопичується місяць за місяцем: позиції зростають, трафік росте, вартість кожного нового клієнта знижується. Через рік SEO — це найдешевший канал залучення клієнтів для локального бізнесу.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CTA -->
+<div class="main-cta" id="cta">
+  <div class="main-cta-inner">
+    <div>
+      <h2>Готові вивести бізнес<br>у <span>топ Google</span> у вашому місті?</h2>
+      <p class="main-cta-sub">Зробимо безкоштовний SEO-розбір — покажемо де ви зараз, де конкуренти і що потрібно зробити першим.</p>
+      <ul class="audit-list">
+        <li>Поточні позиції сайту по ключових локальних запитах</li>
+        <li>Аналіз топ-5 конкурентів у вашому місті</li>
+        <li>Які сторінки потрібно створити для захоплення трафіку</li>
+        <li>Стан вашого Google Business Profile і що виправити</li>
+        <li>Стратегія для органічного росту в Google та AI-пошуку</li>
+        <li>Конкретний план дій на перші 3 місяці</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <h3>Безкоштовний SEO-розбір</h3>
+      <p>Відповімо протягом 1 робочого дня</p>
+      <input type="text" class="field" placeholder="Ваше ім'я">
+      <input type="url" class="field" placeholder="Адреса сайту">
+      <input type="text" class="field" placeholder="Ніша та місто">
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;padding:16px">
+        Написати в Telegram →
+      </a>
+      <p class="form-note">або <a href="mailto:seo@prweb.pro" style="color:var(--pink)">seo@prweb.pro</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo"><span>PR.</span>WEB</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="label">Адреса</div>
+          <p>Україна, м. Харків,<br>вул. Клочківська, 24</p>
+        </div>
+        <div class="footer-col">
+          <div class="label">E-mail</div>
+          <a href="mailto:seo@prweb.pro">seo@prweb.pro</a>
+        </div>
+        <div class="footer-col">
+          <div class="label">Telegram</div>
+          <a href="https://t.me/verdiev" target="_blank">@verdiev</a>
+        </div>
+        <div class="footer-col">
+          <div class="label">Соцмережі</div>
+          <a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a>
+          <a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

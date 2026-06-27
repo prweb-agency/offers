@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакти PR.WEB — написати в Telegram або на email</title>
+<meta name="description" content="Зв'яжіться з PR.WEB: Telegram @verdiev, email seo@prweb.pro. Безкоштовний SEO-розбір для локального бізнесу в UA та EU.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#202020;--white:#F9F9F9;--pink:#F6364D;--gray:#A2A2A2;--light:#EEECEE;--radius:12px;--pad:124px;--max-w:1192px}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--black);font-size:16px}.nav-links a:hover{color:var(--pink)}.nav-links a.active{color:var(--pink);font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer}
+.btn-dark{background:var(--black);color:var(--white)}.btn-pink{background:var(--pink);color:var(--white)}.btn-pink:hover{background:#d42b3f}
+.contact-layout{padding:72px var(--pad) 80px}
+.contact-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:start}
+.hero-tag{display:inline-block;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.06em}
+.page-h1{font-family:'Onest',sans-serif;font-weight:700;font-size:52px;line-height:1.05;margin-bottom:20px}.page-h1 span{color:var(--pink)}
+.contact-sub{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:40px;max-width:500px}
+/* CONTACT METHODS */
+.contact-methods{display:flex;flex-direction:column;gap:16px;margin-bottom:48px}
+.contact-method{display:flex;align-items:center;gap:20px;padding:20px 24px;border:1px solid #eee;border-radius:var(--radius);text-decoration:none;color:var(--black);transition:all .2s}
+.contact-method:hover{border-color:var(--pink);transform:translateX(4px)}
+.cm-icon{width:48px;height:48px;background:rgba(246,54,77,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.cm-label{font-size:13px;color:var(--gray);margin-bottom:2px}
+.cm-value{font-family:'Onest',sans-serif;font-weight:700;font-size:16px}
+.cm-sub{font-size:13px;color:var(--gray);margin-top:2px}
+.cm-arrow{margin-left:auto;font-size:18px;color:var(--pink)}
+/* SOCIALS */
+.socials-row{display:flex;gap:12px;margin-bottom:48px}
+.social-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:40px;border:1.5px solid #eee;text-decoration:none;color:var(--black);font-size:14px;font-weight:700;font-family:'Onest',sans-serif;transition:all .2s}
+.social-btn:hover{border-color:var(--pink);color:var(--pink)}
+/* WHAT GET */
+.what-get{background:var(--light);border-radius:16px;padding:32px}
+.what-get h3{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:20px}
+.wg-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.wg-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.5}.wg-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0;margin-top:2px}
+/* FORM */
+.form-card{background:var(--black);border-radius:20px;padding:40px;position:sticky;top:109px}
+.form-card h2{font-family:'Onest',sans-serif;font-weight:700;font-size:26px;color:var(--white);margin-bottom:8px}.form-card h2 span{color:var(--pink)}
+.form-card p{font-size:15px;color:#aaa;margin-bottom:28px;line-height:1.5}
+.field{border:none;border-bottom:1.5px solid rgba(255,255,255,0.15);background:transparent;width:100%;padding:12px 4px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;color:var(--white);margin-bottom:16px;outline:none;transition:border-color .2s}.field:focus{border-bottom-color:var(--pink)}.field::placeholder{color:#666}
+.form-note{font-size:12px;color:#666;margin-top:12px;text-align:center}
+.form-note a{color:var(--pink)}
+/* FAQ MINI */
+.sec{padding:80px var(--pad)}.sec-inner{max-width:var(--max-w);margin:0 auto}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.faq-mini{padding:24px;border:1px solid #eee;border-radius:var(--radius)}
+.faq-mini h4{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;margin-bottom:8px}
+.faq-mini p{font-size:14px;color:var(--gray);line-height:1.5}
+footer{background:var(--black);padding:56px var(--pad) 40px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:48px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}.footer-logo span{color:var(--pink)}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col .label{font-size:13px;color:var(--gray);margin-bottom:12px}
+.footer-col a,.footer-col p{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);text-decoration:none;display:block;margin-bottom:8px;word-break:break-word}
+.footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}.sticky-cta .btn{width:100%;justify-content:center}
+@media(max-width:1024px){:root{--pad:40px}.contact-inner{grid-template-columns:1fr;gap:48px}.form-card{position:static}}
+@media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.page-h1{font-size:32px}.faq-grid,.footer-cols{grid-template-columns:1fr}.sticky-cta{display:block}body{padding-bottom:72px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+  <ul class="nav-links">
+    <li><a href="https://prweb.pro/services">Послуги</a></li>
+    <li><a href="https://prweb.pro/cases">Кейси</a></li>
+    <li><a href="https://prweb.pro/about">Про нас</a></li>
+    <li><a href="https://prweb.pro/blog">Блог</a></li>
+    <li><a href="https://prweb.pro/contacts" class="active">Контакти</a></li>
+  </ul>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+</div></nav>
+
+<div class="contact-layout"><div class="contact-inner">
+  <div>
+    <div class="hero-tag">Контакти</div>
+    <h1 class="page-h1">Обговоримо<br>ваш <span>проект</span></h1>
+    <p class="contact-sub">Напишіть нам — розберемо ваш бізнес, визначимо точки росту і запропонуємо конкретний план без зайвих слів.</p>
+
+    <div class="contact-methods">
+      <a href="https://t.me/verdiev" target="_blank" class="contact-method">
+        <div class="cm-icon">✈️</div>
+        <div>
+          <div class="cm-label">Найшвидший спосіб</div>
+          <div class="cm-value">Telegram: @verdiev</div>
+          <div class="cm-sub">Відповідаємо протягом кількох годин</div>
+        </div>
+        <div class="cm-arrow">→</div>
+      </a>
+      <a href="mailto:seo@prweb.pro" class="contact-method">
+        <div class="cm-icon">📧</div>
+        <div>
+          <div class="cm-label">Email</div>
+          <div class="cm-value">seo@prweb.pro</div>
+          <div class="cm-sub">Відповідаємо протягом 1 робочого дня</div>
+        </div>
+        <div class="cm-arrow">→</div>
+      </a>
+      <div class="contact-method" style="cursor:default">
+        <div class="cm-icon">📍</div>
+        <div>
+          <div class="cm-label">Адреса</div>
+          <div class="cm-value">Харків, вул. Клочківська, 24</div>
+          <div class="cm-sub">Україна · Працюємо дистанційно по всьому світу</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="socials-row">
+      <a href="https://www.instagram.com/prweb.agency" target="_blank" class="social-btn">📸 Instagram</a>
+      <a href="https://www.threads.com/@verdiev.seo" target="_blank" class="social-btn">🧵 Threads</a>
+      <a href="https://t.me/verdiev" target="_blank" class="social-btn">✈️ Telegram</a>
+    </div>
+
+    <div class="what-get">
+      <h3>Що ви отримаєте на першій зустрічі</h3>
+      <ul class="wg-list">
+        <li>Аналіз поточних позицій сайту в Google по ключових запитах вашої ніші</li>
+        <li>Огляд конкурентів і що вони роблять краще за вас прямо зараз</li>
+        <li>Потенціал органічного трафіку для вашого міста і ніші</li>
+        <li>Стратегія для органічного росту в Google та AI-пошуку</li>
+        <li>Конкретний план дій на 3 місяці з пріоритетами</li>
+        <li>Чесна оцінка вартості і термінів результату</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h2>Безкоштовний<br><span>SEO-розбір</span></h2>
+    <p>Заповніть форму — або просто напишіть у Telegram @verdiev. Відповімо і призначимо зручний час.</p>
+    <input type="text" class="field" placeholder="Ваше ім'я">
+    <input type="url" class="field" placeholder="Сайт вашого бізнесу">
+    <input type="text" class="field" placeholder="Ніша та місто / країна">
+    <input type="text" class="field" placeholder="Що зараз не влаштовує в SEO?">
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;padding:16px;font-size:16px;margin-top:8px">
+      Написати в Telegram →
+    </a>
+    <p class="form-note">або одразу на <a href="mailto:seo@prweb.pro">seo@prweb.pro</a></p>
+  </div>
+</div></div>
+
+<!-- FAQ -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px"><div class="sec-inner">
+  <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:16px">Питання</span>
+  <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:36px;margin-bottom:0">Швидкі відповіді<br><span style="color:var(--pink)">на часті запитання</span></h2>
+  <div class="faq-grid">
+    <div class="faq-mini"><h4>Як відбувається перша комунікація?</h4><p>Напишіть у Telegram або на email. Відповімо протягом кількох годин, задамо кілька питань про проект і запропонуємо зручний час для короткого дзвінка або чату.</p></div>
+    <div class="faq-mini"><h4>Чи є безкоштовна консультація?</h4><p>Так. Перший розбір — безкоштовно. Ми дивимось на ваш сайт, аналізуємо нішу і конкурентів, показуємо точки росту. Ніяких зобов'язань.</p></div>
+    <div class="faq-mini"><h4>Як швидко ви відповідаєте?</h4><p>У Telegram — зазвичай протягом 1–2 годин у робочий час. На email — протягом 1 робочого дня. Термінові питання — пишіть у Telegram.</p></div>
+    <div class="faq-mini"><h4>Чи ви працюєте з проектами за межами UA?</h4><p>Так. Маємо досвід з Польщею, Норвегією, ОАЄ та іншими ринками. Пишіть — обговоримо специфіку вашого ринку.</p></div>
+    <div class="faq-mini"><h4>Що потрібно підготувати для першої зустрічі?</h4><p>Нічого особливого. Просто розкажіть про бізнес: ніша, місто, сайт, що зараз не влаштовує. Все інше ми зробимо самі.</p></div>
+    <div class="faq-mini"><h4>Чи ви беретесь за малий бізнес з невеликим бюджетом?</h4><p>Так, є тариф від $300/міс. Важливо не скільки бюджет на старті, а системність роботи. Обговоримо що реально зробити в рамках вашого бюджету.</p></div>
+  </div>
+</div></div>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-logo"><span>PR.</span>WEB</div>
+    <div class="footer-cols">
+      <div class="footer-col"><div class="label">Адреса</div><p>Україна, м. Харків,<br>вул. Клочківська, 24</p></div>
+      <div class="footer-col"><div class="label">E-mail</div><a href="mailto:seo@prweb.pro">seo@prweb.pro</a></div>
+      <div class="footer-col"><div class="label">Telegram</div><a href="https://t.me/verdiev" target="_blank">@verdiev</a></div>
+      <div class="footer-col"><div class="label">Соцмережі</div><a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a><a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a></div>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
+</div></footer>
+<div class="sticky-cta"><a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a></div>
+</body>
+</html>

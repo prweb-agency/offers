@@ -185,14 +185,14 @@ nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z
 
 /* FOOTER */
 footer{background:var(--black);padding:56px var(--pad) 40px}
-.footer-inner{max-width:var(--max-w);margin:0 auto}
-.footer-top{display:flex;gap:80px;margin-bottom:56px}
-.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);margin-bottom:0;flex-shrink:0}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:56px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0;white-space:nowrap}
 .footer-logo span{color:var(--pink)}
-.footer-cols{display:flex;flex:1;gap:80px}
-.footer-col h5{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;color:var(--white);margin-bottom:20px}
-.footer-col p,.footer-col a{font-size:18px;color:var(--white);text-decoration:none;font-family:'Onest',sans-serif;font-weight:700;line-height:1.2;display:block;margin-bottom:8px}
-.footer-col .label{font-size:16px;color:var(--gray);font-family:'Wix Madefor Display',sans-serif;font-weight:400;margin-bottom:12px}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col{min-width:0}
+.footer-col p,.footer-col a{font-size:16px;color:var(--white);text-decoration:none;font-family:'Onest',sans-serif;font-weight:700;line-height:1.4;display:block;margin-bottom:8px;word-break:break-word}
+.footer-col .label{font-size:14px;color:var(--gray);font-family:'Wix Madefor Display',sans-serif;font-weight:400;margin-bottom:12px}
 .footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
 
 /* STICKY CTA MOBILE */
@@ -235,6 +235,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
   .quote-wrap{padding:32px 24px}
   .quote-text{font-size:18px}
   .footer-top{flex-direction:column;gap:40px}
+  .footer-cols{grid-template-columns:1fr 1fr}
   .sticky-cta{display:block}
   body{padding-bottom:80px}
   .cta-section{padding:60px 20px}
@@ -682,31 +683,55 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
   <div class="sec-tag">Інші проекти</div>
   <h2 class="h2" style="margin-bottom:8px">Схожі <span class="pink">кейси</span></h2>
   <div class="cases-grid">
+
+    <!-- LAPKI.PET -->
     <div class="case-card">
-      <div class="case-niche">Зоотовари / Клініка · UA</div>
+      <div class="case-niche">Зоотовари / Догляд за тваринами · UA</div>
       <h4>Lapki.pet</h4>
       <div class="case-metrics">
-        <div><div class="cm-val">+[X]%</div><div class="cm-lbl">трафік</div></div>
-        <div><div class="cm-val">×[X]</div><div class="cm-lbl">заявки</div></div>
-        <div><div class="cm-val">Топ-[X]</div><div class="cm-lbl">Maps</div></div>
+        <div><div class="cm-val">29K</div><div class="cm-lbl">SEO-трафік/міс</div></div>
+        <div><div class="cm-val">327K</div><div class="cm-lbl">ключових слів</div></div>
+        <div><div class="cm-val">#2</div><div class="cm-lbl">рейтинг в ніші UA</div></div>
+      </div>
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:16px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--gray)">262 вхідних посилань</span>
+        <span style="font-size:12px;color:var(--gray)">53 домени</span>
+        <span style="font-size:12px;color:var(--gray)">#5 942 в UA</span>
       </div>
     </div>
+
+    <!-- OPTIPAK -->
     <div class="case-card">
-      <div class="case-niche">Упаковка / B2B · UA</div>
+      <div class="case-niche">Пакування / B2B · UA</div>
       <h4>Optipak.com.ua</h4>
       <div class="case-metrics">
-        <div><div class="cm-val">+[X]%</div><div class="cm-lbl">трафік</div></div>
-        <div><div class="cm-val">Топ-[X]</div><div class="cm-lbl">запити</div></div>
+        <div><div class="cm-val">2.2K</div><div class="cm-lbl">SEO-трафік/міс</div></div>
+        <div><div class="cm-val">15K</div><div class="cm-lbl">ключових слів</div></div>
+        <div><div class="cm-val">#38</div><div class="cm-lbl">рейтинг в ніші UA</div></div>
+      </div>
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:16px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--gray)">230 вхідних посилань</span>
+        <span style="font-size:12px;color:var(--gray)">55 доменів</span>
+        <span style="font-size:12px;color:var(--gray)">#110 557 в UA</span>
       </div>
     </div>
+
+    <!-- KINOLOG -->
     <div class="case-card">
-      <div class="case-niche">Кінолог / Послуги · UA+PL</div>
+      <div class="case-niche">Кінолог / Дресирування · UA</div>
       <h4>Kinolog.com.ua</h4>
       <div class="case-metrics">
-        <div><div class="cm-val">+[X]%</div><div class="cm-lbl">трафік</div></div>
-        <div><div class="cm-val">×[X]</div><div class="cm-lbl">дзвінки</div></div>
+        <div><div class="cm-val">8.3K</div><div class="cm-lbl">SEO-трафік/міс</div></div>
+        <div><div class="cm-val">46K</div><div class="cm-lbl">ключових слів</div></div>
+        <div><div class="cm-val">413</div><div class="cm-lbl">вхідних посилань</div></div>
+      </div>
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);display:flex;gap:16px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--gray)">110 доменів</span>
+        <span style="font-size:12px;color:var(--gray)">+32 нових посилань</span>
+        <span style="font-size:12px;color:var(--gray)">#40 241 в UA</span>
       </div>
     </div>
+
   </div>
 </div>
 

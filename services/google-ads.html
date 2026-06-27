@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Реклама в Google Ads — налаштування та ведення контекстної реклами | PR.WEB</title>
+<meta name="description" content="Налаштовуємо Google Ads для залучення клієнтів з пошуку та дисплейної мережі. Оплата тільки за результат. PR.WEB.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#202020;--white:#F9F9F9;--pink:#F6364D;--gray:#A2A2A2;--light:#EEECEE;--radius:12px;--pad:124px;--max-w:1192px}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--black);font-size:16px}.nav-links a:hover{color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer}
+.btn-dark{background:var(--black);color:var(--white)}.btn-pink{background:var(--pink);color:var(--white)}.btn-pink:hover{background:#d42b3f}.btn-outline{background:transparent;color:var(--black);border:1.5px solid var(--black)}.btn-outline:hover{background:var(--black);color:var(--white)}.btn-white{background:var(--white);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700}
+.service-tabs{background:var(--light);padding:0 var(--pad);overflow-x:auto;white-space:nowrap;border-bottom:1px solid #ddd}
+.service-tabs-inner{max-width:var(--max-w);margin:0 auto;display:flex}
+.stab{display:inline-flex;align-items:center;gap:6px;padding:14px 20px;font-size:15px;color:var(--gray);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}.stab:hover{color:var(--black)}.stab.active{color:var(--black);border-bottom-color:var(--pink);font-weight:700}
+.hero{padding:72px var(--pad) 80px}.hero-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:64px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:24px;text-transform:uppercase;letter-spacing:0.06em}
+.hero h1{font-family:'Onest',sans-serif;font-weight:700;font-size:52px;line-height:1.05;margin-bottom:24px}.hero h1 span{color:var(--pink)}
+.hero-sub{font-size:20px;color:var(--gray);line-height:1.5;margin-bottom:40px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.hero-proof{display:flex;gap:40px;flex-wrap:wrap;padding-top:32px;border-top:1px solid #eee}
+.proof-item{display:flex;flex-direction:column;gap:4px}
+.proof-num{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;color:var(--black);line-height:1}.proof-num span{color:var(--pink)}
+.proof-label{font-size:13px;color:var(--gray);max-width:160px;line-height:1.4}
+.hero-visual{background:var(--black);border-radius:20px;overflow:hidden;position:relative;min-height:380px;padding:32px;display:flex;flex-direction:column;justify-content:flex-end}
+.hv-bg{position:absolute;inset:0;background:linear-gradient(135deg,#111 0%,#1a1208 50%,#201505 100%)}
+.hv-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(246,54,77,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(246,54,77,0.04) 1px,transparent 1px);background-size:48px 48px}
+.hv-emoji{position:absolute;top:24px;right:24px;font-size:90px;opacity:.1}
+.hv-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--pink)}
+.hv-inner{position:relative;z-index:1}
+.hv-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:20px}
+.hv-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hvs{background:rgba(255,255,255,0.06);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.07)}
+.hvs-num{font-family:'Onest',sans-serif;font-weight:700;font-size:26px;color:var(--white);line-height:1;margin-bottom:4px}.hvs-num span{color:var(--pink)}
+.hvs-label{font-size:12px;color:var(--gray);line-height:1.3}
+.sec{padding:80px var(--pad)}.sec-inner{max-width:var(--max-w);margin:0 auto}
+.sec-tag{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:16px}
+.sec-h{font-family:'Onest',sans-serif;font-weight:700;font-size:44px;line-height:1.05;margin-bottom:16px}.sec-h span{color:var(--pink)}
+.sec-sub{font-size:18px;color:var(--gray);line-height:1.6;max-width:680px;margin-bottom:48px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step-card{border:1px solid #eee;border-radius:var(--radius);padding:28px;transition:border-color .2s}.step-card:hover{border-color:var(--pink)}
+.step-num{font-family:'Onest',sans-serif;font-weight:700;font-size:40px;color:var(--pink);line-height:1;margin-bottom:16px;opacity:.25}
+.step-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:17px;margin-bottom:10px}
+.step-card p{font-size:15px;color:var(--gray);line-height:1.6}
+.get-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+.get-card{display:flex;gap:20px;padding:24px;border:1px solid #eee;border-radius:var(--radius);align-items:flex-start}
+.get-icon{width:48px;height:48px;background:rgba(246,54,77,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.get-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;margin-bottom:6px}
+.get-card p{font-size:14px;color:var(--gray);line-height:1.5}
+.case-block{background:var(--black);border-radius:20px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.case-label{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px}
+.case-block h2{font-family:'Onest',sans-serif;font-weight:700;font-size:34px;color:var(--white);line-height:1.15;margin-bottom:16px}.case-block h2 span{color:var(--pink)}
+.case-block p{font-size:16px;color:#bbb;line-height:1.6;margin-bottom:28px}
+.case-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cs{background:rgba(255,255,255,0.06);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.08)}
+.cs-num{font-family:'Onest',sans-serif;font-weight:700;font-size:30px;color:var(--white);line-height:1;margin-bottom:4px}.cs-num span{color:var(--pink)}
+.cs-label{font-size:12px;color:var(--gray)}
+.cta-strip{background:var(--pink);padding:40px var(--pad)}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-strip h3{font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#fff;margin-bottom:6px}
+.cta-strip p{font-size:15px;color:rgba(255,255,255,.8)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.price-card{border:1px solid #eee;border-radius:var(--radius);padding:32px;position:relative}
+.price-card.featured{border:2px solid var(--pink)}
+.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:12px;padding:4px 16px;border-radius:20px;white-space:nowrap}
+.price-name{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:6px}
+.price-desc{font-size:13px;color:var(--gray);margin-bottom:20px;line-height:1.5}
+.price-val{font-family:'Onest',sans-serif;font-weight:700;font-size:34px;margin-bottom:4px}.price-val span{font-size:15px;font-weight:400;color:var(--gray)}
+.price-period{font-size:12px;color:var(--gray);margin-bottom:24px}
+.price-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.price-list li{font-size:14px;display:flex;align-items:flex-start;gap:8px;line-height:1.4}.price-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0}
+.faq-list{display:flex;flex-direction:column;margin-top:48px}
+.faq-item{border-bottom:1px solid #eee;padding:24px 0}.faq-item:first-child{border-top:1px solid #eee}
+.faq-q{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;user-select:none}
+.faq-q::after{content:"+";font-size:24px;color:var(--pink);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-size:16px;color:var(--gray);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:400px;padding-top:16px}
+.seo-block{padding:72px var(--pad);background:var(--light)}
+.seo-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.seo-col h2{font-family:'Onest',sans-serif;font-weight:700;font-size:30px;line-height:1.2;margin-bottom:20px}.seo-col h2 span{color:var(--pink)}
+.seo-col h3{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;margin:24px 0 12px}
+.seo-col p{font-size:16px;color:#444;line-height:1.8;margin-bottom:14px}
+.seo-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+.seo-col ul li{font-size:15px;color:#444;line-height:1.6;padding-left:20px;position:relative}.seo-col ul li::before{content:"—";color:var(--pink);position:absolute;left:0;font-weight:700}
+.main-cta{padding:80px var(--pad)}.main-cta-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start}
+.main-cta h2{font-family:'Onest',sans-serif;font-weight:700;font-size:42px;line-height:1.05;margin-bottom:20px}.main-cta h2 span{color:var(--pink)}
+.main-cta-sub{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:32px}
+.audit-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.audit-list li{display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.5}.audit-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0;margin-top:1px}
+.form-card{background:var(--light);border-radius:16px;padding:32px}
+.form-card h3{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:6px}
+.form-card p{font-size:14px;color:var(--gray);margin-bottom:24px}
+.field{border:none;border-bottom:1.5px solid #ccc;background:transparent;width:100%;padding:12px 4px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;color:var(--black);margin-bottom:16px;outline:none;transition:border-color .2s}.field:focus{border-bottom-color:var(--pink)}.field::placeholder{color:var(--gray)}
+.form-note{font-size:12px;color:var(--gray);margin-top:12px;text-align:center}
+footer{background:var(--black);padding:56px var(--pad) 40px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:48px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}.footer-logo span{color:var(--pink)}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col .label{font-size:13px;color:var(--gray);margin-bottom:12px}
+.footer-col a,.footer-col p{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);text-decoration:none;display:block;margin-bottom:8px;word-break:break-word}
+.footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}.sticky-cta .btn{width:100%;justify-content:center}
+@media(max-width:1024px){:root{--pad:40px}.hero-inner,.case-block,.main-cta-inner,.seo-inner{grid-template-columns:1fr;gap:40px}.steps-grid,.price-grid,.get-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.hero h1,.sec-h,.main-cta h2{font-size:30px}.steps-grid,.price-grid,.get-grid,.case-stats,.footer-cols{grid-template-columns:1fr}.sticky-cta{display:block}body{padding-bottom:72px}.case-block{padding:28px 20px}.service-tabs{padding:0 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+  <ul class="nav-links">
+    <li><a href="https://prweb.pro/services">Послуги</a></li>
+    <li><a href="https://prweb.pro/cases">Кейси</a></li>
+    <li><a href="https://prweb.pro/about">Про нас</a></li>
+    <li><a href="https://prweb.pro/blog">Блог</a></li>
+    <li><a href="https://prweb.pro/contacts">Контакти</a></li>
+  </ul>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+</div></nav>
+
+<div class="service-tabs"><div class="service-tabs-inner">
+  <a href="https://prweb.pro/seo-sushi" class="stab">🍱 SEO для доставки суші</a>
+  <a href="https://prweb.pro/seo" class="stab">🔍 SEO-просування</a>
+  <a href="https://prweb.pro/seo-shop" class="stab ">🛒 SEO для інтернет-магазину</a>
+  <a href="https://prweb.pro/seo-local" class="stab">📍 SEO для локального бізнесу</a>
+  <a href="https://prweb.pro/admin" class="stab ">⚙️ Адміністрування сайту</a>
+  <a href="https://prweb.pro/google-ads" class="stab active">📣 Реклама в Google</a>
+  <a href="https://prweb.pro/dev" class="stab ">💻 Розробка сайтів</a>
+  <a href="https://prweb.pro/audit" class="stab ">🔧 Технічний аудит</a>
+</div></div>
+
+<div class="hero"><div class="hero-inner">
+  <div>
+    <div class="hero-tag">📣 Реклама в Google</div>
+    <h1>Google Ads, що<br>приводить <span>реальних клієнтів</span><br>а не просто кліки</h1>
+    <p class="hero-sub">Налаштовуємо і ведемо Google Ads: пошукова реклама, Performance Max, ремаркетинг. Фокус на заявки та продажі, а не на CTR та покази.</p>
+    <div class="hero-btns">
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Отримати консультацію →</a>
+      <a href="#how" class="btn btn-outline">Що входить в послугу</a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item"><span class="proof-num">×4<span></span></span><span class="proof-label">Середній ROAS наших клієнтів</span></div>
+      <div class="proof-item"><span class="proof-num">-40<span>%</span></span><span class="proof-label">Зниження CPA після оптимізації</span></div>
+      <div class="proof-item"><span class="proof-num">1-2<span></span></span><span class="proof-label">Місяців до стабільних результатів</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hv-bg"></div><div class="hv-grid"></div>
+    <div class="hv-emoji">📣</div><div class="hv-line"></div>
+    <div class="hv-inner">
+      <div class="hv-label">PR.WEB · Реклама в Google Ads</div>
+      <div class="hv-stats">
+        <div class="hvs"><div class="hvs-num"><span>4,1</span>M</div><div class="hvs-label">переходів у клієнта Roll Club</div></div>
+        <div class="hvs"><div class="hvs-num">+<span>308</span>%</div><div class="hvs-label">зростання трафіку за 4 роки</div></div>
+        <div class="hvs"><div class="hvs-num"><span>12</span>+</div><div class="hvs-label">міст в UA та Польщі</div></div>
+        <div class="hvs"><div class="hvs-num"><span>286</span>K</div><div class="hvs-label">SEO-транзакцій з органіки</div></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="sec" id="how"><div class="sec-inner">
+  <span class="sec-tag">Що входить</span>
+  <h2 class="sec-h">Реклама в Google Ads —<br><span>повний перелік робіт</span></h2>
+  <p class="sec-sub">Прозоро і конкретно: що ми робимо і навіщо це потрібно вашому бізнесу</p>
+  <div class="steps-grid">
+    <div class="step-card"><div class="step-num">01</div><h4>Аналіз і стратегія</h4><p>Досліджуємо ваш бізнес, конкурентів і ринок. Визначаємо пріоритети і формуємо план робіт з чіткими KPI і термінами.</p></div>
+    <div class="step-card"><div class="step-num">02</div><h4>Реалізація</h4><p>Виконуємо роботи згідно з планом. Кожен крок узгоджуємо з вами, надаємо проміжні результати і пояснюємо що і навіщо.</p></div>
+    <div class="step-card"><div class="step-num">03</div><h4>Моніторинг і оптимізація</h4><p>Відстежуємо результати в реальному часі. Коригуємо стратегію на основі даних — щоб кожна наступна дія була ефективнішою.</p></div>
+    <div class="step-card"><div class="step-num">04</div><h4>Звітність</h4><p>Щомісячний звіт з конкретними цифрами: що зробили, які результати, що далі. Ви завжди знаєте, за що платите.</p></div>
+    <div class="step-card"><div class="step-num">05</div><h4>Підтримка і комунікація</h4><p>На зв'язку у Telegram. Відповідаємо швидко, пояснюємо зрозуміло, не ховаємось за технічним жаргоном.</p></div>
+    <div class="step-card"><div class="step-num">06</div><h4>Масштабування</h4><p>Після досягнення перших результатів — розширюємо стратегію: більше ключів, більше міст, більше заявок.</p></div>
+  </div>
+</div></div>
+
+<div class="cta-strip"><div class="cta-strip-inner">
+  <div><h3>Є питання по послузі?</h3><p>Напишіть — відповімо і розберемо ваш конкретний кейс</p></div>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в Telegram →</a>
+</div></div>
+
+<div class="sec"><div class="sec-inner">
+  <span class="sec-tag">Результати</span>
+  <h2 class="sec-h">Що отримує<br><span>ваш бізнес</span></h2>
+  <div class="get-grid">
+    <div class="get-card"><div class="get-icon">📈</div><div><h4>Зростання цільового трафіку</h4><p>Більше відвідувачів, які шукають саме вашу послугу або товар — вже з наміром купити.</p></div></div>
+    <div class="get-card"><div class="get-icon">💰</div><div><h4>Більше заявок і продажів</h4><p>Ріст трафіку конвертується в реальні заявки. Показуємо це в цифрах щомісяця.</p></div></div>
+    <div class="get-card"><div class="get-icon">📊</div><div><h4>Прозора аналітика</h4><p>Звіт з конкретними метриками: трафік, конверсія, заявки, вартість ліда. Ніяких абстрактних «покращень».</p></div></div>
+    <div class="get-card"><div class="get-icon">🚀</div><div><h4>Довгостроковий результат</h4><p>На відміну від реклами — результат залишається і накопичується. Інвестиція, а не витрата.</p></div></div>
+    <div class="get-card"><div class="get-icon">🤝</div><div><h4>Надійний партнер</h4><p>Ми не зникаємо після старту. На зв'язку постійно, пояснюємо кожен крок, реагуємо швидко.</p></div></div>
+    <div class="get-card"><div class="get-icon">🏆</div><div><h4>Перевага над конкурентами</h4><p>Поки конкуренти витрачають бюджет на рекламу — ви накопичуєте органічний актив, який важко повторити.</p></div></div>
+  </div>
+</div></div>
+
+<div class="sec" style="padding-top:0"><div class="sec-inner">
+  <div class="case-block">
+    <div>
+      <div class="case-label">Кейс PR.WEB</div>
+      <h2>Roll Club: з 1 міста до<br>мережі <span>12+ локацій</span><br>в UA та Польщі</h2>
+      <p>Системна робота, яка замінила постійну рекламу. Органіка стала головним каналом замовлень для мережі доставки їжі.</p>
+      <a href="https://prweb-agency.github.io/offers/cases/Seo-Case-Roll-Club.html" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700">Читати кейс повністю →</a>
+    </div>
+    <div class="case-stats">
+      <div class="cs"><div class="cs-num"><span>4,1</span>M</div><div class="cs-label">SEO-переходів за 6 років</div></div>
+      <div class="cs"><div class="cs-num">+<span>308</span>%</div><div class="cs-label">зростання трафіку 2020→2024</div></div>
+      <div class="cs"><div class="cs-num"><span>286</span>K</div><div class="cs-label">SEO-транзакцій з органіки</div></div>
+      <div class="cs"><div class="cs-num"><span>12</span>+</div><div class="cs-label">міст в UA та Польщі</div></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="sec" style="background:var(--light)"><div class="sec-inner">
+  <span class="sec-tag">Тарифи</span>
+  <h2 class="sec-h">Вартість послуги<br><span>без прихованих платежів</span></h2>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-name">Базовий</div><div class="price-desc">Для малого бізнесу та старту</div>
+      <div class="price-val">від 00 <span>/міс</span></div><div class="price-period">Індивідуальне рішення</div>
+      <ul class="price-list"><li>Аналіз і стратегія</li><li>Базова реалізація</li><li>Щомісячний звіт</li><li>Підтримка у Telegram</li></ul>
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Рекомендуємо</div>
+      <div class="price-name">Стандарт</div><div class="price-desc">Повний обсяг + підтримка</div>
+      <div class="price-val">від 00 <span>/міс</span></div><div class="price-period">Фіксований місячний платіж</div>
+      <ul class="price-list"><li>Всі роботи з тарифу Базовий</li><li>Повна реалізація стратегії</li><li>Регулярна оптимізація</li><li>Пріоритетна підтримка</li><li>Розширена аналітика</li></ul>
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700">Обговорити →</a>
+    </div>
+    <div class="price-card">
+      <div class="price-name">Преміум</div><div class="price-desc">Для мереж і великих проектів</div>
+      <div class="price-val">від  200 <span>/міс</span></div><div class="price-period">Індивідуальні умови</div>
+      <ul class="price-list"><li>Всі роботи з тарифу Стандарт</li><li>Виділений спеціаліст</li><li>Щотижнева комунікація</li><li>Стратегія на рік</li><li>Масштабування по регіонах</li></ul>
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+    </div>
+  </div>
+</div></div>
+
+<div class="cta-strip"><div class="cta-strip-inner">
+  <div><h3>Не знаєте який пакет підходить?</h3><p>Розкажіть про бізнес — підберемо оптимальне рішення</p></div>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в TG →</a>
+</div></div>
+
+<div class="sec"><div class="sec-inner">
+  <span class="sec-tag">FAQ</span>
+  <h2 class="sec-h">Питання та відповіді</h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q">Як швидко з'являться перші результати?</div><div class="faq-a">Терміни залежать від послуги і стартового стану проекту. Після першої консультації ми завжди даємо чесний прогноз — без завищених обіцянок і фантастичних термінів.</div></div>
+    <div class="faq-item"><div class="faq-q">Як проходить процес роботи?</div><div class="faq-a">Старт → аналіз і стратегія → реалізація → щомісячна звітність → оптимізація. Ви в курсі кожного кроку. Комунікуємо в Telegram, відповідаємо швидко.</div></div>
+    <div class="faq-item"><div class="faq-q">Чи можна почати з мінімального бюджету?</div><div class="faq-a">Так. У нас є тариф від $300/міс для малого бізнесу. Важливо не скільки ви витрачаєте на старті, а те що роботи виконуються системно і дають результат.</div></div>
+    <div class="faq-item"><div class="faq-q">Які гарантії результату?</div><div class="faq-a">Ми не гарантуємо конкретні цифри заздалегідь — це було б нечесно. Але ми показуємо реальні кейси, даємо прогноз і несемо відповідальність за якість роботи. Якщо щось не так — розбираємось і виправляємо.</div></div>
+    <div class="faq-item"><div class="faq-q">Як зв'язатись і почати роботу?</div><div class="faq-a">Напишіть у Telegram @verdiev або на seo@prweb.pro. Обговоримо ваш проект, проведемо безкоштовний аналіз і запропонуємо конкретний план. Без зайвих формальностей.</div></div>
+  </div>
+</div></div>
+
+<div class="seo-block"><div class="seo-inner">
+  <div class="seo-col">
+    <h2>Реклама в Google Ads —<br><span>навіщо це вашому бізнесу</span></h2>
+    <p>У 2026 році більшість клієнтів починають пошук послуги або товару в Google. Якщо вашого бізнесу немає у топі пошукової видачі — ви втрачаєте клієнтів на користь конкурентів щодня, не помічаючи цього.</p>
+    <h3>Чому органічний канал важливий</h3>
+    <p>Органічний трафік — це клієнти, які самі знайшли вас у Google. Вони вже зацікавлені в послузі, вони шукали саме те, що ви пропонуєте. Конверсія органічного трафіку в середньому вища за рекламний, а вартість ліда знижується з часом.</p>
+    <ul>
+      <li>Google обробляє 8,5 мільярдів запитів щодня</li>
+      <li>70% користувачів кликають на органічні результати, а не на рекламу</li>
+      <li>Локальні запити («поруч», «у місті») мають конверсію 80%+</li>
+      <li>SEO дає результат роками після завершення активних робіт</li>
+    </ul>
+  </div>
+  <div class="seo-col">
+    <h2>PR.WEB —<br><span>чому нам довіряють</span></h2>
+    <h3>Досвід у локальному SEO</h3>
+    <p>Ми спеціалізуємось на просуванні локального бізнесу в Україні та Польщі. Наш головний кейс — Roll Club: доставка суші, яка виросла з 1 міста до мережі 12+ локацій в UA і PL завдяки SEO-системі, яку ми побудували.</p>
+    <h3>Фокус на результат, а не на процес</h3>
+    <p>Ми не звітуємо про «виконані роботи». Ми звітуємо про трафік, заявки і дохід з органіки. Якщо цифри ростуть — все добре. Якщо ні — шукаємо причину і виправляємо.</p>
+    <ul>
+      <li>Реальні кейси з цифрами, не загальні слова</li>
+      <li>Фіксований місячний платіж без прихованих витрат</li>
+      <li>Комунікація у Telegram — швидко і без бюрократії</li>
+      <li>Стратегія для органічного росту в Google та AI-пошуку</li>
+    </ul>
+    <div style="margin-top:24px">
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700">Написати в Telegram →</a>
+    </div>
+  </div>
+</div></div>
+
+<div class="main-cta" id="cta"><div class="main-cta-inner">
+  <div>
+    <h2>Готові обговорити<br><span>ваш проект?</span></h2>
+    <p class="main-cta-sub">Напишіть нам — розберемо ваш бізнес, визначимо точки росту і запропонуємо конкретний план без зайвих слів.</p>
+    <ul class="audit-list">
+      <li>Аналіз поточного стану і точок росту</li>
+      <li>Прогноз результатів для вашої ніші</li>
+      <li>Конкретний план дій і вартість</li>
+      <li>Стратегія для органічного росту в Google та AI</li>
+      <li>Відповіді на всі ваші питання</li>
+    </ul>
+  </div>
+  <div class="form-card">
+    <h3>Безкоштовна консультація</h3>
+    <p>Відповімо протягом 1 робочого дня</p>
+    <input type="text" class="field" placeholder="Ваше ім'я">
+    <input type="url" class="field" placeholder="Сайт (якщо є)">
+    <input type="text" class="field" placeholder="Чим займається ваш бізнес">
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;padding:16px">Написати в Telegram →</a>
+    <p class="form-note">або <a href="mailto:seo@prweb.pro" style="color:var(--pink)">seo@prweb.pro</a></p>
+  </div>
+</div></div>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-logo"><span>PR.</span>WEB</div>
+    <div class="footer-cols">
+      <div class="footer-col"><div class="label">Адреса</div><p>Україна, м. Харків,<br>вул. Клочківська, 24</p></div>
+      <div class="footer-col"><div class="label">E-mail</div><a href="mailto:seo@prweb.pro">seo@prweb.pro</a></div>
+      <div class="footer-col"><div class="label">Telegram</div><a href="https://t.me/verdiev" target="_blank">@verdiev</a></div>
+      <div class="footer-col"><div class="label">Соцмережі</div><a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a><a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a></div>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
+</div></footer>
+<div class="sticky-cta"><a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a></div>
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const i=q.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')})});</script>
+</body>
+</html>

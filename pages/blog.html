@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог PR.WEB — SEO, Local SEO, Google Maps для локального бізнесу</title>
+<meta name="description" content="Блог PR.WEB: корисні статті про SEO, Local SEO, Google Maps, просування в EU. Практичні поради для власників локального бізнесу в UA та Польщі.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#202020;--white:#F9F9F9;--pink:#F6364D;--gray:#A2A2A2;--light:#EEECEE;--radius:12px;--pad:124px;--max-w:1192px}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--black);font-size:16px}.nav-links a:hover{color:var(--pink)}.nav-links a.active{color:var(--pink);font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer}
+.btn-dark{background:var(--black);color:var(--white)}.btn-pink{background:var(--pink);color:var(--white)}.btn-pink:hover{background:#d42b3f}.btn-white{background:var(--white);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700}
+.page-hero{padding:72px var(--pad) 64px}.page-hero-inner{max-width:var(--max-w);margin:0 auto}
+.hero-tag{display:inline-block;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.06em}
+.page-h1{font-family:'Onest',sans-serif;font-weight:700;font-size:56px;line-height:1.05;margin-bottom:20px}.page-h1 span{color:var(--pink)}
+.page-sub{font-size:20px;color:var(--gray);line-height:1.5;max-width:680px;margin-bottom:32px}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap}
+.filter-btn{padding:8px 18px;border-radius:40px;font-size:14px;font-weight:700;font-family:'Onest',sans-serif;cursor:pointer;border:1.5px solid #ddd;background:transparent;color:var(--gray);transition:all .15s}
+.filter-btn.active,.filter-btn:hover{background:var(--black);color:var(--white);border-color:var(--black)}
+.sec{padding:80px var(--pad)}.sec-inner{max-width:var(--max-w);margin:0 auto}
+/* FEATURED POST */
+.post-featured{background:var(--black);border-radius:20px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:48px;text-decoration:none;transition:transform .2s}
+.post-featured:hover{transform:translateY(-3px)}
+.post-date{font-size:13px;color:var(--gray);margin-bottom:12px}
+.post-featured h2{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;color:var(--white);line-height:1.2;margin-bottom:16px}
+.post-featured h2 span{color:var(--pink)}
+.post-featured p{font-size:16px;color:#bbb;line-height:1.6;margin-bottom:24px}
+.post-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.ptag{background:rgba(255,255,255,0.08);color:#bbb;font-size:12px;padding:4px 12px;border-radius:20px;font-weight:700}
+.post-read{font-size:14px;color:var(--pink);font-weight:700;font-family:'Onest',sans-serif}
+.post-visual{background:rgba(255,255,255,0.04);border-radius:12px;padding:32px;border:1px solid rgba(255,255,255,0.08)}
+.post-visual-icon{font-size:64px;margin-bottom:16px}
+.post-visual h3{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;color:var(--white);margin-bottom:8px}
+.post-visual p{font-size:14px;color:var(--gray);line-height:1.5}
+/* POSTS GRID */
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.post-card{border:1px solid #eee;border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--black);display:flex;flex-direction:column;transition:all .2s}
+.post-card:hover{border-color:var(--pink);transform:translateY(-2px)}
+.post-thumb{background:var(--black);height:180px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative}
+.post-thumb-overlay{position:absolute;inset:0;background:linear-gradient(135deg,#111 0%,#1a0808 100%);display:flex;align-items:center;justify-content:center;font-size:56px}
+.post-content{padding:24px;flex:1;display:flex;flex-direction:column}
+.post-meta{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.post-cat{font-size:11px;font-weight:700;color:var(--pink);text-transform:uppercase;letter-spacing:0.06em}
+.post-time{font-size:12px;color:var(--gray)}
+.post-card h3{font-family:'Onest',sans-serif;font-weight:700;font-size:17px;line-height:1.3;margin-bottom:10px}
+.post-card p{font-size:14px;color:var(--gray);line-height:1.5;flex:1;margin-bottom:16px}
+.post-link{font-size:13px;color:var(--pink);font-weight:700;font-family:'Onest',sans-serif}
+/* TOPICS */
+.topics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.topic-card{background:var(--light);border-radius:var(--radius);padding:20px;text-decoration:none;color:var(--black);transition:all .2s}
+.topic-card:hover{background:var(--black);color:var(--white)}
+.topic-icon{font-size:28px;margin-bottom:12px}
+.topic-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;margin-bottom:4px}
+.topic-card p{font-size:13px;color:var(--gray)}
+.topic-card:hover p{color:#aaa}
+.cta-strip{background:var(--pink);padding:40px var(--pad)}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-strip h3{font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#fff;margin-bottom:6px}.cta-strip p{font-size:15px;color:rgba(255,255,255,.8)}
+/* SUBSCRIBE */
+.subscribe-block{background:var(--light);padding:64px var(--pad)}
+.subscribe-inner{max-width:600px;margin:0 auto;text-align:center}
+.subscribe-inner h2{font-family:'Onest',sans-serif;font-weight:700;font-size:36px;margin-bottom:12px}.subscribe-inner h2 span{color:var(--pink)}
+.subscribe-inner p{font-size:17px;color:var(--gray);margin-bottom:32px;line-height:1.5}
+.subscribe-row{display:flex;gap:12px}
+.sub-input{flex:1;border:1.5px solid #ddd;border-radius:40px;padding:14px 20px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;outline:none;background:var(--white)}.sub-input:focus{border-color:var(--pink)}
+footer{background:var(--black);padding:56px var(--pad) 40px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:48px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}.footer-logo span{color:var(--pink)}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col .label{font-size:13px;color:var(--gray);margin-bottom:12px}
+.footer-col a,.footer-col p{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);text-decoration:none;display:block;margin-bottom:8px;word-break:break-word}
+.footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}.sticky-cta .btn{width:100%;justify-content:center}
+@media(max-width:1024px){:root{--pad:40px}.post-featured{grid-template-columns:1fr;gap:32px}.topics-grid{grid-template-columns:1fr 1fr}.posts-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.page-h1{font-size:32px}.posts-grid,.topics-grid,.footer-cols{grid-template-columns:1fr}.subscribe-row{flex-direction:column}.sticky-cta{display:block}body{padding-bottom:72px}.post-featured{padding:24px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+  <ul class="nav-links">
+    <li><a href="https://prweb.pro/services">Послуги</a></li>
+    <li><a href="https://prweb.pro/cases">Кейси</a></li>
+    <li><a href="https://prweb.pro/about">Про нас</a></li>
+    <li><a href="https://prweb.pro/blog" class="active">Блог</a></li>
+    <li><a href="https://prweb.pro/contacts">Контакти</a></li>
+  </ul>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+</div></nav>
+
+<div class="page-hero"><div class="page-hero-inner">
+  <div class="hero-tag">Блог PR.WEB</div>
+  <h1 class="page-h1">SEO без води —<br><span>практика і кейси</span></h1>
+  <p class="page-sub">Пишемо про Local SEO, Google Maps, просування в EU і реальні кейси з цифрами. Для власників бізнесу, а не для SEO-спеціалістів.</p>
+  <div class="filter-row">
+    <button class="filter-btn active">Всі</button>
+    <button class="filter-btn">Local SEO</button>
+    <button class="filter-btn">Google Maps</button>
+    <button class="filter-btn">Кейси</button>
+    <button class="filter-btn">Польща / EU</button>
+    <button class="filter-btn">Для власників</button>
+  </div>
+</div></div>
+
+<div class="sec" style="padding-top:0"><div class="sec-inner">
+
+  <!-- FEATURED -->
+  <a href="https://prweb-agency.github.io/offers/cases/Seo-Case-Roll-Club.html" target="_blank" class="post-featured">
+    <div>
+      <div class="post-date">Червень 2026 · Кейс</div>
+      <h2>Roll Club: як доставка суші виросла до мережі <span>12+ міст в UA та PL</span></h2>
+      <div class="post-tags"><span class="ptag">Local SEO</span><span class="ptag">Кейс</span><span class="ptag">4,1M переходів</span></div>
+      <p>Повний кейс з цифрами: як PR.WEB побудував SEO-систему, яка масштабується містами і замінила постійну рекламу органічним трафіком.</p>
+      <span class="post-read">Читати кейс →</span>
+    </div>
+    <div class="post-visual">
+      <div class="post-visual-icon">🍣</div>
+      <h3>Головний кейс PR.WEB</h3>
+      <p>4,1M SEO-переходів · +308% трафіку · 286K транзакцій · 12+ міст в UA та Польщі</p>
+    </div>
+  </a>
+
+  <!-- POSTS GRID -->
+  <div class="posts-grid">
+    <a href="#" class="post-card">
+      <div class="post-thumb"><div class="post-thumb-overlay">📍</div></div>
+      <div class="post-content">
+        <div class="post-meta"><span class="post-cat">Local SEO</span><span class="post-time">10 хв читати</span></div>
+        <h3>Що таке Local SEO і чому це важливо для малого бізнесу у 2026</h3>
+        <p>Пояснюємо різницю між звичайним і локальним SEO — і чому для бізнесу в конкретному місті це важливіше за будь-яке інше просування.</p>
+        <span class="post-link">Читати →</span>
+      </div>
+    </a>
+    <a href="#" class="post-card">
+      <div class="post-thumb"><div class="post-thumb-overlay">🗺️</div></div>
+      <div class="post-content">
+        <div class="post-meta"><span class="post-cat">Google Maps</span><span class="post-time">8 хв читати</span></div>
+        <h3>Як вийти в топ-3 Google Maps: повний чеклист оптимізації Google Business Profile</h3>
+        <p>Покрокова інструкція: що заповнити, які фото додати, як збирати відгуки і що ще впливає на позицію в картах.</p>
+        <span class="post-link">Читати →</span>
+      </div>
+    </a>
+    <a href="#" class="post-card">
+      <div class="post-thumb"><div class="post-thumb-overlay">🇵🇱</div></div>
+      <div class="post-content">
+        <div class="post-meta"><span class="post-cat">Польща / EU</span><span class="post-time">12 хв читати</span></div>
+        <h3>SEO для українського бізнесу в Польщі: з чого почати і яких помилок уникнути</h3>
+        <p>Розбираємо специфіку польського ринку, відмінності від UA-просування і реальний кейс виходу Roll Club у Варшаву.</p>
+        <span class="post-link">Читати →</span>
+      </div>
+    </a>
+    <a href="#" class="post-card">
+      <div class="post-thumb"><div class="post-thumb-overlay">🏙️</div></div>
+      <div class="post-content">
+        <div class="post-meta"><span class="post-cat">Масштабування</span><span class="post-time">9 хв читати</span></div>
+        <h3>Як масштабувати локальний бізнес по містах через SEO: шаблон, який працює</h3>
+        <p>Розкриваємо методологію з кейсу Roll Club: як побудувати SEO-шаблон, щоб кожне нове місто виходило в топ за 2–3 місяці.</p>
+        <span class="post-link">Читати →</span>
+      </div>
+    </a>
+    <a href="#" class="post-card">
+      <div class="post-thumb"><div class="post-thumb-overlay">🤖</div></div>
+      <div class="post-content">
+        <div class="post-meta"><span class="post-cat">AI SEO</span><span class="post-time">7 хв читати</span></div>
+        <h3>SEO в епоху ChatGPT: як оптимізувати сайт під AI-пошук у 2026 році</h3>
+        <p>Google AI Overview, Perplexity, ChatGPT — нові правила пошуку. Що змінилось і що потрібно зробити вашому сайту прямо зараз.</p>
+        <span class="post-link">Читати →</span>
+      </div>
+    </a>
+    <a href="#" class="post-card">
+      <div class="post-thumb"><div class="post-thumb-overlay">📊</div></div>
+      <div class="post-content">
+        <div class="post-meta"><span class="post-cat">Аналітика</span><span class="post-time">6 хв читати</span></div>
+        <h3>Як читати SEO-звіт: які метрики важливі для власника бізнесу</h3>
+        <p>Пояснюємо простою мовою: трафік, позиції, CTR, конверсія — що з цього реально впливає на прибуток і на що дивитись в першу чергу.</p>
+        <span class="post-link">Читати →</span>
+      </div>
+    </a>
+  </div>
+</div></div>
+
+<!-- TOPICS -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px"><div class="sec-inner">
+  <span style="font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:16px">Теми</span>
+  <h2 style="font-family:'Onest',sans-serif;font-weight:700;font-size:36px;margin-bottom:0">Що читати<br><span style="color:var(--pink)">за вашою нішею</span></h2>
+  <div class="topics-grid">
+    <a href="#" class="topic-card"><div class="topic-icon">🍜</div><h4>Ресторани та доставка</h4><p>Local SEO і Google Maps для доставки їжі</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">✂️</div><h4>Краса і барбершопи</h4><p>Як вийти в топ «поруч» і отримати більше записів</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">🦷</div><h4>Медицина і клініки</h4><p>SEO для медичного бізнесу — специфіка і кейси</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">🔧</div><h4>Ремонт і будівництво</h4><p>Локальні запити і сезонність у SEO-просуванні</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">🇵🇱</div><h4>Бізнес у Польщі</h4><p>Вихід на PL-ринок: SEO, семантика, специфіка</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">🏪</div><h4>Франшизи та мережі</h4><p>SEO-система для масштабування по містах</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">🤖</div><h4>AI і SEO 2026</h4><p>Як AI змінює пошук і що робити вашому сайту</p></a>
+    <a href="#" class="topic-card"><div class="topic-icon">📊</div><h4>Аналітика для бізнесу</h4><p>Як читати дані і приймати рішення на їх основі</p></a>
+  </div>
+</div></div>
+
+<div class="cta-strip"><div class="cta-strip-inner">
+  <div><h3>Хочете SEO-розбір для вашого бізнесу?</h3><p>Безкоштовно покажемо точки росту і потенціал органічного трафіку</p></div>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в Telegram →</a>
+</div></div>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe-block">
+  <div class="subscribe-inner">
+    <h2>Нові статті <span>в Telegram</span></h2>
+    <p>Підписуйтесь на канал @verdiev.seo — публікуємо кейси, розбори і практичні поради по SEO для локального бізнесу.</p>
+    <a href="https://www.threads.com/@verdiev.seo" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700;padding:16px 32px;font-size:16px;margin:0 auto">Підписатись в Threads →</a>
+  </div>
+</div>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-logo"><span>PR.</span>WEB</div>
+    <div class="footer-cols">
+      <div class="footer-col"><div class="label">Адреса</div><p>Україна, м. Харків,<br>вул. Клочківська, 24</p></div>
+      <div class="footer-col"><div class="label">E-mail</div><a href="mailto:seo@prweb.pro">seo@prweb.pro</a></div>
+      <div class="footer-col"><div class="label">Telegram</div><a href="https://t.me/verdiev" target="_blank">@verdiev</a></div>
+      <div class="footer-col"><div class="label">Соцмережі</div><a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a><a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a></div>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
+</div></footer>
+<div class="sticky-cta"><a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a></div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Про нас — PR.WEB SEO-агентство для локального бізнесу в UA та EU</title>
+<meta name="description" content="PR.WEB — SEO-агентство з фокусом на локальному просуванні бізнесу. Команда, цінності, підхід до роботи і результати, які говорять самі за себе.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#202020;--white:#F9F9F9;--pink:#F6364D;--gray:#A2A2A2;--light:#EEECEE;--radius:12px;--pad:124px;--max-w:1192px}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--black);font-size:16px}.nav-links a:hover{color:var(--pink)}.nav-links a.active{color:var(--pink);font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer}
+.btn-dark{background:var(--black);color:var(--white)}.btn-pink{background:var(--pink);color:var(--white)}.btn-pink:hover{background:#d42b3f}.btn-white{background:var(--white);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700}
+.page-hero{padding:72px var(--pad) 64px}.page-hero-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero-tag{display:inline-block;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.06em}
+.page-h1{font-family:'Onest',sans-serif;font-weight:700;font-size:52px;line-height:1.05;margin-bottom:20px}.page-h1 span{color:var(--pink)}
+.page-sub{font-size:18px;color:var(--gray);line-height:1.6;margin-bottom:32px}
+.about-visual{background:var(--black);border-radius:20px;padding:40px;position:relative;overflow:hidden}
+.about-visual-bg{position:absolute;inset:0;background:linear-gradient(135deg,#111 0%,#1a0808 100%)}
+.about-visual-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(246,54,77,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(246,54,77,0.04) 1px,transparent 1px);background-size:48px 48px}
+.about-visual-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--pink)}
+.about-numbers{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.an{background:rgba(255,255,255,0.06);border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.08)}
+.an-num{font-family:'Onest',sans-serif;font-weight:700;font-size:32px;color:var(--white);line-height:1;margin-bottom:6px}.an-num span{color:var(--pink)}
+.an-label{font-size:13px;color:var(--gray);line-height:1.3}
+.sec{padding:80px var(--pad)}.sec-inner{max-width:var(--max-w);margin:0 auto}
+.sec-tag{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:16px}
+.sec-h{font-family:'Onest',sans-serif;font-weight:700;font-size:44px;line-height:1.05;margin-bottom:24px}.sec-h span{color:var(--pink)}
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.team-card{border:1px solid #eee;border-radius:var(--radius);padding:24px;text-align:center}
+.team-avatar{width:72px;height:72px;border-radius:50%;background:var(--black);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:var(--white)}
+.team-avatar.founder{background:var(--pink)}
+.team-name{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;margin-bottom:4px}
+.team-role{font-size:13px;color:var(--gray);margin-bottom:12px}
+.team-skill{font-size:13px;color:var(--black);line-height:1.5}
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.value-card{display:flex;gap:20px;padding:28px;border:1px solid #eee;border-radius:var(--radius);align-items:flex-start}
+.value-icon{width:48px;height:48px;background:rgba(246,54,77,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.value-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:17px;margin-bottom:8px}
+.value-card p{font-size:15px;color:var(--gray);line-height:1.5}
+/* MISSION */
+.mission-block{background:var(--black);border-radius:20px;padding:56px;margin-top:48px}
+.mission-block p{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;color:var(--white);line-height:1.4;margin-bottom:24px}
+.mission-block p span{color:var(--pink)}
+.mission-block .sub{font-family:'Wix Madefor Display',sans-serif;font-weight:400;font-size:18px;color:#bbb;line-height:1.6}
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px}
+.story-text p{font-size:17px;color:var(--black);line-height:1.8;margin-bottom:20px}
+.story-text p strong{font-weight:700}
+.timeline-mini{display:flex;flex-direction:column;gap:0}
+.tl-item{display:grid;grid-template-columns:80px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #eee}
+.tl-item:last-child{border-bottom:none}
+.tl-year{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--pink);padding-top:3px}
+.tl-item h4{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;margin-bottom:4px}
+.tl-item p{font-size:14px;color:var(--gray);line-height:1.5}
+.cta-strip{background:var(--pink);padding:40px var(--pad)}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-strip h3{font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#fff;margin-bottom:6px}.cta-strip p{font-size:15px;color:rgba(255,255,255,.8)}
+footer{background:var(--black);padding:56px var(--pad) 40px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:48px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}.footer-logo span{color:var(--pink)}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col .label{font-size:13px;color:var(--gray);margin-bottom:12px}
+.footer-col a,.footer-col p{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);text-decoration:none;display:block;margin-bottom:8px;word-break:break-word}
+.footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}.sticky-cta .btn{width:100%;justify-content:center}
+@media(max-width:1024px){:root{--pad:40px}.page-hero-inner,.story-grid{grid-template-columns:1fr;gap:40px}.team-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.page-h1,.sec-h{font-size:32px}.team-grid,.values-grid,.about-numbers,.footer-cols{grid-template-columns:1fr}.sticky-cta{display:block}body{padding-bottom:72px}.mission-block{padding:32px 24px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+  <ul class="nav-links">
+    <li><a href="https://prweb.pro/services">Послуги</a></li>
+    <li><a href="https://prweb.pro/cases">Кейси</a></li>
+    <li><a href="https://prweb.pro/about" class="active">Про нас</a></li>
+    <li><a href="https://prweb.pro/blog">Блог</a></li>
+    <li><a href="https://prweb.pro/contacts">Контакти</a></li>
+  </ul>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+</div></nav>
+
+<div class="page-hero"><div class="page-hero-inner">
+  <div>
+    <div class="hero-tag">Про нас</div>
+    <h1 class="page-h1">PR.WEB — SEO для бізнесу,<br>який хоче <span>рости в Google</span></h1>
+    <p class="page-sub">Ми не просто «оптимізуємо сайти». Ми будуємо SEO-системи, які масштабуються разом з вашим бізнесом — місто за містом, ринок за ринком.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати засновнику →</a>
+      <a href="https://prweb.pro/cases" class="btn" style="background:transparent;border:1.5px solid var(--black)">Дивитись кейси</a>
+    </div>
+  </div>
+  <div class="about-visual">
+    <div class="about-visual-bg"></div><div class="about-visual-grid"></div><div class="about-visual-line"></div>
+    <div class="about-numbers">
+      <div class="an"><div class="an-num"><span>4,1</span>M</div><div class="an-label">SEO-переходів у головному кейсі</div></div>
+      <div class="an"><div class="an-num"><span>12</span>+</div><div class="an-label">міст масштабування Roll Club</div></div>
+      <div class="an"><div class="an-num"><span>50</span>+</div><div class="an-label">проектів виконано</div></div>
+      <div class="an"><div class="an-num"><span>6</span></div><div class="an-label">років досвіду в SEO</div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- MISSION -->
+<div class="sec" style="padding-top:0"><div class="sec-inner">
+  <div class="mission-block">
+    <p>PR.WEB <span>продає не SEO.</span><br>PR.WEB продає бізнесу <span>систему отримання клієнтів з Google</span> і масштабування по містах.</p>
+    <p class="sub">Якщо ваші клієнти шукають «послуга + місто» — SEO може стати для вас каналом стабільних заявок і масштабування. Саме це ми і будуємо.</p>
+  </div>
+</div></div>
+
+<!-- STORY -->
+<div class="sec"><div class="sec-inner">
+  <span class="sec-tag">Наша історія</span>
+  <h2 class="sec-h">Як ми <span>розвивались</span></h2>
+  <div class="story-grid">
+    <div class="story-text">
+      <p>PR.WEB починався як приватна практика SEO-спеціаліста. З першими клієнтами прийшло розуміння: більшість локального бізнесу в Україні невидимі в Google — не тому що SEO не працює, а тому що підхід неправильний.</p>
+      <p><strong>Звичайне SEO</strong> — це «оптимізувати сайт» і чекати. <strong>Системне Local SEO</strong> — це побудувати інфраструктуру, яка масштабується: місто за містом, локація за локацією, з готовим шаблоном для кожного нового запуску.</p>
+      <p>Кейс Roll Club — від одного міста до мережі 12+ локацій в UA і PL — став підтвердженням цього підходу. Органіка замінила постійну рекламу і стала головним каналом замовлень.</p>
+      <p>Зараз PR.WEB — це команда з 4 осіб з фокусом на локальний бізнес в Україні та EU.</p>
+    </div>
+    <div class="timeline-mini">
+      <div class="tl-item"><div class="tl-year">2018</div><div><h4>Старт приватної практики</h4><p>Перші SEO-проекти, перші результати, перше розуміння специфіки локального просування</p></div></div>
+      <div class="tl-item"><div class="tl-year">2020</div><div><h4>Початок роботи з Roll Club</h4><p>Харків, 1 сайт, 0 органічного трафіку. Побудова SEO-системи з нуля</p></div></div>
+      <div class="tl-item"><div class="tl-year">2022</div><div><h4>Масштабування Roll Club</h4><p>Перші 3 міста, зростання трафіку +60% за рік. Шаблон масштабування доведено</p></div></div>
+      <div class="tl-item"><div class="tl-year">2024</div><div><h4>Вихід у Польщу</h4><p>Roll Club — Варшава і Вроцлав. Перший досвід EU-просування. Найкращий рік: 913K SEO-переходів</p></div></div>
+      <div class="tl-item"><div class="tl-year">2026</div><div><h4>PR.WEB сьогодні</h4><p>10+ активних проектів, команда 4 особи, фокус на UA та EU, зростання середнього чеку</p></div></div>
+    </div>
+  </div>
+</div></div>
+
+<!-- TEAM -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px"><div class="sec-inner">
+  <span class="sec-tag">Команда</span>
+  <h2 class="sec-h">Люди, які <span>роблять результат</span></h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar founder">В</div>
+      <div class="team-name">Вілен Даніелян</div>
+      <div class="team-role">Засновник / SEO-стратег</div>
+      <div class="team-skill">Головний ідеолог і стратег. Розробляє SEO-системи і веде ключові проекти. Телеграм: @verdiev</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar" style="background:#333">А</div>
+      <div class="team-name">SEO-спеціаліст</div>
+      <div class="team-role">Middle+ рівень</div>
+      <div class="team-skill">Реалізація SEO-стратегій: технічна оптимізація, семантика, on-page роботи</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar" style="background:#333">К</div>
+      <div class="team-name">Контент-менеджер</div>
+      <div class="team-role">Контент і копірайтинг</div>
+      <div class="team-skill">SEO-тексти для посадочних, статті для блогу, локальний контент під кожне місто</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar" style="background:#333">Л</div>
+      <div class="team-name">Лінкбілдер</div>
+      <div class="team-role">Посилальний профіль</div>
+      <div class="team-skill">Крауд-маркетинг, зовнішні посилання, робота з каталогами і тематичними ресурсами</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- VALUES -->
+<div class="sec"><div class="sec-inner">
+  <span class="sec-tag">Принципи</span>
+  <h2 class="sec-h">Як ми <span>працюємо</span></h2>
+  <div class="values-grid">
+    <div class="value-card"><div class="value-icon">🎯</div><div><h4>Результат, а не процес</h4><p>Звітуємо про трафік, заявки і дохід. Якщо цифри не ростуть — не виправдовуємось, а знаходимо і виправляємо причину.</p></div></div>
+    <div class="value-card"><div class="value-icon">🔍</div><div><h4>Чесність без обіцянок ТОП-1</h4><p>Не гарантуємо конкретні позиції — це було б нечесно. Натомість показуємо реальні кейси і даємо обґрунтований прогноз.</p></div></div>
+    <div class="value-card"><div class="value-icon">📊</div><div><h4>Прозорість у цифрах</h4><p>Щомісячний звіт з конкретними метриками. Ви завжди знаєте що відбувається, за що платите і який наступний крок.</p></div></div>
+    <div class="value-card"><div class="value-icon">🏙️</div><div><h4>Системний підхід до масштабування</h4><p>Будуємо SEO не під один запит, а під бізнес-модель клієнта. Нове місто — нова локація — готовий шаблон — швидкий результат.</p></div></div>
+    <div class="value-card"><div class="value-icon">💬</div><div><h4>Комунікація без бюрократії</h4><p>Telegram, швидкі відповіді, зрозумілі пояснення без жаргону. Ми партнери, а не підрядники з вхідними заявками.</p></div></div>
+    <div class="value-card"><div class="value-icon">🤖</div><div><h4>SEO 2026 — Google і AI</h4><p>Оптимізуємо не тільки під класичний пошук, але й під ChatGPT, Perplexity, Google AI Overview. Готуємо клієнтів до майбутнього.</p></div></div>
+  </div>
+</div></div>
+
+<div class="cta-strip"><div class="cta-strip-inner">
+  <div><h3>Готові обговорити ваш проект?</h3><p>Напишіть засновнику — відповімо швидко і по суті</p></div>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в Telegram →</a>
+</div></div>
+
+<footer><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-logo"><span>PR.</span>WEB</div>
+    <div class="footer-cols">
+      <div class="footer-col"><div class="label">Адреса</div><p>Україна, м. Харків,<br>вул. Клочківська, 24</p></div>
+      <div class="footer-col"><div class="label">E-mail</div><a href="mailto:seo@prweb.pro">seo@prweb.pro</a></div>
+      <div class="footer-col"><div class="label">Telegram</div><a href="https://t.me/verdiev" target="_blank">@verdiev</a></div>
+      <div class="footer-col"><div class="label">Соцмережі</div><a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a><a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a></div>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
+</div></footer>
+<div class="sticky-cta"><a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a></div>
+</body>
+</html>

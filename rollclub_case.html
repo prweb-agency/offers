@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс Roll Club — PR.WEB</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --red:#E8374A;
+    --black:#111111;
+    --dark:#1A1A1A;
+    --gray:#F4F4F4;
+    --text:#111111;
+    --muted:#666666;
+  }
+  body{font-family:'Arial',sans-serif;color:var(--text);background:#fff;line-height:1.5}
+
+  /* NAV */
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:100}
+  .logo{font-size:20px;font-weight:900;letter-spacing:-0.5px}
+  .logo span{color:var(--red)}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{text-decoration:none;color:var(--text);font-size:15px}
+  .nav-links a:hover{color:var(--red)}
+  .btn-consult{background:var(--black);color:#fff;border:none;padding:12px 24px;border-radius:40px;font-size:14px;font-weight:600;cursor:pointer}
+
+  /* HERO */
+  .hero{padding:80px 60px 60px;max-width:1200px;margin:0 auto}
+  .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:24px}
+  .breadcrumb a{color:var(--muted);text-decoration:none}
+  .breadcrumb span{color:var(--red)}
+  .tag-label{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:20px;letter-spacing:0.05em;text-transform:uppercase}
+  .hero h1{font-size:clamp(36px,5vw,64px);font-weight:900;line-height:1.05;letter-spacing:-1px;max-width:800px;margin-bottom:24px}
+  .hero h1 em{color:var(--red);font-style:normal}
+  .hero-sub{font-size:17px;color:var(--muted);max-width:560px;line-height:1.6;margin-bottom:40px}
+  .hero-meta{display:flex;gap:40px;flex-wrap:wrap}
+  .meta-item{display:flex;flex-direction:column;gap:4px}
+  .meta-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em}
+  .meta-value{font-size:15px;font-weight:700}
+
+  /* STATS STRIP */
+  .stats-strip{background:var(--dark);padding:40px 60px;margin:0}
+  .stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .stat-box{border-left:3px solid var(--red);padding-left:20px}
+  .stat-num{font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;line-height:1;margin-bottom:6px}
+  .stat-num em{color:var(--red);font-style:normal}
+  .stat-desc{font-size:13px;color:#aaa;line-height:1.4}
+
+  /* SECTION */
+  section{padding:80px 60px;max-width:1200px;margin:0 auto}
+  .section-label{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px}
+  h2{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-0.5px;margin-bottom:32px;line-height:1.1}
+  h2 em{color:var(--red);font-style:normal}
+
+  /* PROBLEM / TASK */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+  .dark-card{background:var(--dark);color:#fff;border-radius:16px;padding:32px}
+  .dark-card h3{font-size:18px;font-weight:800;margin-bottom:16px}
+  .dark-card p,.dark-card li{font-size:15px;color:#ccc;line-height:1.6}
+  .dark-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .dark-card ul li::before{content:"—";color:var(--red);margin-right:8px;font-weight:700}
+
+  /* TIMELINE */
+  .timeline{display:flex;flex-direction:column;gap:0}
+  .tl-item{display:grid;grid-template-columns:100px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid #eee}
+  .tl-item:last-child{border-bottom:none}
+  .tl-month{font-size:13px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.06em;padding-top:4px}
+  .tl-content h4{font-size:17px;font-weight:800;margin-bottom:8px}
+  .tl-content p{font-size:15px;color:var(--muted);line-height:1.6}
+  .tl-result{display:inline-block;background:var(--gray);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:700;margin-top:10px;color:var(--black)}
+  .tl-result span{color:var(--red)}
+
+  /* RESULTS BIG */
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+  .result-card{background:var(--dark);color:#fff;border-radius:16px;padding:28px 24px}
+  .result-card .big{font-size:clamp(36px,5vw,56px);font-weight:900;color:#fff;line-height:1;margin-bottom:10px}
+  .result-card .big em{color:var(--red);font-style:normal}
+  .result-card p{font-size:14px;color:#aaa;line-height:1.5}
+
+  /* GEOGRAPHY */
+  .geo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .geo-chip{background:var(--gray);border-radius:40px;padding:10px 20px;font-size:14px;font-weight:700;text-align:center}
+  .geo-chip.active{background:var(--black);color:#fff}
+  .geo-chip.pl{background:var(--red);color:#fff}
+
+  /* QUOTE */
+  .quote-block{background:var(--dark);border-radius:20px;padding:48px;position:relative;overflow:hidden;margin:40px 0}
+  .quote-block::before{content:'"';position:absolute;top:-20px;left:32px;font-size:200px;color:var(--red);opacity:0.15;font-weight:900;line-height:1}
+  .quote-block blockquote{font-size:clamp(18px,2.5vw,26px);font-weight:700;color:#fff;line-height:1.5;position:relative;z-index:1;margin-bottom:24px}
+  .quote-author{display:flex;align-items:center;gap:16px}
+  .author-avatar{width:48px;height:48px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:18px}
+  .author-info{display:flex;flex-direction:column;gap:2px}
+  .author-name{font-weight:700;color:#fff;font-size:15px}
+  .author-role{font-size:13px;color:#aaa}
+
+  /* WHO IS THIS FOR */
+  .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .aud-card{border:1px solid #eee;border-radius:16px;padding:24px;transition:border-color 0.2s}
+  .aud-card:hover{border-color:var(--red)}
+  .aud-icon{font-size:28px;margin-bottom:12px}
+  .aud-card h4{font-size:16px;font-weight:800;margin-bottom:8px}
+  .aud-card p{font-size:14px;color:var(--muted);line-height:1.5}
+
+  /* CTA */
+  .cta-section{background:var(--dark);padding:80px 60px;text-align:center}
+  .cta-inner{max-width:640px;margin:0 auto}
+  .cta-section h2{color:#fff;margin-bottom:16px;font-size:clamp(28px,4vw,48px)}
+  .cta-section h2 em{color:var(--red);font-style:normal}
+  .cta-section p{color:#aaa;font-size:16px;margin-bottom:40px;line-height:1.6}
+  .cta-btn{background:var(--red);color:#fff;border:none;padding:18px 40px;border-radius:40px;font-size:16px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .cta-btn:hover{background:#c82d3d}
+  .cta-btn svg{width:18px;height:18px}
+
+  /* MORE CASES */
+  .more-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .case-card{background:var(--dark);border-radius:16px;padding:24px;cursor:pointer;transition:transform 0.15s}
+  .case-card:hover{transform:translateY(-3px)}
+  .case-niche{font-size:12px;color:#aaa;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em}
+  .case-card h4{font-size:17px;font-weight:800;color:#fff;margin-bottom:16px}
+  .case-metrics{display:flex;gap:20px}
+  .case-metric{display:flex;flex-direction:column;gap:2px}
+  .case-metric .v{font-size:18px;font-weight:900;color:var(--red)}
+  .case-metric .l{font-size:11px;color:#888}
+  .arrow-link{display:inline-flex;align-items:center;gap:6px;color:var(--red);font-size:13px;font-weight:700;margin-top:16px;text-decoration:none}
+
+  @media(max-width:768px){
+    nav,.hero,section,.stats-strip,.cta-section{padding-left:20px;padding-right:20px}
+    .stats-inner{grid-template-columns:1fr 1fr}
+    .two-col,.results-grid,.audience-grid,.more-cases{grid-template-columns:1fr}
+    .tl-item{grid-template-columns:1fr;gap:8px}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo"><span>PR.</span>WEB</div>
+  <ul class="nav-links">
+    <li><a href="#">Послуги</a></li>
+    <li><a href="#">Кейси</a></li>
+    <li><a href="#">Про нас</a></li>
+    <li><a href="#">Блог</a></li>
+    <li><a href="#">Контакти</a></li>
+  </ul>
+  <button class="btn-consult">Консультація</button>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1200px;margin:0 auto;padding:0 60px">
+<div class="hero" style="padding-left:0;padding-right:0">
+  <div class="breadcrumb"><a href="#">Кейси</a> / <span>Roll Club</span></div>
+  <div class="tag-label">SEO · Локальне просування · Мережа</div>
+  <h1>З 1 сайту до мережі<br>у <em>10+ містах</em> —<br>без бюджету на рекламу</h1>
+  <p class="hero-sub">Як Roll Club захопив локальний трафік в Україні та Польщі через SEO з мінімальними вкладеннями</p>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <span class="meta-label">Ніша</span>
+      <span class="meta-value">Доставка їжі / Франшиза</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Ринки</span>
+      <span class="meta-value">Україна · Польща</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Термін роботи</span>
+      <span class="meta-value">[X] місяців</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Послуги</span>
+      <span class="meta-value">SEO · Контент · Локальне SEO</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-num">+<em>[X]</em>%</div>
+      <div class="stat-desc">ріст органічного трафіку за перші 6 місяців</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">×<em>[X]</em></div>
+      <div class="stat-desc">збільшення кількості заявок з пошуку</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num"><em>[X]</em>+</div>
+      <div class="stat-desc">локацій у топ Google Maps по своєму місту</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">Топ<em>-3</em></div>
+      <div class="stat-desc">по ключовим запитам у кожному новому місті</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM + TASK -->
+<section>
+  <div class="section-label">З чого почали</div>
+  <h2>Проблема та <em>задача</em></h2>
+  <div class="two-col">
+    <div class="dark-card">
+      <h3>Ситуація до старту</h3>
+      <ul>
+        <li>Один сайт, жодного органічного трафіку</li>
+        <li>Конкуренти займали весь топ Google по місту</li>
+        <li>Ручні замовлення через телефон, без онлайн-потоку</li>
+        <li>Плани на відкриття нових локацій — але без SEO-бази</li>
+        <li>Обмежений бюджет: тільки органіка, ніякої реклами</li>
+      </ul>
+    </div>
+    <div class="dark-card">
+      <h3>Що потрібно було зробити</h3>
+      <ul>
+        <li>Вийти в топ Google по локальним запитам в 1-му місті</li>
+        <li>Побудувати SEO-шаблон, який масштабується на нові міста</li>
+        <li>Захопити Google Maps — основний канал для доставки їжі</li>
+        <li>Зробити так, щоб кожна нова локація одразу мала трафік</li>
+        <li>Підключити Польщу — вихід на новий ринок</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section style="padding-top:0">
+  <div class="section-label">Що і коли робили</div>
+  <h2>Хід <em>роботи</em></h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-month">Місяць 1–2</div>
+      <div class="tl-content">
+        <h4>Аудит · Семантика · Структура</h4>
+        <p>Технічний аудит сайту, збір семантичного ядра під локальні запити, побудова структури сторінок під кожне місто та тип послуги. Налаштування Google Business Profile.</p>
+        <div class="tl-result">Результат: <span>база для масштабування готова</span></div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">Місяць 3–4</div>
+      <div class="tl-content">
+        <h4>Контент · Локальні сторінки · On-page</h4>
+        <p>Написали [X] локальних сторінок під кожне місто, оптимізували метатеги, заголовки, зображення. Запустили блог із локальним контентом.</p>
+        <div class="tl-result">Результат: <span>+[X]% кліків з Google Maps</span></div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">Місяць 5–6</div>
+      <div class="tl-content">
+        <h4>Посилання · Крауд · Авторитет</h4>
+        <p>Зовнішні посилання через локальні каталоги, крауд-маркетинг, відгуки. Посилили авторитет домену для нових локацій.</p>
+        <div class="tl-result">Результат: <span>топ-3 по [X] ключових запитах</span></div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-month">Місяць 7+</div>
+      <div class="tl-content">
+        <h4>Масштабування · Польща · Нові міста</h4>
+        <p>Застосували готовий шаблон до кожної нової локації. Вийшли на польський ринок — адаптували структуру під PL домен, польська семантика.</p>
+        <div class="tl-result">Результат: <span>кожне нове місто в топ за [X] тижнів</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<div style="background:var(--gray);padding:80px 0">
+<section style="padding-top:0;padding-bottom:0">
+  <div class="section-label">Що отримали</div>
+  <h2><em>Результати</em> в цифрах</h2>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="big">+<em>[X]</em>%</div>
+      <p>органічний трафік за перший рік роботи. Стабільне зростання без рекламного бюджету.</p>
+    </div>
+    <div class="result-card">
+      <div class="big">×<em>[X]</em></div>
+      <p>ріст кількості онлайн-замовлень. Сайт став основним каналом продажів.</p>
+    </div>
+    <div class="result-card">
+      <div class="big"><em>[X]</em>+</div>
+      <p>міст в Україні та Польщі з трафіком з першого місяця після відкриття.</p>
+    </div>
+    <div class="result-card">
+      <div class="big">Топ<em>-[X]</em></div>
+      <p>в Google Maps по запитам «доставка їжі [місто]» у кожній новій локації.</p>
+    </div>
+    <div class="result-card">
+      <div class="big"><em>[X]</em>K</div>
+      <p>органічних користувачів на місяць — без жодної гривні на контекстну рекламу.</p>
+    </div>
+    <div class="result-card">
+      <div class="big"><em>[X]</em>%</div>
+      <p>ключових запитів у топ-5 Google, включно з конкурентними фразами.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- GEOGRAPHY -->
+<section>
+  <div class="section-label">Охоплення</div>
+  <h2>Локації, які ми <em>запустили</em></h2>
+  <div class="geo-grid">
+    <div class="geo-chip active">Харків 🇺🇦</div>
+    <div class="geo-chip active">Київ 🇺🇦</div>
+    <div class="geo-chip active">Дніпро 🇺🇦</div>
+    <div class="geo-chip active">Львів 🇺🇦</div>
+    <div class="geo-chip active">Одеса 🇺🇦</div>
+    <div class="geo-chip active">Варшава 🇵🇱</div>
+    <div class="geo-chip pl">Краків 🇵🇱</div>
+    <div class="geo-chip pl">Вроцлав 🇵🇱</div>
+    <div class="geo-chip">[місто] 🇺🇦</div>
+    <div class="geo-chip">[місто] 🇺🇦</div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section style="padding-top:0">
+  <div class="quote-block">
+    <blockquote>«[Вставте цитату власника Roll Club — що змінилось після SEO, як зросли продажі, чому задоволені роботою з PRWEB]»</blockquote>
+    <div class="quote-author">
+      <div class="author-avatar">R</div>
+      <div class="author-info">
+        <span class="author-name">[Ім'я власника]</span>
+        <span class="author-role">Засновник Roll Club</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section style="padding-top:0">
+  <div class="section-label">Для кого цей кейс</div>
+  <h2>Впізнаєте <em>свій бізнес?</em></h2>
+  <div class="audience-grid">
+    <div class="aud-card">
+      <div class="aud-icon">🍜</div>
+      <h4>Ресторани та доставка</h4>
+      <p>Суші, піца, їжа — хочете домінувати в Google Maps у своєму місті або відкрити нові локації</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">✂️</div>
+      <h4>Барбершопи та салони</h4>
+      <p>Локальний бізнес з 1–2 точками та планами на мережу. Хочете клієнтів з пошуку, а не тільки з Instagram</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">🏋️</div>
+      <h4>Фітнес та студії</h4>
+      <p>Тренажерний зал, йога, танці — той самий підхід: локальні сторінки + Google Maps + контент</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">🏪</div>
+      <h4>Франшизи</h4>
+      <p>Якщо у вас або у вашого клієнта франшиза — ми будуємо SEO-шаблон, який масштабується на кожну нову точку</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">🇵🇱</div>
+      <h4>Вихід у Польщу</h4>
+      <p>Бізнес в UA та плани на PL — знаємо обидва ринки, зробили це вже з Roll Club</p>
+    </div>
+    <div class="aud-card">
+      <div class="aud-icon">💰</div>
+      <h4>Обмежений бюджет</h4>
+      <p>Немає грошей на рекламу — SEO дає результат без щомісячних витрат на Google Ads</p>
+    </div>
+  </div>
+</section>
+
+<!-- MORE CASES -->
+<section style="padding-top:0">
+  <div class="section-label">Інші кейси</div>
+  <h2>Схожі <em>проекти</em></h2>
+  <div class="more-cases">
+    <div class="case-card">
+      <div class="case-niche">Зоотовари / Клініка</div>
+      <h4>Lapki.pet</h4>
+      <div class="case-metrics">
+        <div class="case-metric"><span class="v">+[X]%</span><span class="l">трафік</span></div>
+        <div class="case-metric"><span class="v">×[X]</span><span class="l">заявки</span></div>
+      </div>
+      <a href="#" class="arrow-link">Читати кейс →</a>
+    </div>
+    <div class="case-card">
+      <div class="case-niche">Упаковка / B2B</div>
+      <h4>Optipak</h4>
+      <div class="case-metrics">
+        <div class="case-metric"><span class="v">+[X]%</span><span class="l">трафік</span></div>
+        <div class="case-metric"><span class="v">Топ-[X]</span><span class="l">запити</span></div>
+      </div>
+      <a href="#" class="arrow-link">Читати кейс →</a>
+    </div>
+    <div class="case-card">
+      <div class="case-niche">Кінолог / Послуги</div>
+      <h4>Kinolog.com.ua</h4>
+      <div class="case-metrics">
+        <div class="case-metric"><span class="v">+[X]%</span><span class="l">трафік</span></div>
+        <div class="case-metric"><span class="v">×[X]</span><span class="l">дзвінки</span></div>
+      </div>
+      <a href="#" class="arrow-link">Читати кейс →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2>Хочете <em>такий самий</em> результат?</h2>
+    <p>Розкажіть про свій бізнес — зробимо безкоштовний аудит і покажемо, як ваш сайт може зайняти топ у Google. Без обіцянок, тільки конкретний план.</p>
+    <a href="#" class="cta-btn">
+      Отримати безкоштовний аудит
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

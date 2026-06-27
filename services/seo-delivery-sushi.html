@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO для доставки суші — вийдіть у топ Google і отримайте більше замовлень | PR.WEB</title>
+<meta name="description" content="SEO-просування для доставки суші та роллів: локальні запити, Google Maps, семантика під кожне місто. Кейс Roll Club — 4,1M переходів з органіки. PR.WEB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#202020;
+  --white:#F9F9F9;
+  --pink:#F6364D;
+  --gray:#A2A2A2;
+  --light:#EEECEE;
+  --radius:12px;
+  --pad:124px;
+  --max-w:1192px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}
+.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--black);font-size:16px}
+.nav-links a:hover{color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer}
+.btn-dark{background:var(--black);color:var(--white)}
+.btn-pink{background:var(--pink);color:var(--white)}
+.btn-pink:hover{background:#d42b3f}
+.btn-outline{background:transparent;color:var(--black);border:1.5px solid var(--black)}
+.btn-outline:hover{background:var(--black);color:var(--white)}
+.btn-white{background:var(--white);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700}
+
+/* SERVICE NAV TABS */
+.service-tabs{background:var(--light);padding:0 var(--pad);overflow-x:auto;white-space:nowrap}
+.service-tabs-inner{max-width:var(--max-w);margin:0 auto;display:flex;gap:0}
+.stab{display:inline-flex;align-items:center;gap:6px;padding:14px 20px;font-size:15px;color:var(--gray);text-decoration:none;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap}
+.stab:hover{color:var(--black)}
+.stab.active{color:var(--black);border-bottom-color:var(--pink);font-weight:700}
+
+/* HERO */
+.hero{padding:72px var(--pad) 80px;max-width:calc(var(--max-w) + var(--pad)*2);margin:0 auto}
+.hero-inner{display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:24px;text-transform:uppercase;letter-spacing:0.06em}
+.hero h1{font-family:'Onest',sans-serif;font-weight:700;font-size:52px;line-height:1.05;letter-spacing:-0.01em;margin-bottom:24px}
+.hero h1 span{color:var(--pink)}
+.hero-sub{font-size:20px;color:var(--gray);line-height:1.5;margin-bottom:40px;max-width:520px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.hero-proof{display:flex;gap:32px;flex-wrap:wrap;padding-top:32px;border-top:1px solid #eee}
+.proof-item{display:flex;flex-direction:column;gap:4px}
+.proof-num{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;line-height:1;color:var(--black)}
+.proof-num span{color:var(--pink)}
+.proof-label{font-size:13px;color:var(--gray)}
+
+/* HERO VISUAL */
+.hero-visual{background:var(--black);border-radius:20px;overflow:hidden;position:relative;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px}
+.hero-visual-bg{position:absolute;inset:0;background:linear-gradient(135deg,#111 0%,#1e0808 50%,#2a0505 100%)}
+.hero-visual-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(246,54,77,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(246,54,77,0.05) 1px,transparent 1px);background-size:48px 48px}
+.hero-visual-emoji{position:absolute;top:24px;right:24px;font-size:80px;opacity:.15}
+.hero-visual-accent{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--pink)}
+.hero-stat-row{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hstat{background:rgba(255,255,255,0.06);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.08)}
+.hstat-num{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;color:var(--white);line-height:1;margin-bottom:4px}
+.hstat-num span{color:var(--pink)}
+.hstat-label{font-size:12px;color:var(--gray)}
+
+/* SECTION HELPERS */
+.sec{padding:80px var(--pad)}
+.sec-inner{max-width:var(--max-w);margin:0 auto}
+.sec-tag{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:16px}
+.sec-h{font-family:'Onest',sans-serif;font-weight:700;font-size:44px;line-height:1.05;letter-spacing:-0.01em;margin-bottom:16px}
+.sec-h span{color:var(--pink)}
+.sec-sub{font-size:20px;color:var(--gray);line-height:1.5;max-width:640px}
+
+/* PROBLEM BLOCK */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.problem-card{background:var(--black);border-radius:var(--radius);padding:32px;color:var(--white)}
+.problem-card h3{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.problem-card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.problem-card li{font-size:16px;color:#ccc;line-height:1.5;padding-left:20px;position:relative}
+.problem-card li::before{content:"—";color:var(--pink);position:absolute;left:0;font-weight:700}
+
+/* HOW WE WORK */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.step-card{border:1px solid #eee;border-radius:var(--radius);padding:28px;position:relative;transition:border-color .2s}
+.step-card:hover{border-color:var(--pink)}
+.step-num{font-family:'Onest',sans-serif;font-weight:700;font-size:40px;color:var(--pink);line-height:1;margin-bottom:16px;opacity:.3}
+.step-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;margin-bottom:10px}
+.step-card p{font-size:15px;color:var(--gray);line-height:1.6}
+.step-tag{display:inline-block;background:rgba(246,54,77,0.08);color:var(--pink);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em}
+
+/* WHAT YOU GET */
+.get-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+.get-card{display:flex;gap:20px;padding:24px;border:1px solid #eee;border-radius:var(--radius);align-items:flex-start}
+.get-icon{width:48px;height:48px;background:rgba(246,54,77,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.get-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;margin-bottom:6px}
+.get-card p{font-size:14px;color:var(--gray);line-height:1.5}
+
+/* CASE BLOCK */
+.case-block{background:var(--black);border-radius:20px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.case-label{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px}
+.case-block h2{font-family:'Onest',sans-serif;font-weight:700;font-size:36px;color:var(--white);line-height:1.1;margin-bottom:16px}
+.case-block h2 span{color:var(--pink)}
+.case-block p{font-size:17px;color:#ccc;line-height:1.6;margin-bottom:32px}
+.case-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cs{background:rgba(255,255,255,0.06);border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.08)}
+.cs-num{font-family:'Onest',sans-serif;font-weight:700;font-size:32px;color:var(--white);line-height:1;margin-bottom:4px}
+.cs-num span{color:var(--pink)}
+.cs-label{font-size:13px;color:var(--gray)}
+
+/* FAQ */
+.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid #eee;padding:24px 0}
+.faq-item:first-child{border-top:1px solid #eee}
+.faq-q{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;user-select:none}
+.faq-q::after{content:"+";font-size:24px;color:var(--pink);flex-shrink:0;font-weight:400;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-size:16px;color:var(--gray);line-height:1.6;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:300px;padding-top:16px}
+
+/* MINI CTA STRIP */
+.cta-strip{background:var(--pink);padding:40px var(--pad)}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-strip h3{font-family:'Onest',sans-serif;font-weight:700;font-size:26px;color:#fff;margin-bottom:6px}
+.cta-strip p{font-size:16px;color:rgba(255,255,255,.8)}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.price-card{border:1px solid #eee;border-radius:var(--radius);padding:32px;position:relative}
+.price-card.featured{border:2px solid var(--pink);background:#fff}
+.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:12px;padding:4px 16px;border-radius:20px;white-space:nowrap}
+.price-name{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px}
+.price-desc{font-size:14px;color:var(--gray);margin-bottom:24px;line-height:1.5}
+.price-val{font-family:'Onest',sans-serif;font-weight:700;font-size:36px;margin-bottom:4px}
+.price-val span{font-size:16px;font-weight:400;color:var(--gray)}
+.price-period{font-size:13px;color:var(--gray);margin-bottom:28px}
+.price-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.price-list li{font-size:14px;display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.price-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0}
+
+/* WHO IS IT FOR */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.who-card{padding:24px;border:1px solid #eee;border-radius:var(--radius)}
+.who-card:hover{border-color:var(--pink)}
+.who-icon{font-size:28px;margin-bottom:12px}
+.who-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:16px;margin-bottom:8px}
+.who-card p{font-size:14px;color:var(--gray);line-height:1.5}
+
+/* MAIN CTA */
+.main-cta{background:var(--light);padding:80px var(--pad)}
+.main-cta-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 440px;gap:80px;align-items:start}
+.main-cta h2{font-family:'Onest',sans-serif;font-weight:700;font-size:44px;line-height:1.05;margin-bottom:20px}
+.main-cta h2 span{color:var(--pink)}
+.main-cta-sub{font-size:20px;color:var(--gray);line-height:1.5;margin-bottom:32px}
+.audit-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.audit-list li{display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.5}
+.audit-list li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0;margin-top:1px}
+.form-card{background:var(--white);border-radius:16px;padding:32px;box-shadow:0 4px 32px rgba(0,0,0,0.06)}
+.form-card h3{font-family:'Onest',sans-serif;font-weight:700;font-size:22px;margin-bottom:6px}
+.form-card p{font-size:14px;color:var(--gray);margin-bottom:24px}
+.field{border:none;border-bottom:1.5px solid #ddd;background:transparent;width:100%;padding:12px 4px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;color:var(--black);margin-bottom:16px;outline:none;transition:border-color .2s}
+.field:focus{border-bottom-color:var(--pink)}
+.field::placeholder{color:var(--gray)}
+.form-note{font-size:12px;color:var(--gray);margin-top:12px;text-align:center}
+
+/* FOOTER */
+footer{background:var(--black);padding:56px var(--pad) 40px}
+.footer-inner{max-width:var(--max-w);margin:0 auto;overflow:hidden}
+.footer-top{display:flex;gap:56px;margin-bottom:48px;align-items:flex-start}
+.footer-logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}
+.footer-logo span{color:var(--pink)}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.footer-col .label{font-size:13px;color:var(--gray);margin-bottom:12px}
+.footer-col a,.footer-col p{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);text-decoration:none;display:block;margin-bottom:8px;line-height:1.4;word-break:break-word}
+.footer-copy{border-top:1px solid #333;padding-top:24px;font-size:12px;color:var(--gray)}
+
+/* STICKY MOBILE */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}
+.sticky-cta .btn{width:100%;justify-content:center}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  :root{--pad:40px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-visual{min-height:300px}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .price-grid,.get-grid,.who-grid{grid-template-columns:1fr 1fr}
+  .case-block{grid-template-columns:1fr;gap:32px}
+  .main-cta-inner{grid-template-columns:1fr;gap:40px}
+  .problem-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  :root{--pad:20px}
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero h1{font-size:34px}
+  .sec-h{font-size:30px}
+  .steps-grid,.price-grid,.get-grid,.who-grid,.case-stats,.footer-cols{grid-template-columns:1fr}
+  .sticky-cta{display:block}
+  body{padding-bottom:72px}
+  .case-block{padding:32px 24px}
+  .service-tabs{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+    <ul class="nav-links">
+      <li><a href="https://prweb.pro/services">Послуги</a></li>
+      <li><a href="https://prweb.pro/cases">Кейси</a></li>
+      <li><a href="https://prweb.pro/about">Про нас</a></li>
+      <li><a href="https://prweb.pro/blog">Блог</a></li>
+      <li><a href="https://prweb.pro/contacts">Контакти</a></li>
+    </ul>
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+  </div>
+</nav>
+
+<!-- SERVICE TABS -->
+<div class="service-tabs">
+  <div class="service-tabs-inner">
+    <a href="#" class="stab active">🍱 SEO для доставки суші</a>
+    <a href="#" class="stab">🔍 SEO-просування</a>
+    <a href="#" class="stab">🛒 SEO для інтернет-магазину</a>
+    <a href="#" class="stab">🔎 SEO для малого бізнесу</a>
+    <a href="#" class="stab">⚙️ Адміністрування сайту</a>
+    <a href="#" class="stab">📣 Реклама в Google</a>
+    <a href="#" class="stab">💻 Розробка сайтів</a>
+    <a href="#" class="stab">🔧 Технічний аудит</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">🍣 SEO для доставки суші та роллів</div>
+      <h1>Більше замовлень<br>з Google — без<br><span>реклами щодня</span></h1>
+      <p class="hero-sub">Будуємо SEO-систему для доставки їжі: локальні запити, Google Maps, сторінки під кожне місто. Клієнти знаходять вас самі.</p>
+      <div class="hero-btns">
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Отримати безкоштовний аудит →</a>
+        <a href="#case" class="btn btn-outline">Дивитись кейс Roll Club</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <span class="proof-num">4,1<span>M</span></span>
+          <span class="proof-label">переходів з SEO у нашого клієнта</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">+<span>308</span>%</span>
+          <span class="proof-label">зростання трафіку за 4 роки</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">12<span>+</span></span>
+          <span class="proof-label">міст в UA та PL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-bg"></div>
+      <div class="hero-visual-grid"></div>
+      <div class="hero-visual-emoji">🍣</div>
+      <div class="hero-visual-accent"></div>
+      <div class="hero-stat-row">
+        <div class="hstat">
+          <div class="hstat-num"><span>#1</span></div>
+          <div class="hstat-label">«доставка суші Харків»</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num"><span>#1</span></div>
+          <div class="hstat-label">«суші на замовлення Київ»</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">229<span>K</span></div>
+          <div class="hstat-label">SEO-трафік / міс</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">38<span>K</span></div>
+          <div class="hstat-label">ключових слів у топ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px">
+  <div class="sec-inner">
+    <span class="sec-tag">Проблема</span>
+    <h2 class="sec-h">Чому доставка суші<br><span>втрачає клієнтів з Google</span></h2>
+    <p class="sec-sub">Більшість сайтів доставки їжі не видно в пошуку. Знаємо чому — і знаємо, як це виправити.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>😓 Типова ситуація</h3>
+        <ul>
+          <li>Сайт є, але в Google його ніхто не бачить — є тільки реклама</li>
+          <li>Агрегатори (Glovo, Bolt Food) забирають топ і беруть комісію 25–30%</li>
+          <li>По запиту «суші + місто» видача зайнята конкурентами</li>
+          <li>Відкриваєте нове місто — і знову починаєте з нуля</li>
+          <li>Бюджет на рекламу росте, але замовлення не пропорційно</li>
+        </ul>
+      </div>
+      <div class="problem-card">
+        <h3>✅ Після роботи з PR.WEB</h3>
+        <ul>
+          <li>Ваш сайт у топ-3 Google по «доставка суші [ваше місто]»</li>
+          <li>Google Maps виводить вас першими — замовлення без комісії агрегатора</li>
+          <li>Кожне нове місто виходить у топ за 2–3 місяці по готовому шаблону</li>
+          <li>Органічний трафік росте щомісяця навіть без реклами</li>
+          <li>SEO стає активом, а не витратою — трафік залишається назавжди</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MINI CTA 1 -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div>
+      <h3>Хочете дізнатися, де ваш сайт втрачає клієнтів?</h3>
+      <p>Зробимо безкоштовний SEO-розбір вашого сайту за 24 години</p>
+    </div>
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Отримати розбір безкоштовно →</a>
+  </div>
+</div>
+
+<!-- HOW WE WORK -->
+<div class="sec" id="how">
+  <div class="sec-inner">
+    <span class="sec-tag">Як ми працюємо</span>
+    <h2 class="sec-h">Що входить<br><span>в SEO для доставки суші</span></h2>
+    <p class="sec-sub">Не «тексти і ключі», а повна SEO-інфраструктура під зростання бізнесу</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-tag">Крок 1</div>
+        <div class="step-num">01</div>
+        <h4>SEO-аудит і технічна база</h4>
+        <p>Знаходимо помилки, які блокують індексацію. Швидкість, мобільна адаптація, дублі, помилки в коді — виправляємо все до старту просування.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 2</div>
+        <div class="step-num">02</div>
+        <h4>Семантика під «суші + місто»</h4>
+        <p>Збираємо всі запити по яких шукають доставку: «суші Харків», «роли з доставкою», «замовити суші недорого». Окрема семантика на кожне місто та категорію.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 3</div>
+        <div class="step-num">03</div>
+        <h4>Локальні сторінки під кожне місто</h4>
+        <p>Шаблон сторінки «Доставка суші [Місто]» — SEO-текст, мета-теги, структура, комерційні блоки. Одне місто = одна повноцінна сторінка в топ.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 4</div>
+        <div class="step-num">04</div>
+        <h4>Google Maps і локальне SEO</h4>
+        <p>Оптимізація Google Business Profile, відгуки, фото, категорії, регулярні публікації. Топ-3 в Maps = замовлення без агрегаторів і їх комісій.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 5</div>
+        <div class="step-num">05</div>
+        <h4>Контент і посилання</h4>
+        <p>Статті для блогу, крауд-маркетинг у локальних форумах і соцмережах, зовнішні посилання з авторитетних ресурсів. Підвищуємо довіру домену.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-tag">Крок 6</div>
+        <div class="step-num">06</div>
+        <h4>Аналітика і масштабування</h4>
+        <p>Щомісячна звітність по трафіку, позиціях і транзакціях. Готовий шаблон під нові міста — кожен новий запуск швидше попереднього.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT YOU GET -->
+<div class="sec" style="padding-top:0">
+  <div class="sec-inner">
+    <span class="sec-tag">Що ви отримуєте</span>
+    <h2 class="sec-h">Конкретні результати,<br><span>а не «покращення позицій»</span></h2>
+    <div class="get-grid">
+      <div class="get-card">
+        <div class="get-icon">📍</div>
+        <div>
+          <h4>Топ Google Maps у вашому місті</h4>
+          <p>По запиту «доставка суші [місто]» ваш заклад з'являється в першій трійці Maps — там де клієнти натискають одразу</p>
+        </div>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">📈</div>
+        <div>
+          <h4>Органічний трафік без реклами</h4>
+          <p>Нові відвідувачі з Google щодня — без щоденних витрат на рекламу. SEO-трафік накопичується і залишається</p>
+        </div>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">🏙️</div>
+        <div>
+          <h4>Система для масштабування по містах</h4>
+          <p>Готовий SEO-шаблон під кожне нове місто. Відкриваєте нову точку — і вона одразу отримує трафік з Google</p>
+        </div>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">🇵🇱</div>
+        <div>
+          <h4>Вихід у Польщу та EU</h4>
+          <p>Адаптуємо SEO-систему під польський ринок: окрема семантика, hreflang, PL-каталоги. Вже зробили для Roll Club</p>
+        </div>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">💰</div>
+        <div>
+          <h4>Замовлення без комісії агрегаторів</h4>
+          <p>Клієнти заходять на ваш сайт прямо з Google — без Glovo і Bolt Food. Ваш прибуток, без чужої комісії</p>
+        </div>
+      </div>
+      <div class="get-card">
+        <div class="get-icon">📊</div>
+        <div>
+          <h4>Прозора аналітика щомісяця</h4>
+          <p>Звіт по трафіку, позиціях, транзакціях і доходу з органіки. Ви бачите в цифрах, за що платите</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CASE ROLL CLUB -->
+<div class="sec" style="padding-top:0" id="case">
+  <div class="sec-inner">
+    <div class="case-block">
+      <div>
+        <div class="case-label">Наш кейс</div>
+        <h2>Roll Club: з 1 міста<br>до мережі <span>12+ локацій</span><br>в UA та PL</h2>
+        <p>Побудували SEO-систему для доставки суші, яка масштабується: місто за містом, локація за локацією. Органіка стала головним каналом продажів без рекламного бюджету.</p>
+        <a href="https://prweb-agency.github.io/offers/cases/Seo-Case-Roll-Club.html" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700">Читати повний кейс →</a>
+      </div>
+      <div class="case-stats">
+        <div class="cs">
+          <div class="cs-num"><span>4,1</span>M</div>
+          <div class="cs-label">SEO-переходів за 6 років</div>
+        </div>
+        <div class="cs">
+          <div class="cs-num">+<span>308</span>%</div>
+          <div class="cs-label">зростання трафіку 2020→2024</div>
+        </div>
+        <div class="cs">
+          <div class="cs-num"><span>286</span>K</div>
+          <div class="cs-label">SEO-транзакцій з органіки</div>
+        </div>
+        <div class="cs">
+          <div class="cs-num"><span>12</span>+</div>
+          <div class="cs-label">міст в UA та Польщі</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MINI CTA 2 -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div>
+      <h3>Хочете такий самий результат?</h3>
+      <p>Покажемо, як SEO може працювати для вашої доставки</p>
+    </div>
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в Telegram →</a>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="sec" id="price">
+  <div class="sec-inner">
+    <span class="sec-tag">Вартість</span>
+    <h2 class="sec-h">Прозорі тарифи<br><span>без прихованих платежів</span></h2>
+    <p class="sec-sub">Ціна залежить від кількості міст і обсягу робіт. Фіксований місячний платіж.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-name">Старт</div>
+        <div class="price-desc">1 місто, базове просування</div>
+        <div class="price-val">від $300 <span>/міс</span></div>
+        <div class="price-period">+ разовий старт $200</div>
+        <ul class="price-list">
+          <li>SEO-аудит і технічна оптимізація</li>
+          <li>Семантика і структура під 1 місто</li>
+          <li>До 20 локальних сторінок</li>
+          <li>Google Business Profile</li>
+          <li>2 статті для блогу / міс</li>
+          <li>Щомісячний звіт</li>
+        </ul>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Найпопулярніший</div>
+        <div class="price-name">Мережа</div>
+        <div class="price-desc">2–5 міст, повне просування</div>
+        <div class="price-val">від $700 <span>/міс</span></div>
+        <div class="price-period">+ разовий старт від $400</div>
+        <ul class="price-list">
+          <li>Всі пункти тарифу «Старт»</li>
+          <li>SEO під кожне місто окремо</li>
+          <li>До 80 локальних сторінок</li>
+          <li>Google Maps для всіх точок</li>
+          <li>5 статей для блогу / міс</li>
+          <li>Крауд-маркетинг і посилання</li>
+          <li>Пріоритетна підтримка</li>
+        </ul>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700">Обговорити →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Масштаб</div>
+        <div class="price-desc">6+ міст + Польща / EU</div>
+        <div class="price-val">від $1 200 <span>/міс</span></div>
+        <div class="price-period">Індивідуальні умови</div>
+        <ul class="price-list">
+          <li>Всі пункти тарифу «Мережа»</li>
+          <li>Необмежена кількість міст</li>
+          <li>Польська та EU семантика</li>
+          <li>hreflang і мультимовний SEO</li>
+          <li>Виділений SEO-спеціаліст</li>
+          <li>Щотижнева комунікація</li>
+          <li>Стратегія на рік</li>
+        </ul>
+        <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO IS IT FOR -->
+<div class="sec" style="padding-top:0;padding-bottom:80px">
+  <div class="sec-inner">
+    <span class="sec-tag">Для кого</span>
+    <h2 class="sec-h">Підходить вам,<br><span>якщо ви...</span></h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">🍱</div>
+        <h4>Доставка суші або роллів</h4>
+        <p>1 точка або мережа — будуємо SEO-систему під ваш масштаб і допомагаємо рости далі</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🍕</div>
+        <h4>Доставка піци, бургерів, їжі</h4>
+        <p>Той самий підхід: локальні сторінки + Google Maps + органіка без агрегаторів</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🏙️</div>
+        <h4>Відкриваєте нові міста</h4>
+        <p>Маєте план масштабування — ми будуємо SEO-шаблон, щоб кожне нове місто одразу виходило в топ</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">💸</div>
+        <h4>Втомились від дорогої реклами</h4>
+        <p>Реклама вимагає постійного бюджету. SEO — це актив, який накопичується і залишається з вами</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🇵🇱</div>
+        <h4>Плануєте вихід у Польщу</h4>
+        <p>Знаємо польський ринок — вже виводили Roll Club у Варшаву та Вроцлав. Зробимо те саме для вас</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">📊</div>
+        <h4>Хочете прозорі результати</h4>
+        <p>Надаємо щомісячні звіти з конкретними цифрами: трафік, позиції, замовлення, дохід з органіки</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sec" style="background:var(--light);padding-top:72px;padding-bottom:72px">
+  <div class="sec-inner">
+    <span class="sec-tag">FAQ</span>
+    <h2 class="sec-h">Часті запитання</h2>
+    <div class="faq-list" id="faq">
+      <div class="faq-item">
+        <div class="faq-q">Коли з'являться перші результати?</div>
+        <div class="faq-a">Перші зрушення в позиціях помітні через 6–8 тижнів. Стабільний органічний трафік — через 3–4 місяці. Google Maps реагує швидше — топ-3 по деяких запитах можливий вже за місяць після оптимізації профілю.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Скільки коштує SEO для доставки суші?</div>
+        <div class="faq-a">Залежить від кількості міст і обсягу робіт. Базовий тариф для 1 міста — від $300/міс. Для мережі 2–5 міст — від $700/міс. Завжди обговорюємо індивідуально і прозоро.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Чи потрібно мені платити за рекламу одночасно з SEO?</div>
+        <div class="faq-a">Не обов'язково. SEO і реклама можуть доповнювати одне одного на старті, але мета SEO — замінити постійний рекламний бюджет органічним трафіком. Багато наших клієнтів скорочують витрати на рекламу через 4–6 місяців після старту.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ви можете гарантувати ТОП-1 в Google?</div>
+        <div class="faq-a">Ніхто не може гарантувати конкретну позицію — Google постійно змінює алгоритми. Але ми показуємо реальні кейси з цифрами і даємо прогноз на основі аналізу конкурентів. Наш результат з Roll Club — 38 000+ ключових слів у топ-10.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Чи підходить ваш підхід для доставки піци, бургерів, ЗСЖ-харчування?</div>
+        <div class="faq-a">Так. Принцип той самий: локальна семантика, сторінки під місто, Google Maps. Ніша доставки їжі — одна з наших ключових спеціалізацій незалежно від типу кухні.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Як відбувається масштабування на нові міста?</div>
+        <div class="faq-a">Ми будуємо готовий SEO-шаблон вже при роботі з першим містом. Кожне нове місто запускається по шаблону: нова локальна сторінка, семантика, Google Business Profile — і починає отримувати трафік за 2–3 місяці замість 6–8.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CTA -->
+<div class="main-cta" id="cta">
+  <div class="main-cta-inner">
+    <div>
+      <h2>Готові вивести вашу<br>доставку в <span>топ Google?</span></h2>
+      <p class="main-cta-sub">Зробимо безкоштовний SEO-розбір вашого сайту і покажемо, скільки клієнтів ви зараз втрачаєте.</p>
+      <ul class="audit-list">
+        <li>Які локальні запити можуть приводити замовлення прямо зараз</li>
+        <li>Де сайт втрачає трафік і чому конкуренти вище в Google</li>
+        <li>Скільки замовлень потенційно приносить органіка у вашому місті</li>
+        <li>Конкретний план дій на перші 3 місяці</li>
+        <li>Стратегія для органічного росту в Google та AI-пошуку</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <h3>Безкоштовний SEO-розбір</h3>
+      <p>Відповімо протягом 1 робочого дня</p>
+      <input type="text" class="field" placeholder="Ваше ім'я">
+      <input type="url" class="field" placeholder="Сайт доставки">
+      <input type="text" class="field" placeholder="Місто / кількість міст">
+      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;padding:16px">
+        Написати в Telegram →
+      </a>
+      <p class="form-note">або напишіть на <a href="mailto:seo@prweb.pro" style="color:var(--pink)">seo@prweb.pro</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo"><span>PR.</span>WEB</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="label">Адреса</div>
+          <p>Україна, м. Харків,<br>вул. Клочківська, 24</p>
+        </div>
+        <div class="footer-col">
+          <div class="label">E-mail</div>
+          <a href="mailto:seo@prweb.pro">seo@prweb.pro</a>
+        </div>
+        <div class="footer-col">
+          <div class="label">Telegram</div>
+          <a href="https://t.me/verdiev" target="_blank">@verdiev</a>
+        </div>
+        <div class="footer-col">
+          <div class="label">Соцмережі</div>
+          <a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a>
+          <a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-cta">
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a>
+</div>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Як читати SEO-звіт: які метрики важливі для власника бізнесу | Блог PR.WEB</title>
+<meta name="description" content="Пояснюємо простою мовою: трафік, позиції, CTR, конверсія — що з цього реально впливає на прибуток і на що дивитись в першу чергу.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#202020;--white:#F9F9F9;--pink:#F6364D;--gray:#A2A2A2;--light:#EEECEE;--radius:12px;--pad:124px}
+html{scroll-behavior:smooth}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased}
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:1192px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}.logo span{color:var(--pink)}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--black);font-size:16px}.nav-links a:hover{color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-size:16px;text-decoration:none;border:none;cursor:pointer}
+.btn-dark{background:var(--black);color:var(--white)}.btn-pink{background:var(--pink);color:var(--white)}.btn-pink:hover{background:#d42b3f}
+.article-layout{max-width:1192px;margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1fr 280px;gap:64px;align-items:start}
+.article-main{padding:56px 0 80px;min-width:0}
+.article-sidebar{padding:56px 0 80px;position:sticky;top:109px}
+.crumb{display:flex;align-items:center;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+.crumb a{color:var(--gray);font-size:14px;text-decoration:none}.crumb a:hover{color:var(--pink)}.crumb span{color:var(--gray);font-size:14px}
+.article-hero{background:var(--black);border-radius:16px;height:320px;display:flex;align-items:center;justify-content:center;font-size:100px;margin-bottom:40px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#111 0%,#1a0808 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(246,54,77,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(246,54,77,0.04) 1px,transparent 1px);background-size:48px 48px}
+.hero-emoji{position:relative;z-index:1}
+.hero-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--pink)}
+.art-cat{display:inline-block;font-family:'Onest',sans-serif;font-weight:700;font-size:13px;color:var(--pink);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px}
+.art-h1{font-family:'Onest',sans-serif;font-weight:700;font-size:40px;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px}
+.art-meta{display:flex;gap:20px;align-items:center;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid #eee;flex-wrap:wrap}
+.author{display:flex;align-items:center;gap:10px}
+.ava{width:36px;height:36px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;color:#fff;font-size:14px;flex-shrink:0}
+.aname{font-size:14px;font-weight:700;font-family:'Onest',sans-serif}
+.adate,.aread{font-size:14px;color:var(--gray)}
+.art-body{font-size:18px;line-height:1.7;color:#333}
+.art-body p{margin-bottom:24px}
+.art-body h2{font-family:'Onest',sans-serif;font-weight:700;font-size:28px;line-height:1.2;margin:48px 0 16px;color:var(--black)}
+.art-body h2 .pink{color:var(--pink)}
+.art-body h3{font-family:'Onest',sans-serif;font-weight:700;font-size:21px;line-height:1.2;margin:32px 0 12px;color:var(--black)}
+.art-body ul{margin:0 0 24px 0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.art-body ul li{padding-left:20px;position:relative;font-size:17px;line-height:1.6}.art-body ul li::before{content:"—";color:var(--pink);position:absolute;left:0;font-weight:700}
+.art-body ol{margin:0 0 24px 0;list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:12px}
+.art-body ol li{padding-left:32px;position:relative;font-size:17px;line-height:1.6;counter-increment:step}.art-body ol li::before{content:counter(step)".";color:var(--pink);position:absolute;left:0;font-weight:700;font-family:'Onest',sans-serif}
+.art-body strong{font-weight:700;color:var(--black)}
+.art-body blockquote{border-left:3px solid var(--pink);padding:16px 20px;background:#fff5f5;border-radius:0 8px 8px 0;margin:28px 0;font-size:17px;color:#444;line-height:1.6}
+.hbox{background:var(--black);border-radius:12px;padding:28px;margin:32px 0}
+.hbox h4{font-family:'Onest',sans-serif;font-weight:700;font-size:18px;color:var(--white);margin-bottom:12px}
+.hbox p{color:#ccc;margin-bottom:8px;font-size:16px}
+.hbox .stat{font-family:'Onest',sans-serif;font-weight:700;font-size:36px;color:var(--pink);line-height:1;margin-bottom:4px}
+.checklist{background:var(--light);border-radius:12px;padding:24px 28px;margin:28px 0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.checklist li{display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.5}.checklist li::before{content:"✓";color:var(--pink);font-weight:700;flex-shrink:0;margin-top:2px}
+.warn{background:#fff8e1;border:1px solid #ffc107;border-radius:10px;padding:14px 18px;margin:24px 0;font-size:16px;color:#555;line-height:1.5}
+.icta{background:var(--pink);border-radius:16px;padding:32px;margin:40px 0;text-align:center}
+.icta h3{font-family:'Onest',sans-serif;font-weight:700;font-size:22px;color:#fff;margin-bottom:8px}
+.icta p{font-size:15px;color:rgba(255,255,255,0.85);margin-bottom:20px}
+.icta a{background:#fff;color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;padding:12px 28px;border-radius:40px;text-decoration:none;font-size:15px;display:inline-block}
+.art-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:40px;padding-top:32px;border-top:1px solid #eee}
+.art-tag{background:var(--light);color:var(--black);font-size:13px;font-weight:700;padding:6px 14px;border-radius:40px;text-decoration:none}.art-tag:hover{background:var(--pink);color:#fff}
+/* SIDEBAR */
+.sb-cta{background:var(--black);border-radius:16px;padding:24px;margin-bottom:16px}
+.sb-cta h4{font-family:'Onest',sans-serif;font-weight:700;font-size:15px;color:var(--white);margin-bottom:10px}
+.sb-cta p{font-size:13px;color:#aaa;line-height:1.5;margin-bottom:14px}
+.sb-cta a{display:flex;align-items:center;justify-content:center;background:var(--pink);color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:10px;border-radius:40px;text-decoration:none}
+.sb-toc{background:var(--light);border-radius:16px;padding:20px;margin-bottom:16px}
+.sb-toc h4{font-family:'Onest',sans-serif;font-weight:700;font-size:14px;margin-bottom:14px}
+.sb-toc ol{list-style:none;counter-reset:toc;display:flex;flex-direction:column;gap:8px}
+.sb-toc li{counter-increment:toc;font-size:13px;line-height:1.4}
+.sb-toc a{color:var(--black);text-decoration:none;display:flex;gap:6px}.sb-toc a:hover{color:var(--pink)}
+.sb-toc a::before{content:counter(toc)".";color:var(--pink);font-weight:700;font-family:'Onest',sans-serif;flex-shrink:0}
+.sb-related{background:var(--light);border-radius:16px;padding:20px}
+.sb-related h4{font-family:'Onest',sans-serif;font-weight:700;font-size:14px;margin-bottom:14px}
+.rp{display:flex;gap:10px;align-items:flex-start;text-decoration:none;color:var(--black);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #ddd}
+.rp:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.rp-ico{width:36px;height:36px;background:var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rp-cat{font-size:10px;color:var(--pink);font-weight:700;margin-bottom:2px}
+.rp-t{font-size:12px;font-weight:700;line-height:1.4}.rp:hover .rp-t{color:var(--pink)}
+/* BOTTOM */
+.bcta{background:var(--black);padding:64px var(--pad)}
+.bcta-inner{max-width:1192px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.bcta h2{font-family:'Onest',sans-serif;font-weight:700;font-size:32px;color:#fff;margin-bottom:8px}.bcta h2 span{color:var(--pink)}
+.bcta p{font-size:16px;color:#aaa;max-width:480px;line-height:1.5}
+.bcta-btns{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
+footer{background:var(--black);border-top:1px solid #333;padding:40px var(--pad) 28px}
+.fi{max-width:1192px;margin:0 auto;overflow:hidden}
+.ft{display:flex;gap:56px;margin-bottom:28px;align-items:flex-start}
+.flogo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;color:var(--white);flex-shrink:0}.flogo span{color:var(--pink)}
+.fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;flex:1;min-width:0}
+.fcol .lbl{font-size:12px;color:var(--gray);margin-bottom:8px}
+.fcol a,.fcol p{font-family:'Onest',sans-serif;font-weight:700;font-size:14px;color:var(--white);text-decoration:none;display:block;margin-bottom:6px;word-break:break-word}
+.fc{border-top:1px solid #333;padding-top:16px;font-size:12px;color:var(--gray)}
+.sc{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}.sc .btn{width:100%;justify-content:center}
+@media(max-width:1100px){:root{--pad:40px}.article-layout{grid-template-columns:1fr;gap:0}.article-sidebar{padding-top:0;position:static}}
+@media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.art-h1{font-size:26px}.art-body{font-size:16px}.bcta{padding:40px 20px}.bcta-inner{flex-direction:column}.fcols{grid-template-columns:1fr 1fr}.sc{display:block}body{padding-bottom:72px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="https://prweb.pro" class="logo"><span>PR.</span>WEB</a>
+  <ul class="nav-links">
+    <li><a href="https://prweb.pro/services">Послуги</a></li>
+    <li><a href="https://prweb.pro/cases">Кейси</a></li>
+    <li><a href="https://prweb.pro/about">Про нас</a></li>
+    <li><a href="https://prweb.pro/blog">Блог</a></li>
+    <li><a href="https://prweb.pro/contacts">Контакти</a></li>
+  </ul>
+  <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+</div></nav>
+
+<div class="article-layout">
+<main class="article-main">
+  <div class="crumb"><a href="https://prweb.pro">PR.WEB</a><span>→</span><a href="https://prweb.pro/blog">Блог</a><span>→</span><span>Аналітика</span></div>
+  <div class="article-hero"><div class="hero-bg"></div><div class="hero-grid"></div><div class="hero-emoji">📊</div><div class="hero-line"></div></div>
+  <div class="art-cat">Аналітика</div>
+  <h1 class="art-h1">Як читати SEO-звіт: які метрики важливі для власника бізнесу</h1>
+  <div class="art-meta">
+    <div class="author"><div class="ava">В</div><div><div class="aname">Вілен Даніелян</div><div style="font-size:12px;color:var(--gray)">Засновник PR.WEB</div></div></div>
+    <span class="adate">Червень 2026</span><span class="aread">6 хв читати</span>
+  </div>
+  <div class="art-body"><p>SEO-агентство надсилає вам звіт з десятками таблиць і графіків. Ви дивитесь і не розумієте: все добре чи ні? Чи варто платити далі? Ця стаття допоможе читати SEO-звіт як власник бізнесу, а не як SEO-спеціаліст.</p>
+<h2 id='s1'>Чому більшість SEO-звітів незрозумілі (і що з цим робити)</h2>
+<p>Типова проблема: звіти перевантажені технічними метриками, які не пов'язані з вашим бізнес-результатом. Бачите «Domain Rating виріс з 18 до 23» — і не знаєте, це добре чи погано, і що це взагалі означає для заявок.</p>
+<blockquote>Хороший SEO-звіт відповідає на одне запитання: чи стає більше клієнтів з органічного пошуку? Все решта — деталі для SEO-фахівця.</blockquote>
+<h2 id='s2'>Метрики, які реально важливі для власника бізнесу</h2>
+<h3>Tier 1: Бізнес-метрики (дивіться в першу чергу)</h3>
+<ul><li><strong>Органічні конверсії</strong> — кількість заявок, дзвінків, замовлень з органічного пошуку</li><li><strong>Органічний трафік</strong> — скільки людей прийшло з Google за місяць</li><li><strong>Дохід з органіки</strong> — якщо є e-commerce або відстежується в CRM</li></ul>
+<h3>Tier 2: SEO-метрики (пояснення процесу)</h3>
+<ul><li><strong>Позиції по ключових запитах</strong> — на яких місцях ваш сайт по цільових словах</li><li><strong>Impressions (Покази)</strong> — скільки разів сайт з'явився у видачі</li><li><strong>CTR (Click-through rate)</strong> — який відсоток людей клікнув після того як побачив</li></ul>
+<h3>Tier 3: Технічні метрики (для спеціалістів)</h3>
+<ul><li>Domain Rating, Domain Authority — авторитет домену</li><li>Кількість зворотних посилань</li><li>Показники Core Web Vitals</li><li>Індексація сторінок</li></ul>
+<div class='hbox'><h4>Просте правило</h4><p>Якщо ваш SEO-підрядник звітує тільки про Domain Rating і кількість посилань, але не показує трафік і конверсії — це червоний прапорець. Питайте про заявки, а не про посилання.</p></div>
+<h2 id='s3'>Що таке позиції і як їх читати у звіті</h2>
+<p>Позиція — це місце вашого сайту у видачі Google по конкретному запиту. Топ-3 отримує ~60% кліків, топ-10 — ще ~20%, далі — крихти.</p>
+<ul><li><strong>Топ-3</strong> — відмінно, основний трафік</li><li><strong>Топ-5</strong> — добре, є трафік</li><li><strong>Топ-10</strong> — перша сторінка, людина може зайти</li><li><strong>11–20</strong> — друга сторінка, мало хто заходить</li><li><strong>21+</strong> — фактично невидимі</li></ul>
+<p>У звіті дивіться на динаміку: чи ростуть позиції по цільових запитах щомісяця. Зростання з 15-го на 8-ме місце — вже гарний знак, навіть якщо трафіку ще немає.</p>
+<h2 id='s4'>Органічний трафік: як читати графік</h2>
+<p>Органічний трафік — кількість людей з Google, які зайшли на ваш сайт без реклами. Ось як читати графік трафіку:</p>
+<ol><li><strong>Тренд</strong> — загальний напрямок: росте, падає або стабільний</li><li><strong>Сезонність</strong> — нормально, якщо трафік коливається по місяцях</li><li><strong>Різкі падіння</strong> — сигнал проблеми: технічна помилка, оновлення Google, санкція</li><li><strong>Порівняння з попереднім роком</strong> — важливіше за порівняння з попереднім місяцем</li></ol>
+<div class='warn'>Зимою трафік на "стрижку волосся" природно нижчий, ніж навесні. Не панікуйте через сезонні коливання. Порівнюйте той самий місяць рік до року.</div>
+<h2 id='s5'>Конверсія і заявки з органіки: найважливіша метрика</h2>
+<p>Трафік — це просто люди на сайті. Важливо не кількість відвідувачів, а <strong>скільки з них стали клієнтами</strong>.</p>
+<h3>Як відстежити заявки з органіки</h3>
+<ul><li>Google Analytics 4: налаштуйте Goals/Conversions на заявку або дзвінок</li><li>Calltracking: окремий номер телефону для органічного трафіку</li><li>CRM: позначте джерело кожного ліда</li><li>Proquery (для UA) або Ringostat — послуги відстеження дзвінків</li></ul>
+<p>Якщо конверсія з органіки нижча за 1% — проблема не в SEO, а на сайті. SEO приводить людей, але сайт їх не конвертує. Потрібна UX-оптимізація.</p>
+<h2 id='s6'>Червоні прапорці: коли варто насторожитися</h2>
+<ul><li>Трафік падає більше 20% за 1 місяць без очевидної причини</li><li>Позиції різко впали по всіх запитах (можлива санкція або оновлення алгоритму)</li><li>Звіт показує тільки посилання і DR, але не трафік і конверсії</li><li>Агентство не може пояснити причину зміни в простих словах</li><li>Трафік росте, але заявок стає менше (проблема конверсії або якості трафіку)</li></ul>
+<div class='icta'><h3>Хочете зрозуміти, що відбувається з вашим SEO?</h3><p>Розберемо ваш звіт разом і пояснимо що реально важливо для вашого бізнесу</p><a href='https://t.me/verdiev' target='_blank'>Написати в Telegram →</a></div></div>
+  <div class="art-tags"><a href="#" class="art-tag">Аналітика</a><a href="#" class="art-tag">Local SEO</a><a href="#" class="art-tag">Google</a><a href="#" class="art-tag">PR.WEB</a></div>
+</main>
+<aside class="article-sidebar">
+  <div class="sb-cta"><h4>Безкоштовний SEO-розбір</h4><p>Покажемо де ваш сайт зараз і що потрібно зробити першим</p><a href="https://t.me/verdiev" target="_blank">Написати в Telegram →</a></div>
+  <div class="sb-toc"><h4>Зміст статті</h4><ol><li><a href='#s1'>Чому більшість SEO-звітів незрозумілі</a></li><li><a href='#s2'>Метрики, які реально важливі</a></li><li><a href='#s3'>Що таке позиції і навіщо їх відстежувати</a></li><li><a href='#s4'>Трафік: органіка vs реклама</a></li><li><a href='#s5'>Конверсія і заявки з органіки</a></li><li><a href='#s6'>Червоні прапорці у звіті</a></li></ol></div>
+  <div class="sb-related"><h4>Читайте також</h4>
+    <a href="#" class="rp"><div class="rp-ico">📍</div><div><div class="rp-cat">Local SEO</div><div class="rp-t">Що таке Local SEO і чому це важливо</div></div></a>
+    <a href="#" class="rp"><div class="rp-ico">🗺️</div><div><div class="rp-cat">Google Maps</div><div class="rp-t">Топ-3 Google Maps: повний чеклист</div></div></a>
+    <a href="#" class="rp"><div class="rp-ico">🤖</div><div><div class="rp-cat">AI SEO</div><div class="rp-t">SEO в епоху ChatGPT у 2026</div></div></a>
+    <a href="#" class="rp"><div class="rp-ico">🏙️</div><div><div class="rp-cat">Масштабування</div><div class="rp-t">Як масштабувати бізнес по містах</div></div></a>
+  </div>
+</aside>
+</div>
+
+<div class="bcta"><div class="bcta-inner">
+  <div><h2>Готові вивести бізнес<br>у <span>топ Google</span>?</h2><p>Зробимо безкоштовний SEO-розбір і покажемо конкретний план дій на 3 місяці.</p></div>
+  <div class="bcta-btns">
+    <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700;padding:16px 32px">Написати в Telegram →</a>
+    <a href="https://prweb-agency.github.io/offers/cases/Seo-Case-Roll-Club.html" class="btn" style="background:rgba(255,255,255,0.08);color:#fff;padding:16px 32px;justify-content:center">Кейс Roll Club</a>
+  </div>
+</div></div>
+
+<footer><div class="fi">
+  <div class="ft">
+    <div class="flogo"><span>PR.</span>WEB</div>
+    <div class="fcols">
+      <div class="fcol"><div class="lbl">Адреса</div><p>Харків, Клочківська, 24</p></div>
+      <div class="fcol"><div class="lbl">E-mail</div><a href="mailto:seo@prweb.pro">seo@prweb.pro</a></div>
+      <div class="fcol"><div class="lbl">Telegram</div><a href="https://t.me/verdiev" target="_blank">@verdiev</a></div>
+      <div class="fcol"><div class="lbl">Соцмережі</div><a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a><a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a></div>
+    </div>
+  </div>
+  <div class="fc">© 2026 PR.WEB · All rights reserved</div>
+</div></footer>
+<div class="sc"><a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a></div>
+</body>
+</html>

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ1K0ZWMKS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SZ1K0ZWMKS');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Розробка сайтів — адаптивні сайти під SEO та продажі | PR.WEB</title>
@@ -113,6 +121,52 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
 @media(max-width:1024px){:root{--pad:40px}.hero-inner,.case-block,.main-cta-inner,.seo-inner{grid-template-columns:1fr;gap:40px}.steps-grid,.price-grid,.get-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.hero h1,.sec-h,.main-cta h2{font-size:30px}.steps-grid,.price-grid,.get-grid,.case-stats,.footer-cols{grid-template-columns:1fr}.sticky-cta{display:block}body{padding-bottom:72px}.case-block{padding:28px 20px}.service-tabs{padding:0 20px}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "PR.WEB — SEO-агентство",
+  "description": "SEO-просування для локального бізнесу в Україні та ЄС. Local SEO, Google Maps, технічний аудит, розробка сайтів.",
+  "url": "https://prweb.pro",
+  "logo": "https://prweb.pro/logo.png",
+  "image": "https://prweb.pro/og-image.jpg",
+  "telephone": "+380996875274",
+  "email": "seo@prweb.pro",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "вул. Ярослава Мудрого, 14",
+    "addressLocality": "Харків",
+    "addressRegion": "Харківська область",
+    "postalCode": "61002",
+    "addressCountry": "UA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "49.9935",
+    "longitude": "36.2304"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Руслан Вердієв",
+    "jobTitle": "Засновник та SEO-стратег",
+    "sameAs": ["https://t.me/verdiev","https://www.threads.com/@verdiev.seo"]
+  },
+  "priceRange": "$$",
+  "currenciesAccepted": "UAH, USD",
+  "areaServed": ["Україна","Польща","EU"],
+  "sameAs": [
+    "https://www.instagram.com/prweb.agency",
+    "https://www.threads.com/@verdiev.seo",
+    "https://t.me/verdiev"
+  ]
+}
+</script>
 </head>
 <body>
 <nav><div class="nav-inner">
@@ -124,7 +178,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
     <li><a href="https://prweb.pro/blog">Блог</a></li>
     <li><a href="https://prweb.pro/contacts">Контакти</a></li>
   </ul>
-  <a href="https://t.me/verdiev" target="_blank" class="btn btn-dark">Написати в TG →</a>
+  <a href="#contact-form" target="_blank" class="btn btn-dark">Отримати консультацію →</a>
 </div></nav>
 
 <div class="service-tabs"><div class="service-tabs-inner">
@@ -144,7 +198,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
     <h1>Сайти, що<br>продають і <span>ростуть</span><br>у Google</h1>
     <p class="hero-sub">Розробляємо адаптивні сайти з правильною SEO-архітектурою з першого дня: швидкі, зручні, готові до просування і масштабування.</p>
     <div class="hero-btns">
-      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Отримати консультацію →</a>
+      <a href="#contact-form" target="_blank" class="btn btn-pink">Отримати консультацію →</a>
       <a href="#how" class="btn btn-outline">Типи проектів</a>
     </div>
     <div class="hero-proof">
@@ -184,7 +238,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
 
 <div class="cta-strip"><div class="cta-strip-inner">
   <div><h3>Є питання по послузі?</h3><p>Напишіть — відповімо і розберемо ваш конкретний кейс</p></div>
-  <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в Telegram →</a>
+  <a href="#contact-form" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Отримати консультацію →</a>
 </div></div>
 
 <div class="sec"><div class="sec-inner">
@@ -223,29 +277,29 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
   <div class="price-grid">
     <div class="price-card">
       <div class="price-name">Базовий</div><div class="price-desc">Для малого бізнесу та старту</div>
-      <div class="price-val">від 00 <span>/міс</span></div><div class="price-period">Індивідуальне рішення</div>
+      <div class="price-val">від 00 <span>/міс</span></div><div class="price-period">Лендінг або сайт-візитка</div>
       <ul class="price-list"><li>Аналіз і стратегія</li><li>Базова реалізація</li><li>Щомісячний звіт</li><li>Підтримка у Telegram</li></ul>
-      <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+      <a href="#contact-form" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
     </div>
     <div class="price-card featured">
       <div class="price-badge">Рекомендуємо</div>
       <div class="price-name">Стандарт</div><div class="price-desc">Повний обсяг + підтримка</div>
       <div class="price-val">від 00 <span>/міс</span></div><div class="price-period">Фіксований місячний платіж</div>
       <ul class="price-list"><li>Всі роботи з тарифу Базовий</li><li>Повна реалізація стратегії</li><li>Регулярна оптимізація</li><li>Пріоритетна підтримка</li><li>Розширена аналітика</li></ul>
-      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700">Обговорити →</a>
+      <a href="#contact-form" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700">Обговорити →</a>
     </div>
     <div class="price-card">
       <div class="price-name">Преміум</div><div class="price-desc">Для мереж і великих проектів</div>
       <div class="price-val">від  200 <span>/міс</span></div><div class="price-period">Індивідуальні умови</div>
       <ul class="price-list"><li>Всі роботи з тарифу Стандарт</li><li>Виділений спеціаліст</li><li>Щотижнева комунікація</li><li>Стратегія на рік</li><li>Масштабування по регіонах</li></ul>
-      <a href="https://t.me/verdiev" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
+      <a href="#contact-form" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center">Обговорити →</a>
     </div>
   </div>
 </div></div>
 
 <div class="cta-strip"><div class="cta-strip-inner">
   <div><h3>Не знаєте який пакет підходить?</h3><p>Розкажіть про бізнес — підберемо оптимальне рішення</p></div>
-  <a href="https://t.me/verdiev" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Написати в TG →</a>
+  <a href="#contact-form" target="_blank" class="btn btn-white" style="padding:16px 32px;font-size:16px;flex-shrink:0">Отримати консультацію →</a>
 </div></div>
 
 <div class="sec"><div class="sec-inner">
@@ -286,7 +340,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
       <li>Стратегія для органічного росту в Google та AI-пошуку</li>
     </ul>
     <div style="margin-top:24px">
-      <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700">Написати в Telegram →</a>
+      <a href="#contact-form" target="_blank" class="btn btn-pink" style="font-family:'Onest',sans-serif;font-weight:700">Отримати консультацію →</a>
     </div>
   </div>
 </div></div>
@@ -309,7 +363,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
     <input type="text" class="field" placeholder="Ваше ім'я">
     <input type="url" class="field" placeholder="Сайт (якщо є)">
     <input type="text" class="field" placeholder="Чим займається ваш бізнес">
-    <a href="https://t.me/verdiev" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;padding:16px">Написати в Telegram →</a>
+    <a href="#contact-form" target="_blank" class="btn btn-pink" style="width:100%;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;padding:16px">Отримати консультацію →</a>
     <p class="form-note">або <a href="mailto:seo@prweb.pro" style="color:var(--pink)">seo@prweb.pro</a></p>
   </div>
 </div></div>
@@ -318,7 +372,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
   <div class="footer-top">
     <div class="footer-logo"><span>PR.</span>WEB</div>
     <div class="footer-cols">
-      <div class="footer-col"><div class="label">Адреса</div><p>Україна, м. Харків,<br>вул. Клочківська, 24</p></div>
+      <div class="footer-col"><div class="label">Адреса</div><p>Україна, м. Харків,<br>вул. Ярослава Мудрого, 14</p></div>
       <div class="footer-col"><div class="label">E-mail</div><a href="mailto:seo@prweb.pro">seo@prweb.pro</a></div>
       <div class="footer-col"><div class="label">Telegram</div><a href="https://t.me/verdiev" target="_blank">@verdiev</a></div>
       <div class="footer-col"><div class="label">Соцмережі</div><a href="https://www.instagram.com/prweb.agency" target="_blank">Instagram</a><a href="https://www.threads.com/@verdiev.seo" target="_blank">Threads</a></div>
@@ -326,7 +380,7 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
   </div>
   <div class="footer-copy">© 2026 PR.WEB · All rights reserved</div>
 </div></footer>
-<div class="sticky-cta"><a href="https://t.me/verdiev" target="_blank" class="btn btn-pink">Написати в Telegram →</a></div>
+<div class="sticky-cta"><a href="#contact-form" target="_blank" class="btn btn-pink">Отримати консультацію →</a></div>
 <script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const i=q.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')})});</script>
 </body>
 </html>

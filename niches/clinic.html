@@ -121,6 +121,12 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
 .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);padding:12px 20px;box-shadow:0 -4px 20px rgba(0,0,0,.1);z-index:99}.sticky-cta .btn{width:100%;justify-content:center}
 @media(max-width:1024px){:root{--pad:40px}.hero-inner,.two-col,.case-block,.main-cta-inner,.seo-inner{grid-template-columns:1fr;gap:40px}.steps-grid,.price-grid,.get-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){:root{--pad:20px}nav{padding:0 20px}.nav-links{display:none}.hero h1,.sec-h,.main-cta h2{font-size:30px}.steps-grid,.price-grid,.get-grid,.case-stats,.footer-cols{grid-template-columns:1fr}.sticky-cta{display:block}body{padding-bottom:72px}.case-block{padding:28px 20px}}
+
+.service-tabs{background:var(--light);padding:0 var(--pad);overflow-x:auto;white-space:nowrap;border-bottom:1px solid #ddd}
+.service-tabs-inner{max-width:var(--max-w);margin:0 auto;display:flex}
+.stab{display:inline-flex;align-items:center;gap:6px;padding:14px 20px;font-size:15px;color:var(--gray);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.stab:hover{color:var(--black)}
+.stab.active{color:var(--black);border-bottom-color:var(--pink);font-weight:700}
 </style>
 <script type="application/ld+json">
 {
@@ -181,6 +187,18 @@ footer{background:var(--black);padding:56px var(--pad) 40px}
   </ul>
   <a href="#contact-form" target="_blank" class="btn btn-dark">Отримати консультацію →</a>
 </div></nav>
+<div class="service-tabs">
+  <div class="service-tabs-inner">
+    <a href="#" class="stab active">🏥 SEO для клініки</a>
+    <a href="https://prweb-agency.github.io/offers/niches/stomatology.html" class="stab">🦷 SEO для стоматології</a>
+    <a href="https://prweb-agency.github.io/offers/services/seo-local-business.html" class="stab">📍 SEO для локального бізнесу</a>
+    <a href="https://prweb-agency.github.io/offers/services/technical-audit.html" class="stab">🔧 Технічний аудит</a>
+    <a href="https://prweb-agency.github.io/offers/services/dev-sites.html" class="stab">💻 Розробка сайтів</a>
+    <a href="https://prweb-agency.github.io/offers/services/seo-promotion.html" class="stab">🔍 SEO-просування</a>
+    <a href="https://prweb-agency.github.io/offers/services/admin.html" class="stab">⚙️ Адміністрування сайту</a>
+  </div>
+</div>
+
 
 <div class="hero"><div class="hero-inner">
   <div>

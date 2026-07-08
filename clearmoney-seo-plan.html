@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#202020">
+<title>SEO-план ClearMoney — PR.WEB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Wix+Madefor+Display:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#202020;--white:#F9F9F9;--pink:#F6364D;--gray:#A2A2A2;--light:#EEECEE;--radius:12px;--pad:124px;--max-w:1192px}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Wix Madefor Display',sans-serif;background:var(--white);color:var(--black);line-height:1.3;-webkit-font-smoothing:antialiased;margin:0;}
+
+nav{background:var(--white);border-bottom:1px solid #eee;position:sticky;top:0;z-index:100;padding:0 var(--pad)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:89px}
+.logo{font-family:'Onest',sans-serif;font-weight:700;font-size:20px;text-decoration:none;color:var(--black)}
+.logo span{color:var(--pink)}
+.nav-badge{font-family:'Onest',sans-serif;font-size:13px;font-weight:700;color:var(--gray);border:1px solid #eee;padding:8px 16px;border-radius:40px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:40px;font-family:'Wix Madefor Display',sans-serif;font-weight:500;font-size:16px;text-decoration:none;border:none;cursor:pointer;transition:all .15s}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-pink:hover{background:#d42b3f;transform:translateY(-2px);box-shadow:0 8px 24px rgba(246,54,77,.3)}
+
+/* HERO */
+.hero{padding:72px var(--pad) 0;overflow:hidden}
+.hero-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
+.hero-tag{display:inline-flex;background:rgba(246,54,77,0.1);color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;font-size:13px;padding:6px 14px;border-radius:40px;margin-bottom:24px;text-transform:uppercase;letter-spacing:.06em}
+.hero h1{font-family:'Onest',sans-serif;font-weight:700;font-size:52px;line-height:1.08;letter-spacing:-.01em;margin:0 0 20px;max-width:800px;margin-left:auto;margin-right:auto}
+.hero h1 span{color:var(--pink)}
+.hero-sub{font-size:19px;color:var(--gray);line-height:1.55;max-width:640px;margin:0 auto 36px}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+.hero-proof{display:flex;gap:56px;justify-content:center;flex-wrap:wrap;padding:36px 0;border-top:1px solid #eee}
+.proof-item{text-align:center}
+.proof-num{font-family:'Onest',sans-serif;font-weight:700;font-size:34px;color:var(--black);line-height:1;margin-bottom:6px}
+.proof-num span{color:var(--pink)}
+.proof-label{font-size:14px;color:var(--gray)}
+
+/* SECTION */
+.sec{padding:72px var(--pad)}
+.sec-inner{max-width:var(--max-w);margin:0 auto}
+.sec-tag{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--pink);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:16px}
+.sec-h{font-family:'Onest',sans-serif;font-weight:700;font-size:38px;line-height:1.08;margin:0 0 16px}
+.sec-h span{color:var(--pink)}
+.sec-sub{font-size:17px;color:var(--gray);line-height:1.6;max-width:680px;margin-bottom:44px}
+.sec-border{border-top:1px solid #eee}
+
+/* WHY / GROWTH GRID */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{padding:28px;border:1px solid #eee;border-radius:var(--radius);transition:border-color .2s}
+.why-card:hover{border-color:var(--pink)}
+.why-emoji{font-size:28px;margin-bottom:14px}
+.why-card h4{font-family:'Onest',sans-serif;font-weight:700;font-size:17px;margin:0 0 10px}
+.why-card ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--gray);line-height:1.6}
+.why-card li{margin-bottom:4px}
+
+/* NUMBERED MONTHS */
+.numbered-grid{display:flex;flex-direction:column;gap:0;margin-top:8px}
+.num-row{display:grid;grid-template-columns:60px 1fr;gap:24px;padding:32px 0;border-bottom:1px solid #eee}
+.num-row:first-child{border-top:1px solid #eee}
+.num-circle{width:44px;height:44px;background:var(--black);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;flex-shrink:0}
+.num-body h4{font-family:'Onest',sans-serif;font-weight:700;font-size:19px;margin:0 0 6px}
+.num-body .num-sub{font-size:14px;color:var(--pink);font-family:'Onest',sans-serif;font-weight:700;margin-bottom:14px}
+.num-body .col2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.num-body h5{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--black);margin:0 0 8px}
+.num-body ul{margin:0;padding-left:16px;font-size:14.5px;color:var(--gray);line-height:1.65}
+.num-body li{margin-bottom:4px}
+.result-tag{margin-top:16px;display:flex;gap:10px;align-items:flex-start;background:var(--light);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.5}
+.result-tag b{color:var(--pink);font-family:'Onest',sans-serif;}
+
+/* FACTORS / PROCESS TABLE */
+.factors-table{width:100%;border-collapse:collapse;margin-top:8px}
+.factors-table th{text-align:left;padding:14px 16px;font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid #eee}
+.factors-table td{padding:16px;border-bottom:1px solid #f0f0f0;font-size:15px;vertical-align:top}
+.factors-table td:first-child{font-family:'Onest',sans-serif;font-weight:700;white-space:nowrap}
+.factors-table tr:hover td{background:#fafafa}
+
+/* CHECK LIST (excluded) */
+.audit-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0;columns:2;column-gap:32px}
+.audit-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.5;break-inside:avoid;margin-bottom:6px}
+.audit-list li::before{content:"–";color:var(--pink);font-weight:700;flex-shrink:0}
+
+/* CASE BLOCK style reused for KPI summary */
+.case-block{background:var(--black);border-radius:20px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.case-label{font-family:'Onest',sans-serif;font-weight:700;font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+.case-block h3{font-family:'Onest',sans-serif;font-weight:700;font-size:26px;color:#fff;line-height:1.15;margin:0 0 14px}
+.case-block p{font-size:15px;color:#bbb;line-height:1.6;margin:0}
+.case-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cs{background:rgba(255,255,255,.06);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,.08)}
+.cs-num{font-family:'Onest',sans-serif;font-weight:700;font-size:26px;color:#fff;line-height:1;margin-bottom:4px}
+.cs-num span{color:var(--pink)}
+.cs-label{font-size:12px;color:var(--gray)}
+
+/* CTA STRIP */
+.cta-strip{background:var(--pink);padding:40px var(--pad)}
+.cta-strip-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-strip h3{font-family:'Onest',sans-serif;font-weight:700;font-size:24px;color:#fff;margin:0 0 6px}
+.cta-strip p{font-size:15px;color:rgba(255,255,255,.85);margin:0}
+.btn-white{background:#fff;color:var(--pink);font-family:'Onest',sans-serif;font-weight:700}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+
+footer{background:var(--black);padding:40px var(--pad);text-align:center}
+footer p{font-size:13px;color:var(--gray);margin:0}
+footer a{color:var(--pink);text-decoration:none}
+
+@media(max-width:1024px){
+  :root{--pad:40px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .case-block{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:40px}
+}
+@media(max-width:768px){
+  :root{--pad:16px}
+  .nav-badge{display:none}
+  .hero h1{font-size:32px}
+  .why-grid{grid-template-columns:1fr}
+  .num-row{grid-template-columns:44px 1fr}
+  .num-body .col2{grid-template-columns:1fr}
+  .case-stats{grid-template-columns:1fr 1fr}
+  .cta-strip-inner{flex-direction:column;text-align:center}
+  .audit-list{columns:1}
+  .sec{padding:56px var(--pad)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="https://prweb.pro">PR<span>.</span>WEB</a>
+    <div class="nav-badge">SEO Light Support · ClearMoney</div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">SEO-план · 6 місяців</div>
+    <h1>SEO Light Support для <span>ClearMoney</span></h1>
+    <p class="hero-sub">Легкий SEO-супровід з фокусом на B2B-попит: облік для ФОП, CRM для малого бізнесу, альтернативи конкурентам та блог для залучення підприємців.</p>
+    <div class="hero-btns">
+      <a class="btn btn-pink" href="#plan">Дивитись план по місяцях</a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item"><div class="proof-num">$<span>100</span></div><div class="proof-label">бюджет / місяць</div></div>
+      <div class="proof-item"><div class="proof-num"><span>6</span></div><div class="proof-label">місяців роботи</div></div>
+      <div class="proof-item"><div class="proof-num"><span>10–15</span></div><div class="proof-label">сторінок у роботі</div></div>
+      <div class="proof-item"><div class="proof-num"><span>20–40</span></div><div class="proof-label">запитів у GSC</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-border">
+  <div class="sec-inner">
+    <span class="sec-tag">Точки росту</span>
+    <h2 class="sec-h">Три напрямки <span>замість</span> хаотичного SEO</h2>
+    <p class="sec-sub">Замість універсального просування — три конкретні джерела B2B-трафіку для ClearMoney.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-emoji">🧑‍💼</div>
+        <h4>Сторінки під професії</h4>
+        <ul>
+          <li>Облік для IT-ФОП</li>
+          <li>Програма для салону краси</li>
+          <li>CRM для інтернет-магазину</li>
+          <li>Облік для СТО</li>
+          <li>Онлайн-запис для салону</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="why-emoji">🔁</div>
+        <h4>Альтернативи конкурентам</h4>
+        <ul>
+          <li>Альтернатива BitFaktura</li>
+          <li>Альтернатива Finmap</li>
+          <li>Альтернатива Таксер</li>
+          <li>Альтернатива Dilovod</li>
+          <li>Альтернатива 1С для малого бізнесу</li>
+        </ul>
+      </div>
+      <div class="why-card">
+        <div class="why-emoji">✍️</div>
+        <h4>Блог для ФОП</h4>
+        <ul>
+          <li>Як ФОП вести облік доходів</li>
+          <li>Ліміти ФОП у 2026 році</li>
+          <li>Як працювати з ПРРО</li>
+          <li>Excel чи програма для обліку</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-border" id="plan">
+  <div class="sec-inner">
+    <span class="sec-tag">План робіт</span>
+    <h2 class="sec-h">6 місяців <span>крок за кроком</span></h2>
+    <p class="sec-sub">Кожен місяць — окремий блок задач, обсяг робіт і очікуваний результат.</p>
+
+    <div class="numbered-grid">
+      <div class="num-row">
+        <div class="num-circle">01</div>
+        <div class="num-body">
+          <h4>SEO Foundation</h4>
+          <div class="num-sub">Індексація, sitemap, аудит, GSC / GA4</div>
+          <div class="col2">
+            <div>
+              <h5>Задачі</h5>
+              <ul>
+                <li>Індексація, sitemap.xml, robots.txt</li>
+                <li>Перевірка головної та сторінок модулів</li>
+                <li>Google Search Console та GA4</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Обсяг</h5>
+              <ul>
+                <li>1 SEO-перевірка · 2–3 сторінки</li>
+                <li>5 мета-тегів · 1 список задач</li>
+                <li>1 короткий звіт</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result-tag"><b>Результат:</b> зрозуміло, які сторінки просувати першими та що заважає росту.</div>
+        </div>
+      </div>
+
+      <div class="num-row">
+        <div class="num-circle">02</div>
+        <div class="num-body">
+          <h4>Оптимізація комерційних сторінок</h4>
+          <div class="num-sub">Title / Description / H1, FAQ, перелінковка</div>
+          <div class="col2">
+            <div>
+              <h5>Задачі</h5>
+              <ul>
+                <li>Оптимізація головної та сторінок модулів (CRM, Облік, Онлайн-запис, Фінанси)</li>
+                <li>FAQ та блоки про користь продукту</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Обсяг</h5>
+              <ul>
+                <li>2–3 сторінки · 5–7 мета-тегів</li>
+                <li>1 FAQ-блок · 1 звіт</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result-tag"><b>Результат:</b> головні сторінки зрозуміліші для Google і клієнта; можливі перші покращення показів.</div>
+        </div>
+      </div>
+
+      <div class="num-row">
+        <div class="num-circle">03</div>
+        <div class="num-body">
+          <h4>Перші сторінки під професії</h4>
+          <div class="num-sub">SEO-ТЗ під конкретні типи бізнесу</div>
+          <div class="col2">
+            <div>
+              <h5>Приклади сторінок</h5>
+              <ul>
+                <li>Облік для IT-ФОП · CRM для інтернет-магазину</li>
+                <li>Програма для салону краси · Облік для СТО</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Обсяг</h5>
+              <ul>
+                <li>1 карта сторінок · 3–5 ідей нових сторінок</li>
+                <li>1 SEO-ТЗ · 3–5 мета-тегів · 1 FAQ-блок</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result-tag"><b>Результат:</b> план сторінок під вузькі комерційні запити з нижчою конкуренцією.</div>
+        </div>
+      </div>
+
+      <div class="num-row">
+        <div class="num-circle">04</div>
+        <div class="num-body">
+          <h4>Сторінки-альтернативи конкурентам</h4>
+          <div class="num-sub">BitFaktura, Finmap, Таксер, Dilovod, 1С</div>
+          <div class="col2">
+            <div>
+              <h5>Що на сторінці</h5>
+              <ul>
+                <li>Кому підходить, чим відрізняється</li>
+                <li>Таблиця порівняння · FAQ · CTA</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Обсяг</h5>
+              <ul>
+                <li>1 карта сторінок-альтернатив · 1 SEO-ТЗ</li>
+                <li>3–5 мета-тегів · 1 порівняльна таблиця</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result-tag"><b>Результат:</b> сайт закриває попит користувачів, які вже обирають між сервісами.</div>
+        </div>
+      </div>
+
+      <div class="num-row">
+        <div class="num-circle">05</div>
+        <div class="num-body">
+          <h4>Блог і експертність</h4>
+          <div class="num-sub">Контент-план під запити ФОП</div>
+          <div class="col2">
+            <div>
+              <h5>Приклади тем</h5>
+              <ul>
+                <li>Як ФОП вести облік доходів · Ліміти ФОП 2026</li>
+                <li>Як працювати з ПРРО · Excel чи програма для обліку</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Обсяг</h5>
+              <ul>
+                <li>1 контент-план · 5–8 тем · 1 SEO-ТЗ</li>
+                <li>3–5 мета-тегів · схема перелінковки</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result-tag"><b>Результат:</b> блог працює як вхід у воронку — від відповіді до продуктової сторінки.</div>
+        </div>
+      </div>
+
+      <div class="num-row">
+        <div class="num-circle">06</div>
+        <div class="num-body">
+          <h4>Аналіз результатів і масштабування</h4>
+          <div class="num-sub">GSC, пріоритети, план на наступні 6 місяців</div>
+          <div class="col2">
+            <div>
+              <h5>Задачі</h5>
+              <ul>
+                <li>Аналіз GSC, показів і нових запитів</li>
+                <li>Оновлення слабких мета-тегів</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Обсяг</h5>
+              <ul>
+                <li>1 SEO-звіт · аналіз 10–20 запитів</li>
+                <li>список пріоритетів · план масштабування</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result-tag"><b>Результат:</b> зрозуміло, який напрямок дає рух — професії, альтернативи, блог чи модулі.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-border">
+  <div class="sec-inner">
+    <span class="sec-tag">Прогноз</span>
+    <h2 class="sec-h">Чого <span>очікувати</span></h2>
+    <table class="factors-table">
+      <tr><th>Період</th><th>Що буде видно</th></tr>
+      <tr><td>2–3 місяці</td><td>Перші покращення індексації, оновлені мета-теги, перші покази по вузьких запитах, готовий план сторінок під професії</td></tr>
+      <tr><td>6 місяців</td><td>10–15 сторінок оптимізовано / підготовлено, 4–6 нових сторінок у роботі через ТЗ, 20–40 запитів під відстеженням у GSC, готова стратегія масштабування</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="sec sec-border">
+  <div class="sec-inner">
+    <span class="sec-tag">Прозорість</span>
+    <h2 class="sec-h">Що <span>НЕ</span> входить у $100/міс</h2>
+    <p class="sec-sub">Окремо оплачується, якщо буде потрібно.</p>
+    <ul class="audit-list">
+      <li>Повний копірайтинг сторінок</li>
+      <li>Розробка нових сторінок</li>
+      <li>Дизайн</li>
+      <li>Програмування</li>
+      <li>Лінкбілдинг</li>
+      <li>PR-публікації</li>
+      <li>Повний технічний аудит</li>
+      <li>Робота з великим блогом</li>
+      <li>Щотижневі звіти</li>
+      <li>Активне масштабування семантики</li>
+      <li>Розміщення на MC.today, DOU, Vector, Finance.ua</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-inner">
+    <div class="case-block">
+      <div>
+        <div class="case-label">Загальний обсяг за 6 місяців</div>
+        <h3>Що отримає <span style="color:var(--pink)">ClearMoney</span></h3>
+        <p>Базовий SEO-аудит, 6 щомісячних перевірок, карта сторінок під професії та альтернативи конкурентам, контент-план для блогу і план масштабування на наступні 6 місяців.</p>
+      </div>
+      <div class="case-stats">
+        <div class="cs"><div class="cs-num">10<span>–15</span></div><div class="cs-label">сторінок у роботі</div></div>
+        <div class="cs"><div class="cs-num">25<span>–35</span></div><div class="cs-label">мета-тегів</div></div>
+        <div class="cs"><div class="cs-num">4<span>–6</span></div><div class="cs-label">SEO-ТЗ</div></div>
+        <div class="cs"><div class="cs-num">4<span>–6</span></div><div class="cs-label">FAQ-блоків</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <div>
+      <h3>Готові почати перші 6 місяців?</h3>
+      <p>Стартуємо з SEO Foundation і будуємо систему сторінок під професії, альтернативи та блог.</p>
+    </div>
+    <a class="btn btn-white" href="#">Отримати SEO-розбір →</a>
+  </div>
+</div>
+
+<footer>
+  <p>План підготовлено · <a href="https://prweb.pro">PR.WEB</a> · SEO-агенція для локального та B2B бізнесу</p>
+</footer>
+
+</body>
+</html>

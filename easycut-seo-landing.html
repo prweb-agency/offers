@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO-пропозиція для Easycut · Ultrahelivann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&family=Wix+Madefor+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#141414;--dark:#1c1c1c;--card:#242424;
+  --white:#F9F9F9;--gray:#9a9a9a;--line:#333;
+  --pink:#F6364D;--pink-soft:rgba(246,54,77,.12);
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:'Wix Madefor Display',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.num,.kicker{font-family:'Onest',sans-serif}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+.kicker.ghost{color:var(--gray)}
+
+/* HERO */
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::after{content:"";position:absolute;right:-220px;top:-220px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(246,54,77,.16),transparent 65%)}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 34px}
+.tag{font-size:13px;padding:7px 16px;border:1px solid var(--line);border-radius:100px;color:var(--gray)}
+.hero h1{font-size:clamp(30px,5vw,54px);font-weight:800;line-height:1.1;letter-spacing:-.015em;margin:0;max-width:840px}
+.hero h1 span{color:var(--pink)}
+.hero p.sub{font-size:18px;color:var(--gray);max-width:640px;margin:24px 0 38px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:16px;padding:16px 32px;border-radius:100px;text-decoration:none;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(246,54,77,.35)}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--white)}
+.btn.ghost:hover{border-color:var(--pink);box-shadow:none}
+.scroll-hint{position:absolute;bottom:28px;left:24px;font-size:12px;color:var(--gray);letter-spacing:.14em;text-transform:uppercase}
+
+/* SECTIONS */
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.num{font-size:13px;font-weight:800;color:var(--pink);letter-spacing:.2em;margin-bottom:8px}
+h2{font-size:clamp(24px,3.4vw,38px);font-weight:800;line-height:1.15;letter-spacing:-.01em;margin:0 0 18px;max-width:760px}
+.lead{font-size:17px;color:var(--gray);max-width:700px;margin:0 0 42px}
+.lead b,.lead strong{color:var(--white)}
+
+/* CARDS */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:1fr 1fr 1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+.card h3{font-size:17px;font-weight:700;margin:0 0 10px}
+.card p{font-size:14.5px;color:var(--gray);margin:0;line-height:1.65}
+.card .big{font-size:30px;font-weight:800;color:var(--pink);font-family:'Onest',sans-serif;display:block;margin-bottom:6px}
+.card.accent{border-color:var(--pink);background:linear-gradient(160deg,var(--card),rgba(246,54,77,.08))}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:8px}
+th{text-align:left;font-family:'Onest',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);padding:12px 16px;border-bottom:1px solid var(--line)}
+td{padding:15px 16px;border-bottom:1px solid #2a2a2a;vertical-align:top;color:#d9d9d9}
+td:first-child{font-weight:600;color:var(--white)}
+tr:hover td{background:rgba(255,255,255,.02)}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+.step .s-num{font-family:'Onest',sans-serif;font-weight:800;font-size:13px;color:var(--pink);letter-spacing:.15em;margin-bottom:10px}
+.step h4{font-size:15px;font-weight:700;margin:0 0 8px;font-family:'Onest',sans-serif}
+.step p{font-size:13px;color:var(--gray);margin:0;line-height:1.6}
+
+/* CHECK LIST */
+.checks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#d9d9d9}
+.checks li::before{content:"✓";color:var(--pink);font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* CTA STRIP */
+.cta-strip{background:var(--pink);border-radius:20px;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:56px}
+.cta-strip h3{font-size:22px;font-weight:800;margin:0 0 4px;color:#fff}
+.cta-strip p{margin:0;color:rgba(255,255,255,.85);font-size:15px}
+.btn.inv{background:#fff;color:var(--pink)}
+.btn.inv:hover{box-shadow:0 12px 28px rgba(0,0,0,.3)}
+
+/* PRICING */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 28px;position:relative;display:flex;flex-direction:column}
+.plan.featured{border-color:var(--pink);background:linear-gradient(170deg,var(--card),rgba(246,54,77,.10))}
+.plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;font-family:'Onest',sans-serif;font-size:11px;font-weight:800;letter-spacing:.12em;padding:6px 16px;border-radius:100px;text-transform:uppercase}
+.plan h3{font-family:'Onest',sans-serif;font-size:18px;font-weight:700;margin:0 0 6px}
+.plan .price{font-family:'Onest',sans-serif;font-size:40px;font-weight:800;color:var(--white)}
+.plan .price small{font-size:14px;color:var(--gray);font-weight:400}
+.plan ul{list-style:none;margin:20px 0 26px;padding:0;flex:1}
+.plan li{font-size:13.5px;color:#d0d0d0;padding:7px 0;border-bottom:1px solid #2b2b2b;display:flex;gap:10px}
+.plan li::before{content:"—";color:var(--pink);flex-shrink:0}
+.plan .lb{font-size:12px;color:var(--gray);margin-bottom:18px;font-style:italic}
+.plan .btn{justify-content:center}
+
+/* TIMELINE */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.tl .t{border-left:2px solid var(--line);padding:4px 0 4px 20px}
+.tl .t.hot{border-color:var(--pink)}
+.tl .t .d{font-family:'Onest',sans-serif;font-weight:800;font-size:16px;color:var(--pink);margin-bottom:8px}
+.tl .t p{font-size:13.5px;color:var(--gray);margin:0;line-height:1.6}
+
+/* FOOTER */
+footer{padding:52px 0;text-align:center;color:var(--gray);font-size:13px}
+footer a{color:var(--pink);text-decoration:none}
+
+@media(max-width:900px){
+  .g2,.g3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr}
+  .tl{grid-template-columns:1fr 1fr}
+  .checks{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .cta-strip{padding:30px 24px}
+}
+@media(max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .tl{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">EASYCUT · SEO PROPOSAL</span><br>
+    <span class="kicker ghost">ET-FIRST SPRINT · 90 ДНІВ</span>
+    <h1>Виводимо <span>ultraheli vann</span> у топ естонського Google — і перетворюємо пошук на B2B-ліди</h1>
+    <p class="sub">Ваші клієнти вже шукають ultraheli vann, ultraheli puhasti та ultraheli pesur. Питання лише в тому, кого вони знаходять першим — вас чи маркетплейси.</p>
+    <div class="hero-tags">
+      <span class="tag">ultraheli vann</span>
+      <span class="tag">ultraheli puhasti</span>
+      <span class="tag">ultraheli pesur</span>
+      <span class="tag">B2B / industrial</span>
+    </div>
+    <a class="btn" href="https://t.me/verdiev">Обговорити проєкт →</a>
+  </div>
+  <div class="scroll-hint">— прогортайте нижче · 01 / 07</div>
+</header>
+
+<!-- 02 SITUATION -->
+<section>
+  <div class="wrap">
+    <div class="num">02 · ДЕ ВИ ЗАРАЗ</div>
+    <h2>Сторінка вже є. Але вона працює на половину сили</h2>
+    <p class="lead">Ваша сторінка <b>/lahendus/ultrahelivann/</b> — хороша B2B-база: окремий URL, кнопка запиту пропозиції, demo, серії Anmasi, приклади промислового застосування. Проблема не в тому, що чогось нема. Проблема в тому, що Google і клієнт поки не бачать у ній найсильнішу відповідь на свій запит.</p>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Змішана видача</h3>
+        <p>У топі за вашими запитами — маркетплейси, прайс-агрегатори й каталоги. Вони виграють кількістю товарів, але програють у експертизі. Це ваш шанс.</p>
+      </div>
+      <div class="card">
+        <h3>Розпорошений кластер</h3>
+        <p>Запити ultraheli vann / puhasti / pesur — це один попит різними словами. Зараз сторінка ловить тільки частину цього кластера.</p>
+      </div>
+      <div class="card">
+        <h3>Мало доказів</h3>
+        <p>Для B2B-покупця вирішальні не тексти, а докази: сценарії застосування, підбір під задачу, кейси, demo. Саме цих блоків сторінці бракує.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 OPPORTUNITY -->
+<section>
+  <div class="wrap">
+    <div class="num">03 · ЧОМУ ЦЕ РЕАЛЬНО</div>
+    <h2>Вам не треба перемагати маркетплейси. Треба бути кращою B2B-відповіддю</h2>
+    <p class="lead">Естонська видача за цими запитами — комерційна. Це означає: Google готовий показувати сторінки рішень, а не статті. Ми не змагаємось із каталогами за асортимент — ми даємо те, чого в них нема: <b>експертну сторінку, яка веде інженера чи закупівельника прямо до запиту пропозиції.</b></p>
+    <div class="grid g3">
+      <div class="card accent">
+        <span class="big">Top-10</span>
+        <p>реалістична ціль першого етапу по ultraheli vann та ultraheli puhasti, далі — боротьба за top-5</p>
+      </div>
+      <div class="card">
+        <span class="big">1–3</span>
+        <p>стабільні цільові B2B-запити на місяць часто цінніші за тисячі нецільових відвідувачів</p>
+      </div>
+      <div class="card">
+        <span class="big">×4</span>
+        <p>мовні версії (ET → LV / LT / RU): відпрацьовуємо модель на Естонії та масштабуємо без хаосу</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 STRATEGY -->
+<section>
+  <div class="wrap">
+    <div class="num">04 · ЯК МИ ЦЕ ЗРОБИМО</div>
+    <h2>Одна сильна сторінка + кластер підтримки навколо неї</h2>
+    <p class="lead">Всі головні запити ведемо на одну сторінку — щоб вони підсилювали одна одну, а не конкурували між собою. Вузькі промислові запити закриваємо окремими сторінками підтримки.</p>
+
+    <table>
+      <tr><th>Запит клієнта</th><th>Куди веде</th><th>Хто це шукає</th></tr>
+      <tr><td>ultraheli vann</td><td>/lahendus/ultrahelivann/</td><td>основний B2B-попит</td></tr>
+      <tr><td>ultraheli puhasti</td><td>/lahendus/ultrahelivann/</td><td>B2B + виробничі компанії</td></tr>
+      <tr><td>ultraheli pesur</td><td>/lahendus/ultrahelivann/</td><td>змішаний комерційний попит</td></tr>
+      <tr><td>tööstuslik ultraheli puhasti</td><td>нова сторінка підтримки</td><td>промислові клієнти</td></tr>
+      <tr><td>ultraheli vann detailide puhastamiseks</td><td>нова сторінка підтримки</td><td>пошук під конкретну задачу</td></tr>
+      <tr><td>ultraheli pesur tööriistade puhastamiseks</td><td>нова сторінка підтримки</td><td>сервіс та обслуговування</td></tr>
+    </table>
+
+    <div style="height:42px"></div>
+    <div class="steps">
+      <div class="step"><div class="s-num">КРОК 1</div><h4>Технічна база + перепаковка сторінки</h4><p>Перевіряємо індексацію, canonical, сніпети. Прибираємо повтори на головній сторінці, підсилюємо структуру під весь кластер vann / puhasti / pesur.</p></div>
+      <div class="step"><div class="s-num">КРОК 2</div><h4>Довіра, докази, перелінковка</h4><p>Блоки «для кого / яку серію обрати», demo, сценарії застосування — і чітка внутрішня логіка: сторінка → серії Anmasi → сценарії → заявка.</p></div>
+      <div class="step"><div class="s-num">КРОК 3</div><h4>Кластер + зовнішні посилання</h4><p>Сторінки під вузькі промислові запити плюс B2B-лінкбілдинг: індустріальні портали, каталоги, партнерські згадки — авторитет росте паралельно з контентом.</p></div>
+      <div class="step"><div class="s-num">КРОК 4</div><h4>Масштабування на LV / LT / RU</h4><p>Після перших результатів переносимо готову модель на інші мови — з локалізацією під кожен ринок, а не механічним перекладом.</p></div>
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <h3>План готовий — давайте запускати його в роботу</h3>
+        <p>Перші зміни на сторінці можна впровадити вже цього місяця і почати рухати позиції.</p>
+      </div>
+      <a class="btn inv" href="https://t.me/verdiev">Почати роботу →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 WHAT YOU GET / TIMELINE -->
+<section>
+  <div class="wrap">
+    <div class="num">05 · ЩО ВИ ОТРИМАЄТЕ</div>
+    <h2>90 днів — від сильної сторінки до перших органічних лідів</h2>
+
+    <div class="tl">
+      <div class="t hot"><div class="d">30 днів</div><p>Оновлена головна сторінка: чіткий фокус на кластері, кращі сніпети в Google, без перевантаження текстом.</p></div>
+      <div class="t"><div class="d">60 днів</div><p>2–3 сторінки підтримки опубліковані. Перші рухи по вузьких запитах і B2B-наміру.</p></div>
+      <div class="t"><div class="d">90 днів</div><p>Стабільні покази по головному кластеру, перші входження в top-10 / top-20, перші органічні звернення.</p></div>
+      <div class="t"><div class="d">3–6 міс</div><p>Закріплення позицій, частина ключів у top-10 — і готова модель для LV / LT / RU.</p></div>
+    </div>
+
+    <div style="height:46px"></div>
+    <h2 style="font-size:22px">Що входить у роботу</h2>
+    <ul class="checks">
+      <li>Повний аудит і перепаковка сторінки /lahendus/ultrahelivann/</li>
+      <li>Нові сторінки під вузькі промислові запити</li>
+      <li>Блоки «для кого / яку серію обрати / сфери застосування»</li>
+      <li>Внутрішня перелінковка: сторінка → серії → сценарії → заявка</li>
+      <li>Технічна розмітка (schema), оптимізація фото та відео</li>
+      <li>Підсилення сторінок серій Anmasi як частини кластера</li>
+      <li>Щомісячний звіт: позиції, покази, звернення</li>
+      <li>Після ET — план масштабування на LV / LT / RU</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 FORECAST -->
+<section>
+  <div class="wrap">
+    <div class="num">06 · ЧОГО ОЧІКУВАТИ</div>
+    <h2>Чесний прогноз, а не обіцянки</h2>
+    <p class="lead">Точні цифри підтвердимо після доступу до Search Console та аналітики. Нижче — робочий діапазон для ET-сценарію. У вузькій B2B-ніші головна метрика — не трафік, а звернення.</p>
+    <table>
+      <tr><th>Період</th><th>Консервативно</th><th>Оптимістично</th></tr>
+      <tr><td>3 місяці</td><td>3–6 ключів у top-20 · 150–400 показів/міс · 0–1 лід/міс</td><td>6–10 ключів у top-20 · 400–900 показів/міс · 1–2 ліди/міс</td></tr>
+      <tr><td>6 місяців</td><td>8–14 ключів у top-20 · 500–1 200 показів/міс · 1–3 ліди/міс</td><td>12–20 ключів у top-20 · 1 200–2 500 показів/міс · 3–6 лідів/міс</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 07 PRICING -->
+<section>
+  <div class="wrap">
+    <div class="num">07 · ПАКЕТИ</div>
+    <h2>Оберіть темп — модель однакова</h2>
+    <p class="lead">Кожен пакет — це комплексна робота над сайтом: технічна база, оптимізація існуючих сторінок, структура, контент і посилання. Нові сторінки — лише один з інструментів, а не суть послуги. Різниця між пакетами — у глибині та швидкості.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Start</h3>
+        <div class="price">€290 <small>/ міс</small></div>
+        <ul>
+          <li>Технічний контроль: індексація, canonical, сніпети</li>
+          <li>On-page оптимізація головної сторінки кластера</li>
+          <li>Оптимізація мета-тегів і структури заголовків</li>
+          <li>FAQ + оптимізація зображень</li>
+          <li>Базовий лінкбілдинг: 1–2 розміщення / міс (каталоги, B2B-директорії)</li>
+          <li>Щомісячний звіт: позиції, покази</li>
+        </ul>
+        <div class="lb">Нові сторінки — за потреби, як окремі задачі</div>
+        <a class="btn ghost" href="https://t.me/verdiev">Почати зі Start →</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="badge">Рекомендуємо</div>
+        <h3>Growth</h3>
+        <div class="price">€390 <small>/ міс</small></div>
+        <ul>
+          <li>Все зі Start</li>
+          <li>Побудова контентного кластера: 1–2 сторінки підтримки / міс</li>
+          <li>Внутрішня перелінковка: сторінка → серії → сценарії → заявка</li>
+          <li>Блоки довіри та доказів (demo, кейси, підбір під задачу)</li>
+          <li>Schema-розмітка, фото/відео підтримка</li>
+          <li>Лінкбілдинг: 2–4 розміщення / міс (індустріальні портали, B2B-майданчики)</li>
+          <li>Roadmap на 90 днів + звіт з рекомендаціями</li>
+        </ul>
+        <div class="lb">Оптимальний баланс техніки, контенту й посилань</div>
+        <a class="btn" href="https://t.me/verdiev">Стартувати з Growth →</a>
+      </div>
+
+      <div class="plan">
+        <h3>Scale</h3>
+        <div class="price">€590 <small>/ міс</small></div>
+        <ul>
+          <li>Все з Growth</li>
+          <li>Активніше розширення кластера й семантики</li>
+          <li>Глибша робота з конверсією сторінок</li>
+          <li>Посилений лінкбілдинг: 4–6 розміщень / міс, включно з trade-порталами</li>
+          <li>Підготовка мультимовного запуску LV / LT / RU</li>
+          <li>Пріоритетна швидкість виконання</li>
+        </ul>
+        <div class="lb">Для швидшого виходу на кілька ринків</div>
+        <a class="btn ghost" href="https://t.me/verdiev">Обговорити Scale →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 FINAL CTA -->
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="num">08 · НАСТУПНИЙ КРОК</div>
+    <h2>Стартуємо з ET-спринту — і через 90 днів дивимось на цифри</h2>
+    <p class="lead">Працюємо комплексно: техніка, контент, структура й посилання рухаються разом, а не по черзі. Через 60–90 днів разом оцінюємо позиції, покази й звернення — і масштабуємо найсильнішу модель на інші мови.</p>
+    <div class="cta-strip">
+      <div>
+        <h3>Готові вивести ultraheli vann у топ?</h3>
+        <p>Напишіть — відповімо на питання і покажемо перші кроки для вашої сторінки.</p>
+      </div>
+      <a class="btn inv" href="https://t.me/verdiev">Зв'язатися →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Verdiev SEO · Easycut SEO Proposal · 2026 · <a href="https://t.me/verdiev">t.me/verdiev</a>
+  </div>
+</footer>
+
+</body>
+</html>

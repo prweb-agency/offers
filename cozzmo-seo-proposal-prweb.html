@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SEO-пропозиція PRWEB для Cozzmo: посилення нових категорій, товарів та органічного трафіку.">
+<title>SEO-пропозиція для Cozzmo — PRWEB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --fg:#0b0b0b;
+  --muted:#676767;
+  --dark:#0b0b0b;
+  --dark2:#151515;
+  --light:#f5f5f2;
+  --accent:#f04444;
+  --accent2:#ff6868;
+  --border:rgba(0,0,0,.12);
+  --border-dark:rgba(255,255,255,.14);
+  --pad:clamp(20px,5vw,82px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:#fff}
+
+.topbar{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px var(--pad);
+  font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  mix-blend-mode:difference;color:#fff;pointer-events:none;
+}
+.topbar a{pointer-events:auto}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:10px}
+
+section{padding:clamp(82px,10vw,145px) var(--pad);position:relative}
+.dark{background:var(--dark);color:#fff}
+.soft{background:var(--light)}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:135px;padding-bottom:100px}
+.hero::after{
+  content:'';position:absolute;right:-18vw;top:10vh;width:56vw;height:56vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(240,68,68,.16),rgba(240,68,68,0) 68%);pointer-events:none
+}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
+h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:1.03}
+h1{font-size:clamp(48px,8vw,118px);max-width:1350px;position:relative;z-index:1}
+h2{font-size:clamp(34px,5.4vw,76px);margin-bottom:clamp(30px,4vw,52px)}
+h3{font-size:clamp(20px,2vw,28px)}
+.accent{color:var(--accent)}
+.hero-sub{font-size:clamp(18px,1.8vw,25px);line-height:1.45;color:var(--muted);max-width:900px;margin:32px 0 36px;position:relative;z-index:1}
+.badges{display:flex;flex-wrap:wrap;gap:14px 24px;margin-bottom:42px;position:relative;z-index:1}
+.badges span{font-size:14px;font-weight:650;display:flex;align-items:center;gap:10px}
+.badges span::before{content:'';width:8px;height:8px;background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:18px 30px;border:1px solid var(--fg);font-weight:700;transition:.25s;background:var(--fg);color:#fff;position:relative;z-index:1}
+.btn:hover{transform:translate(-4px,-4px);background:var(--accent);border-color:var(--accent);box-shadow:6px 6px 0 var(--fg)}
+.hero-meta{position:absolute;left:var(--pad);right:var(--pad);bottom:34px;display:flex;justify-content:space-between;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+.section-head{display:flex;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,72px)}
+.section-num{font-size:clamp(72px,10vw,140px);font-weight:300;letter-spacing:-.05em;line-height:.85;color:var(--accent)}
+.section-label{font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;border-top:1px solid currentColor;padding-top:8px;min-width:150px;opacity:.8}
+.lead{max-width:1080px;font-size:clamp(17px,1.5vw,21px);line-height:1.62;color:var(--muted)}
+.dark .lead{color:rgba(255,255,255,.68)}
+
+.callout{margin-top:38px;padding:clamp(28px,3vw,44px);border:1px solid var(--border);background:#fafafa}
+.dark .callout{border-color:var(--border-dark);background:rgba(255,255,255,.04)}
+.callout-label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:15px}
+.callout-text{font-size:clamp(20px,2vw,28px);font-weight:700;line-height:1.35;letter-spacing:-.02em}
+
+.grid-2,.grid-3,.grid-4{display:grid;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.dark .grid-2,.dark .grid-3,.dark .grid-4{border-color:var(--border-dark)}
+.cell{padding:clamp(28px,3vw,46px);border-right:1px solid var(--border)}
+.dark .cell{border-right-color:var(--border-dark)}
+.cell:last-child{border-right:0}
+.cell-num{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.cell h3{margin-bottom:14px}
+.cell p{font-size:15px;color:var(--muted)}
+.dark .cell p{color:rgba(255,255,255,.64)}
+.cell ul{list-style:none;margin-top:14px}
+.cell li{padding:9px 0;border-bottom:1px solid var(--border);font-size:15px;display:flex;gap:10px}
+.dark .cell li{border-color:var(--border-dark)}
+.cell li:last-child{border-bottom:0}
+.cell li::before{content:'→';color:var(--accent);font-weight:800}
+
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.dark .work-grid{background:var(--border-dark)}
+.work-card{padding:clamp(28px,3vw,46px);background:var(--bg)}
+.dark .work-card{background:var(--dark)}
+.work-index{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.18em;margin-bottom:38px}
+.work-card h3{margin-bottom:14px}
+.work-card p{color:var(--muted);font-size:15px}
+.dark .work-card p{color:rgba(255,255,255,.64)}
+.work-card .volume{display:inline-block;margin-top:20px;padding:7px 11px;background:rgba(240,68,68,.1);color:var(--accent);font-size:12px;font-weight:800}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.timeline-item{padding:34px 28px;border-right:1px solid var(--border)}
+.timeline-item:last-child{border-right:0}
+.timeline-month{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.2em;margin-bottom:18px}
+.timeline-item h3{font-size:22px;margin-bottom:12px}
+.timeline-item p{font-size:15px;color:var(--muted)}
+
+.table-wrap{overflow-x:auto;border-top:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th,td{text-align:left;padding:18px 16px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+td{font-size:15px;color:#242424}
+.dark th,.dark td{border-color:var(--border-dark)}
+.dark th{color:rgba(255,255,255,.58)}
+.dark td{color:rgba(255,255,255,.76)}
+tr:hover td{background:rgba(240,68,68,.05)}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.price-card{border:1px solid var(--border-dark);background:rgba(255,255,255,.035);padding:32px;display:flex;flex-direction:column;position:relative}
+.price-card.featured{border-color:var(--accent);background:linear-gradient(150deg,rgba(240,68,68,.11),rgba(255,255,255,.025))}
+.recommend{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);padding:5px 14px;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.price-name{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.58);font-weight:800;margin-bottom:18px}
+.price{font-size:clamp(38px,4vw,58px);font-weight:900;line-height:1;margin-bottom:10px}
+.price small{font-size:14px;color:rgba(255,255,255,.58);font-weight:500}
+.price-desc{font-size:14px;color:rgba(255,255,255,.6);padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--border-dark)}
+.price-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;flex:1}
+.price-list li{font-size:14px;color:rgba(255,255,255,.72);display:flex;gap:10px}
+.price-list li::before{content:'✓';color:var(--accent);font-weight:900}
+.price-button{display:block;text-align:center;padding:13px 14px;border:1px solid var(--border-dark);font-weight:750;transition:.2s}
+.featured .price-button{background:var(--accent);border-color:var(--accent)}
+.price-button:hover{border-color:var(--accent);color:#fff}
+
+.budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.budget-card{padding:26px;border:1px solid var(--border);background:#fff}
+.budget-label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.budget-value{font-size:30px;font-weight:900;letter-spacing:-.03em}
+.budget-card p{font-size:14px;color:var(--muted);margin-top:10px}
+
+.final{background:var(--dark);color:#fff;padding-top:clamp(100px,12vw,170px);padding-bottom:clamp(100px,12vw,170px)}
+.final h2{font-size:clamp(50px,7.5vw,108px);max-width:1300px}
+.final p{font-size:clamp(19px,2vw,28px);max-width:900px;color:rgba(255,255,255,.7);margin:32px 0 42px}
+.final .btn{background:#fff;color:#111;border-color:#fff}
+.final .btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:6px 6px 0 #fff}
+
+footer{padding:34px var(--pad);background:var(--dark);color:rgba(255,255,255,.45);border-top:1px solid var(--border-dark);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .grid-4,.grid-3,.work-grid,.timeline,.pricing-grid,.budget-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .grid-2,.grid-3,.grid-4,.work-grid,.timeline,.pricing-grid,.budget-grid{grid-template-columns:1fr}
+  .cell,.timeline-item{border-right:0;border-bottom:1px solid var(--border)}
+  .dark .cell{border-bottom-color:var(--border-dark)}
+  .cell:last-child,.timeline-item:last-child{border-bottom:0}
+  .hero-meta{display:none}
+  .topbar{font-size:9px}
+  .price-card{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><span class="dot"></span>PR.WEB · COZZMO SEO</div>
+  <a href="#pricing">КОМЕРЦІЙНА ПРОПОЗИЦІЯ</a>
+</div>
+
+<section class="hero">
+  <div class="eyebrow reveal">SEO-супровід fashion e-commerce</div>
+  <h1 class="reveal">Посилюємо нові категорії Cozzmo та перетворюємо каталог на <span class="accent">стабільне джерело продажів</span></h1>
+  <p class="hero-sub reveal">Базову SEO-оптимізацію вже виконано. Наступний етап — швидше індексувати новий асортимент, підсилити категорії та товари, розширити структуру під реальний попит і поступово збільшувати небрендовий трафік.</p>
+  <div class="badges reveal">
+    <span>Нові категорії</span>
+    <span>Картки товарів</span>
+    <span>Google Images</span>
+    <span>Комерційний трафік</span>
+  </div>
+  <div class="reveal"><a class="btn" href="#pricing">Переглянути тарифи <span>→</span></a></div>
+  <div class="hero-meta"><span>— SEO proposal 2026</span><span>01 / 08</span></div>
+</section>
+
+<section class="dark">
+  <div class="section-head reveal"><div class="section-num">02</div><div class="section-label">Поточна ситуація</div></div>
+  <h2 class="reveal">Сайт не стартує з нуля — фундамент уже є</h2>
+  <p class="lead reveal">Cozzmo вже має базову SEO-структуру, комерційні категорії, нову колекцію, чоловічий і жіночий каталог та сторінки товарів. Тепер головна задача — не переробляти все, а системно посилити те, що вже може давати попит, і швидко підключати до пошуку нові моделі.</p>
+  <div class="callout reveal">
+    <div class="callout-label">Ключовий висновок</div>
+    <div class="callout-text">Найбільший потенціал Cozzmo — у глибині каталогу: категоріях, фасонах, матеріалах, сезонних добірках і точних посадкових сторінках під намір купівлі.</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head reveal"><div class="section-num">03</div><div class="section-label">Точки росту</div></div>
+  <h2 class="reveal">Де SEO може дати найбільший ефект</h2>
+  <div class="grid-4 reveal">
+    <div class="cell"><div class="cell-num">01 — Каталог</div><h3>Пріоритетні категорії</h3><p>Посилення сторінок, які вже мають попит: костюми, футболки, верхній одяг, штани, нові колекції та сезонні добірки.</p></div>
+    <div class="cell"><div class="cell-num">02 — Новинки</div><h3>Швидша індексація</h3><p>Нові категорії та товари швидше потрапляють у пошук і отримують внутрішню підтримку з сильних сторінок сайту.</p></div>
+    <div class="cell"><div class="cell-num">03 — Низькочастотний попит</div><h3>Точні посадкові</h3><p>Сторінки під фасон, матеріал, крій і сезонність можуть приносити більш цільові переходи з нижчою конкуренцією.</p></div>
+    <div class="cell"><div class="cell-num">04 — Visual Search</div><h3>Google Images і Lens</h3><p>Для одягу фото часто стає першою точкою контакту. Оптимізація зображень дає додатковий канал органічного попиту.</p></div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="section-head reveal"><div class="section-num">04</div><div class="section-label">Стратегія</div></div>
+  <h2 class="reveal">Як будемо просувати Cozzmo</h2>
+  <div class="grid-3 reveal">
+    <div class="cell"><div class="cell-num">Рівень 1</div><h3>Посилення ядра сайту</h3><ul><li>Нова колекція</li><li>Головні категорії</li><li>Пріоритетні товари</li><li>Індексація новинок</li></ul></div>
+    <div class="cell"><div class="cell-num">Рівень 2</div><h3>Розширення структури</h3><ul><li>Посадкові під фасони</li><li>Сторінки під матеріали</li><li>Сезонні категорії</li><li>Контроль фільтрів</li></ul></div>
+    <div class="cell"><div class="cell-num">Рівень 3</div><h3>Довіра та бренд</h3><ul><li>Про бренд і виробництво</li><li>Розмірні сітки</li><li>Доставка та повернення</li><li>FAQ і підтримка</li></ul></div>
+  </div>
+  <div class="callout reveal">
+    <div class="callout-label">Логіка росту</div>
+    <div class="callout-text">Спочатку підсилюємо сторінки з уже наявним попитом, потім додаємо нові точки входу та підтримуємо їх зовнішніми згадками.</div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-head reveal"><div class="section-num">05</div><div class="section-label">План робіт</div></div>
+  <h2 class="reveal">Шість напрямків щомісячної роботи</h2>
+  <div class="work-grid reveal">
+    <article class="work-card"><div class="work-index">01 / INDEX</div><h3>Індексація та технічний контроль</h3><p>Перевірка нових URL, дублів, sitemap, Search Console, перенаправлень, мобільної швидкості та коректності фільтрів.</p><span class="volume">Щомісячний контроль</span></article>
+    <article class="work-card"><div class="work-index">02 / STRUCTURE</div><h3>Категорії та SEO-посадки</h3><p>Посилення існуючих розділів і створення статичних сторінок під значимі поєднання фасону, тканини, крою та сезонності.</p><span class="volume">1–4 нові посадки / міс</span></article>
+    <article class="work-card"><div class="work-index">03 / PRODUCT</div><h3>Картки товарів</h3><p>Оптимізація пріоритетних товарів: метадані, описи, характеристики, розміри, пов’язані моделі, фото та комерційні блоки.</p><span class="volume">8–25+ URL / міс</span></article>
+    <article class="work-card"><div class="work-index">04 / IMAGE</div><h3>Зображення та visual search</h3><p>Alt, назви файлів, контекст, стиснення WebP/AVIF та логіка «модель + фасон + тканина + колір».</p><span class="volume">30–100 image fixes / міс</span></article>
+    <article class="work-card"><div class="work-index">05 / TRUST</div><h3>Довіра і конверсія</h3><p>Посилення сторінок «Про COZZMO», контактів, виробництва, FAQ, доставки, повернення та розмірних сіток.</p><span class="volume">2–6 блоків / міс</span></article>
+    <article class="work-card"><div class="work-index">06 / DATA</div><h3>Структура пошуку та аналітика</h3><p>Товарні дані, хлібні крихти, внутрішня перелінковка, аналіз GSC та корекція сторінок, які починають рости.</p><span class="volume">1 звіт + roadmap</span></article>
+  </div>
+</section>
+
+<section>
+  <div class="section-head reveal"><div class="section-num">06</div><div class="section-label">Строки</div></div>
+  <h2 class="reveal">Коли чекати результат</h2>
+  <div class="timeline reveal">
+    <div class="timeline-item"><div class="timeline-month">1 місяць</div><h3>Навести порядок</h3><p>Індексація новинок, перевірка технічних ризиків, оновлення пріоритетних категорій і товарів.</p></div>
+    <div class="timeline-item"><div class="timeline-month">2–3 місяці</div><h3>Перші сигнали росту</h3><p>Зростання показів, рух у топ-20 і перші входження в топ-10 за вузькими комерційними кластерами.</p></div>
+    <div class="timeline-item"><div class="timeline-month">4–6 місяців</div><h3>Стабільніша органіка</h3><p>Більше небрендових переходів, видимість нових категорій і регулярний трафік на SEO-посадки.</p></div>
+    <div class="timeline-item"><div class="timeline-month">6+ місяців</div><h3>Масштабування</h3><p>Розширення категорій, сезонних кластерів, visual search та зовнішнього авторитету бренду.</p></div>
+  </div>
+
+  <div class="table-wrap reveal" style="margin-top:48px">
+    <table>
+      <thead><tr><th>Період</th><th>Орієнтовний результат</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Перші 3 місяці</strong></td><td>+20–50% показів за пріоритетними групами, перші рухи в топ-20 / топ-10 за вузькими категоріями.</td></tr>
+        <tr><td><strong>Перші 6 місяців</strong></td><td>+40–100% показів за сильними категоріями, зростання небрендового трафіку та входів на нові посадкові сторінки.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lead reveal" style="margin-top:26px">Прогноз є робочим орієнтиром, а не гарантією. Фактична динаміка залежить від сезону, конкуренції, швидкості впровадження та бюджету на зовнішнє посилення.</p>
+</section>
+
+<section class="dark" id="pricing">
+  <div class="section-head reveal"><div class="section-num">07</div><div class="section-label">Тарифи</div></div>
+  <h2 class="reveal">Формати SEO-супроводу</h2>
+  <div class="pricing-grid reveal">
+    <div class="price-card">
+      <div class="price-name">SEO Support</div>
+      <div class="price">$450 <small>/ місяць</small></div>
+      <div class="price-desc">Підтримка результатів і контроль нового асортименту після першого етапу SEO.</div>
+      <ul class="price-list">
+        <li>8–10 пріоритетних URL / міс</li>
+        <li>Контроль індексації та GSC</li>
+        <li>Оновлення метаданих</li>
+        <li>Внутрішня перелінковка</li>
+        <li>Рекомендації по нових товарах</li>
+        <li>Щомісячний звіт</li>
+      </ul>
+      <a class="price-button" href="#contact">Обрати пакет</a>
+    </div>
+
+    <div class="price-card featured">
+      <div class="recommend">Рекомендуємо</div>
+      <div class="price-name">SEO Growth</div>
+      <div class="price">$750 <small>/ місяць</small></div>
+      <div class="price-desc">Оптимальний обсяг для росту категорій, новинок і комерційного трафіку.</div>
+      <ul class="price-list">
+        <li>15–20 пріоритетних URL / міс</li>
+        <li>1–2 нові SEO-посадки / міс</li>
+        <li>Посилення категорій і карток</li>
+        <li>Image SEO</li>
+        <li>Trust / FAQ / brand blocks</li>
+        <li>Регулярна корекція за GSC</li>
+        <li>Розширений звіт + roadmap</li>
+      </ul>
+      <a class="price-button" href="#contact">Обрати пакет</a>
+    </div>
+
+    <div class="price-card">
+      <div class="price-name">SEO Scale</div>
+      <div class="price">$1,100 <small>/ місяць</small></div>
+      <div class="price-desc">Активне масштабування каталогу та швидше охоплення нових кластерів.</div>
+      <ul class="price-list">
+        <li>25+ URL / міс</li>
+        <li>3–4 нові SEO-посадки / міс</li>
+        <li>Пріоритетна робота з товарами</li>
+        <li>Image SEO + schema support</li>
+        <li>Посилення брендових сторінок</li>
+        <li>Розширена аналітика</li>
+        <li>Постійний roadmap</li>
+      </ul>
+      <a class="price-button" href="#contact">Обрати пакет</a>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="section-head reveal"><div class="section-num">08</div><div class="section-label">Лінкбілдинг</div></div>
+  <h2 class="reveal">Зовнішнє посилення оплачується окремо</h2>
+  <p class="lead reveal">Вартість розміщень не входить у SEO-супровід, оскільки залежить від конкретних fashion, lifestyle, media та marketplace-майданчиків. Для Cozzmo потрібне поступове посилення нових категорій і бренду, а не масова закупівля слабких посилань.</p>
+  <div class="budget-grid reveal">
+    <div class="budget-card"><div class="budget-label">Базовий рівень</div><div class="budget-value">$250–350</div><p>Каталоги, добірки українських брендів, профілі та базові тематичні згадки.</p></div>
+    <div class="budget-card"><div class="budget-label">Робочий рівень</div><div class="budget-value">$400–600</div><p>Регулярні тематичні розміщення, fashion / lifestyle майданчики та підтримка нових категорій.</p></div>
+    <div class="budget-card"><div class="budget-label">Активне посилення</div><div class="budget-value">$700+</div><p>Сильні медіа, огляди, партнерські матеріали та масштабування брендової присутності.</p></div>
+  </div>
+  <div class="callout reveal">
+    <div class="callout-label">Рекомендований формат</div>
+    <div class="callout-text">SEO Growth — $750 / місяць + лінкбілдинг $400–600 / місяць окремо.</div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="eyebrow reveal">PR.WEB · SEO FOR E-COMMERCE</div>
+  <h2 class="reveal">Підсилити новий асортимент Cozzmo без зайвого ускладнення</h2>
+  <p class="reveal">Фокусуємося на сторінках, які реально можуть давати продажі: категорії, новинки, точні посадкові та пріоритетні картки товарів.</p>
+  <a class="btn reveal" href="https://t.me/verdiev" target="_blank" rel="noopener">Обговорити старт <span>→</span></a>
+</section>
+
+<footer>
+  <div>© 2026 PR.WEB · SEO PROPOSAL FOR COZZMO</div>
+  <div>CONFIDENTIAL</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{ if(entry.isIntersecting){ entry.target.classList.add('in'); observer.unobserve(entry.target); } });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach((el)=>observer.observe(el));
+</script>
+</body>
+</html>
